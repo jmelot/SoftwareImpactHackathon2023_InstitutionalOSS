@@ -12,6 +12,7 @@ Goal of our efforts during this hackathon: surface a list of _possible links_ fr
     * Resulting data in `ror_url_to_ids_domain.json` (domain names to ror ids) and `ror_url_to_ids_full.json` (cleaned full urls to ror ids)
 * Script for extracting github urls from the Journal of Open-Source software and mapping them to DOIs and paper titles: `get_dois_and_repos_from_joss.py`
     * Resulting data in `repo_to_doi_and_title.json`
+* Script for searching openalex API using dois/pmids from RRID dataset (`working file software.csv`) and pulling in metadata, including RORs and author information `rrid_dataset_mapped_to_openalex.R`
 
 ## (partial) Solutions
 
