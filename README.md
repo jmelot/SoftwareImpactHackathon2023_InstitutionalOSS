@@ -2,14 +2,13 @@
 
 Goal of our efforts during this hackathon: surface a list of _possible links_ from software repositories to ROR IDs (the idea being that this would be followed by manual curations).
 
+[Project planning document](https://docs.google.com/document/d/1dxEUORt-m0I9tDicAQU77__gDR4TvVnUGXOatI1CS_A/edit).
+
 ## Resources
 
 * Regex for grabbing GitHub repos from freetext: `(?i)github.com/([A-Za-z0-9-_.]+/[A-Za-z0-9-_.]*[A-Za-z0-9-_])`
-
 * Script for extracting urls of Github orgs/users: `get_github_org_url.py` - part of ROR url to GitHub org/user url linking
-
 * Script for mapping urls to ROR ids: `get_urls_from_bulk_ror.py`
-
     * Resulting data in `ror_url_to_ids_domain.json` (domain names to ror ids) and `ror_url_to_ids_full.json` (cleaned full urls to ror ids)
 
 ## (partial) Solutions
