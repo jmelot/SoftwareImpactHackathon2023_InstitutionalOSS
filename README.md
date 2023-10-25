@@ -4,11 +4,26 @@ Goal of our efforts during this hackathon: surface a list of _possible links_ fr
 
 ## Resources
 
-Regex for grabbing GitHub repos from freetext: `(?i)github.com/([A-Za-z0-9-_.]+/[A-Za-z0-9-_.]*[A-Za-z0-9-_])`
+* Regex for grabbing GitHub repos from freetext: `(?i)github.com/([A-Za-z0-9-_.]+/[A-Za-z0-9-_.]*[A-Za-z0-9-_])`
 
-Script for extracting urls of Github orgs/users: `get_github_org_url.py` - part of ROR url to GitHub org/user url linking
+* Script for extracting urls of Github orgs/users: `get_github_org_url.py` - part of ROR url to GitHub org/user url linking
 
-Script for mapping urls to ROR ids: `get_urls_from_bulk_ror.py`
+* Script for mapping urls to ROR ids: `get_urls_from_bulk_ror.py`
+
+    * Resulting data in `ror_url_to_ids_domain.json` (domain names to ror ids) and `ror_url_to_ids_full.json` (cleaned full urls to ror ids)
+
+## (partial) Solutions
+
+Script for retrieving ROR IDs from github users or org names, if available: `get_ror_from_gh_org.py`. Sample usage:
+
+```bash
+$ python3 get_ror_from_gh_org_or_user.py MITHaystack
+ROR ids found for MITHaystack: ['https://ror.org/03db3by08']
+$ python3 get_ror_from_gh_org_or_user.py foo
+No ROR id found for url https://maciej.pacut.pl from foo on github
+$ python3 get_ror_from_gh_org_or_user.py jmelot
+No url found for jmelot on github
+```
 
 ## RRID to ROR Software Mapping Data File Readme Section
 

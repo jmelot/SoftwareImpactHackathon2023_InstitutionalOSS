@@ -50,7 +50,7 @@ def reformat_bulk_ror(bulk_ror_json: str, output_file_prefix: str):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("bulk_ror_json")
-    parser.add_argument("--output_file_prefix", default="ror_domain_to_ids")
+    parser.add_argument("--output_file_prefix", default="ror_url_to_ids")
     args = parser.parse_args()
 
     reformat_bulk_ror(args.bulk_ror_json, args.output_file_prefix)
