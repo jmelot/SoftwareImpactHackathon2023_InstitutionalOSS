@@ -1,0 +1,3 @@
+[submodule "joss-papers"]
+	path = joss-papers
+	url = https://github.com/openjournals/joss-papers.git

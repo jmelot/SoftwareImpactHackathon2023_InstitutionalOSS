@@ -10,6 +10,8 @@ Goal of our efforts during this hackathon: surface a list of _possible links_ fr
 * Script for extracting urls of Github orgs/users: `get_github_org_url.py` - part of ROR url to GitHub org/user url linking
 * Script for mapping urls to ROR ids: `get_urls_from_bulk_ror.py`
     * Resulting data in `ror_url_to_ids_domain.json` (domain names to ror ids) and `ror_url_to_ids_full.json` (cleaned full urls to ror ids)
+* Script for extracting github urls from the Journal of Open-Source software and mapping them to DOIs and paper titles: `get_dois_and_repos_from_joss.py`
+    * Resulting data in `repo_to_doi_and_title.json`
 
 ## (partial) Solutions
 

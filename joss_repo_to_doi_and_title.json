@@ -1,0 +1,1202 @@
+{
+  "https://gitlab.com/cerfacs/batman": {
+    "doi": "https://doi.org/10.21105/joss.00493",
+    "title": "BATMAN: Statistical analysis for expensive computer codes made easy"
+  },
+  "https://github.com/ropensci/tokenizers": {
+    "doi": "https://doi.org/10.21105/joss.00655",
+    "title": "Fast, Consistent Tokenization of Natural Language Text"
+  },
+  "https://github.com/reichlab/flusight": {
+    "doi": "https://doi.org/10.21105/joss.00231",
+    "title": "flusight: interactive visualizations for infectious disease forecasts"
+  },
+  "https://github.com/JuliaDynamics/DynamicalBilliards.jl": {
+    "doi": "https://doi.org/10.21105/joss.00458",
+    "title": "DynamicalBilliards.jl: An easy-to-use, modular and extendable Julia package for Dynamical Billiard systems in two dimensions."
+  },
+  "https://bitbucket.org/cmutel/brightway2": {
+    "doi": "https://doi.org/10.21105/joss.00236",
+    "title": "Brightway: An open source framework for Life Cycle Assessment"
+  },
+  "https://github.com/jronayne/PyTransport": {
+    "doi": "https://doi.org/10.21105/joss.00494",
+    "title": "PyTransport: A Python package for the calculation of inflationary correlation functions"
+  },
+  "https://github.com/chappers/Ramble": {
+    "doi": "https://doi.org/10.21105/joss.00209",
+    "title": "Ramble: Parser Combinator for R"
+  },
+  "https://github.com/anhoej/qicharts2": {
+    "doi": "https://doi.org/10.21105/joss.00699",
+    "title": "qicharts2: Quality Improvement Charts for R"
+  },
+  "https://github.com/ros-controls": {
+    "doi": "https://doi.org/10.21105/joss.00456",
+    "title": "ros_control: A generic and simple control framework for ROS"
+  },
+  "https://github.com/zoran-cuckovic/QGIS-visibility-analysis": {
+    "doi": "https://doi.org/10.21105/joss.00032",
+    "title": "Advanced viewshed analysis: a Quantum GIS plug-in for the analysis of visual landscapes"
+  },
+  "https://github.com/ropensci/qualtRics": {
+    "doi": "https://doi.org/10.21105/joss.00690",
+    "title": "qualtRics: retrieve survey data using the Qualtrics API"
+  },
+  "https://github.com/jiemakel/las": {
+    "doi": "https://doi.org/10.21105/joss.00035",
+    "title": "LAS: an integrated language analysis tool for multiple languages"
+  },
+  "https://github.com/NickC1/skedm": {
+    "doi": "https://doi.org/10.21105/joss.00207",
+    "title": "skedm: Empirical Dynamic Modeling"
+  },
+  "https://github.com/weecology/retriever": {
+    "doi": "https://doi.org/10.21105/joss.00451",
+    "title": "Retriever: Data Retrieval Tool"
+  },
+  "https://github.com/arfc/moltres": {
+    "doi": "https://doi.org/10.21105/joss.00298",
+    "title": "Moltres: finite element based simulation of molten salt reactors"
+  },
+  "https://github.com/andyyao95/walkr": {
+    "doi": "https://doi.org/10.21105/joss.00061",
+    "title": "walkr: MCMC Sampling from Non-Negative Convex Polytopes"
+  },
+  "https://github.com/DTChuck/HSImage": {
+    "doi": "https://doi.org/10.21105/joss.00630",
+    "title": "HSImage: A Python and C++ library to allow interaction with ENVI-BIL hyperspectral images"
+  },
+  "https://github.com/ropensci/bittrex/": {
+    "doi": "https://doi.org/10.21105/joss.00402",
+    "title": "bittrex: An R client for the Bittrex Crypto-Currency Exchange"
+  },
+  "http://github.com/zmjones/edarf/": {
+    "doi": "https://doi.org/10.21105/joss.00092",
+    "title": "edarf: Exploratory Data Analysis using Random Forests"
+  },
+  "https://github.com/motib/LearnSAT": {
+    "doi": "https://doi.org/10.21105/joss.00639",
+    "title": "LearnSAT: A SAT Solver for Education"
+  },
+  "https://github.com/n3mo/massmine": {
+    "doi": "https://doi.org/10.21105/joss.00050",
+    "title": "MassMine: Your Access To Data"
+  },
+  "https://github.com/adibender/coalitions": {
+    "doi": "https://doi.org/10.21105/joss.00606",
+    "title": "coalitions: Coalition probabilities in multi-party democracies"
+  },
+  "https://github.com/statsmaths/kerasR": {
+    "doi": "https://doi.org/10.21105/joss.00296",
+    "title": "kerasR: R Interface to the Keras Deep Learning Library"
+  },
+  "https://bitbucket.org/cloopsy/android/": {
+    "doi": "https://doi.org/10.21105/joss.00291",
+    "title": "CLOOPSy - Copernicus Land cOver crOwdsourcing Platform for Sentinel-based mapping"
+  },
+  "https://github.com/ljvmiranda921/pyswarms": {
+    "doi": "https://doi.org/10.21105/joss.00433",
+    "title": "PySwarms: a research toolkit for Particle Swarm Optimization in Python"
+  },
+  "https://github.com/eclipse/mosquitto": {
+    "doi": "https://doi.org/10.21105/joss.00265",
+    "title": "Mosquitto: server and client implementation of the MQTT protocol"
+  },
+  "https://github.com/msmbuilder/osprey": {
+    "doi": "https://doi.org/10.21105/joss.00034",
+    "title": "Osprey: Hyperparameter Optimization for Machine Learning"
+  },
+  "https://github.com/bblankrot/ParticleScattering.jl": {
+    "doi": "https://doi.org/10.21105/joss.00691",
+    "title": "ParticleScattering: Solving and optimizing multiple-scattering problems in Julia"
+  },
+  "https://github.com/Genomon-Project/paplot/": {
+    "doi": "https://doi.org/10.21105/joss.00457",
+    "title": "A framework for generating interactive reports for cancer genome analysis"
+  },
+  "https://github.com/EducationalTestingService/rsmtool": {
+    "doi": "https://doi.org/10.21105/joss.00033",
+    "title": "RSMTool: collection of tools building and evaluating automated scoring models"
+  },
+  "https://github.com/casics/spiral": {
+    "doi": "https://doi.org/10.21105/joss.00653",
+    "title": "Spiral: splitters for identifiers in source code files"
+  },
+  "https://github.com/hpchud/vccjs": {
+    "doi": "https://doi.org/10.21105/joss.00208",
+    "title": "VCC: A framework for building containerized reproducible cluster software environments"
+  },
+  "https://github.com/ropensci/getCRUCLdata": {
+    "doi": "https://doi.org/10.21105/joss.00230",
+    "title": "getCRUCLdata: Use and Explore CRU CL v. 2.0 Climatology Elements in R"
+  },
+  "https://github.com/mdbloice/Augmentor": {
+    "doi": "https://doi.org/10.21105/joss.00432",
+    "title": "Augmentor: An Image Augmentation Library for Machine Learning"
+  },
+  "https://github.com/ropensci/hddtools/": {
+    "doi": "https://doi.org/10.21105/joss.00056",
+    "title": "hddtools: Hydrological Data Discovery Tools"
+  },
+  "https://github.com/rasbt/mlxtend": {
+    "doi": "https://doi.org/10.21105/joss.00638",
+    "title": "MLxtend: Providing machine learning and data science utilities and extensions to Python\u2019s scientific computing stack"
+  },
+  "https://github.com/kehraProject/r_rdefra": {
+    "doi": "https://doi.org/10.21105/joss.00051",
+    "title": "rdefra: Interact with the UK AIR Pollution Database from DEFRA"
+  },
+  "https://github.com/atmoschem/eixport": {
+    "doi": "https://doi.org/10.21105/joss.00607",
+    "title": "eixport: An R package to export emissions to atmospheric models"
+  },
+  "https://github.com/kbarbary/sep": {
+    "doi": "https://doi.org/10.21105/joss.00058",
+    "title": "SEP: Source Extractor as a library"
+  },
+  "https://github.com/eclipse/golo-lang": {
+    "doi": "https://doi.org/10.21105/joss.00093",
+    "title": "Eclipse Golo"
+  },
+  "https://github.com/jdidion/xphyle": {
+    "doi": "https://doi.org/10.21105/joss.00255",
+    "title": "xphyle: Extraordinarily simple file handling"
+  },
+  "https://github.com/JonathanAMichaels/hebbRNN": {
+    "doi": "https://doi.org/10.21105/joss.00060",
+    "title": "hebbRNN: A Reward-Modulated Hebbian Learning Rule for Recurrent Neural Networks"
+  },
+  "http://github.com/simonvh/genomepy": {
+    "doi": "https://doi.org/10.21105/joss.00320",
+    "title": "genomepy: download genomes the easy way"
+  },
+  "https://github.com/ropensci/weathercan": {
+    "doi": "https://doi.org/10.21105/joss.00571",
+    "title": "weathercan: Download and format weather data from Environment and Climate Change Canada"
+  },
+  "https://github.com/ResidentMario/missingno": {
+    "doi": "https://doi.org/10.21105/joss.00547",
+    "title": "Missingno: a missing data visualization suite"
+  },
+  "https://github.com/scikit-learn-contrib/forest-confidence-interval": {
+    "doi": "https://doi.org/10.21105/joss.00124",
+    "title": "Confidence Intervals for Random Forests in Python"
+  },
+  "https://github.com/siravan/fib_tf": {
+    "doi": "https://doi.org/10.21105/joss.00719",
+    "title": "fib-tf: A TensorFlow-based Cardiac Electrophysiology Simulator"
+  },
+  "https://github.com/bradleyboehmke/KraljicMatrix": {
+    "doi": "https://doi.org/10.21105/joss.00170",
+    "title": "KraljicMatrix: An R package for implementing the Kraljic Matrix to strategically analyze a firm\u2019s purchasing portfolio"
+  },
+  "https://github.com/sjspielman/phyphy": {
+    "doi": "https://doi.org/10.21105/joss.00514",
+    "title": "phyphy: Python package for facilitating the execution and parsing of HyPhy standard analyses"
+  },
+  "https://github.com/ropensci/suppdata": {
+    "doi": "https://doi.org/10.21105/joss.00721",
+    "title": "Suppdata: Downloading Supplementary Data from Published Manuscripts"
+  },
+  "https://github.com/ropensci/cleanEHR": {
+    "doi": "https://doi.org/10.21105/joss.00513",
+    "title": "Critical care data processing tools"
+  },
+  "https://github.com/ropensci/GSODR": {
+    "doi": "https://doi.org/10.21105/joss.00177",
+    "title": "GSODR: Global Summary Daily Weather Data in R"
+  },
+  "https://github.com/jeff-goldsmith/vbvs.concurrent": {
+    "doi": "https://doi.org/10.21105/joss.00141",
+    "title": "vbvs.concurrent: Fitting Methods for the Functional Linear Concurrent Model"
+  },
+  "https://github.com/array-split/array_split": {
+    "doi": "https://doi.org/10.21105/joss.00373",
+    "title": "array_split: Multi-dimensional array partitioning"
+  },
+  "https://github.com/JNisk/AncesTrim": {
+    "doi": "https://doi.org/10.21105/joss.00179",
+    "title": "AncesTrim - a tool for trimming complex pedigrees"
+  },
+  "https://github.com/raamana/hiwenet": {
+    "doi": "https://doi.org/10.21105/joss.00380",
+    "title": "Histogram-weighted Networks for Feature Extraction, Connectivity and Advanced Analysis in Neuroscience"
+  },
+  "https://github.com/jakobbossek/mcMST": {
+    "doi": "https://doi.org/10.21105/joss.00374",
+    "title": "mcMST: A Toolbox for the Multi-Criteria Minimum Spanning Tree Problem"
+  },
+  "https://github.com/elabftw/elabftw": {
+    "doi": "https://doi.org/10.21105/joss.00146",
+    "title": "eLabFTW: An open source laboratory notebook for research labs"
+  },
+  "https://github.com/bmcfee/resampy": {
+    "doi": "https://doi.org/10.21105/joss.00125",
+    "title": "resampy: efficient sample rate conversion in Python"
+  },
+  "https://github.com/boisgera/bitstream": {
+    "doi": "https://doi.org/10.21105/joss.00541",
+    "title": "Bitstream \u2013 Binary Data for Humans"
+  },
+  "https://github.com/SMTG-UCL/galore": {
+    "doi": "https://doi.org/10.21105/joss.00773",
+    "title": "Galore: Broadening and weighting for simulation of photoelectron spectroscopy"
+  },
+  "https://github.com/WinVector/vtreat/": {
+    "doi": "https://doi.org/10.21105/joss.00584",
+    "title": "The vtreat R package: a statistically sound data processor for predictive modeling"
+  },
+  "https://github.com/PetoLau/TSrepr": {
+    "doi": "https://doi.org/10.21105/joss.00577",
+    "title": "TSrepr R package: Time Series Representations"
+  },
+  "https://github.com/vmtk/vmtk": {
+    "doi": "https://doi.org/10.21105/joss.00745",
+    "title": "The Vascular Modeling Toolkit: A Python Library for the Analysis of Tubular Structures in Medical Images"
+  },
+  "https://github.com/rreinecke/global-gradient-based-groundwater-model": {
+    "doi": "https://doi.org/10.21105/joss.00548",
+    "title": "G\u00b3M-f a global gradient-based groundwater modelling framwork"
+  },
+  "https://github.com/zedtaha/ivprobit-1.0": {
+    "doi": "https://doi.org/10.21105/joss.00523",
+    "title": "ivporbit:An R package to estimate the instrumental variables probit model"
+  },
+  "https://github.com/sepandhaghighi/pycm": {
+    "doi": "https://doi.org/10.21105/joss.00729",
+    "title": "PyCM: Multiclass confusion matrix library in Python"
+  },
+  "https://github.com/go-hep/hep": {
+    "doi": "https://doi.org/10.21105/joss.00372",
+    "title": "Go-HEP: libraries for High Energy Physics analyses in Go"
+  },
+  "https://github.com/HERA-Team/pyuvdata": {
+    "doi": "https://doi.org/10.21105/joss.00140",
+    "title": "pyuvdata: an interface for astronomical interferometeric datasets in python"
+  },
+  "https://github.com/migueldvb/cine": {
+    "doi": "https://doi.org/10.21105/joss.00182",
+    "title": "Cine: Line excitation by infrared fluorescence in cometary atmospheres"
+  },
+  "https://github.com/jeremyrcoyle/origami": {
+    "doi": "https://doi.org/10.21105/joss.00512",
+    "title": "origami: A Generalized Framework for Cross-Validation in R"
+  },
+  "https://github.com/arcaravaggi/remBoot": {
+    "doi": "https://doi.org/10.21105/joss.00176",
+    "title": "remBoot: An R package for Random Encounter Modelling"
+  },
+  "https://github.com/adrn/gala": {
+    "doi": "https://doi.org/10.21105/joss.00388",
+    "title": "Gala: A Python package for galactic dynamics"
+  },
+  "https://github.com/ArdiaD/RiskPortfolios": {
+    "doi": "https://doi.org/10.21105/joss.00171",
+    "title": "RiskPortfolios: Computation of Risk-Based Portfolios in R"
+  },
+  "https://github.com/BenjaK/scanstatistics": {
+    "doi": "https://doi.org/10.21105/joss.00515",
+    "title": "scanstatistics: space-time anomaly detection using scan statistics"
+  },
+  "https://github.com/lebebr01/highlightHTML": {
+    "doi": "https://doi.org/10.21105/joss.00185",
+    "title": "highlightHTML: CSS Formatting of R Markdown Documents"
+  },
+  "https://github.com/danilofreire/prisonbrief": {
+    "doi": "https://doi.org/10.21105/joss.00361",
+    "title": "prisonbrief: An R package that returns tidy data from the World Prison Brief website"
+  },
+  "https://github.com/KitwareMedical/SlicerITKUltrasound": {
+    "doi": "https://doi.org/10.21105/joss.00153",
+    "title": "SlicerITKUltrasound: A 3D Slicer extension for scan conversion of B-mode and next-generation ultrasound imaging modalities"
+  },
+  "https://github.com/ornl-ndav/django-remote-submission": {
+    "doi": "https://doi.org/10.21105/joss.00366",
+    "title": "Django Remote Submission"
+  },
+  "https://github.com/mathLab/PyDMD": {
+    "doi": "https://doi.org/10.21105/joss.00530",
+    "title": "PyDMD: Python Dynamic Mode Decomposition"
+  },
+  "https://github.com/ropensci/iheatmapr": {
+    "doi": "https://doi.org/10.21105/joss.00359",
+    "title": "iheatmapr: Interactive complex heatmaps in R"
+  },
+  "https://github.com/gibbonCode/GIBBON": {
+    "doi": "https://doi.org/10.21105/joss.00506",
+    "title": "GIBBON: The Geometry and Image-Based Bioengineering add-On"
+  },
+  "https://github.com/uglymol/uglymol": {
+    "doi": "https://doi.org/10.21105/joss.00350",
+    "title": "UglyMol: a WebGL macromolecular viewer focused on the electron density"
+  },
+  "https://github.com/adrn/schwimmbad": {
+    "doi": "https://doi.org/10.21105/joss.00357",
+    "title": "schwimmbad: A uniform interface to parallel processing pools in Python"
+  },
+  "https://github.com/bmcage/odes/": {
+    "doi": "https://doi.org/10.21105/joss.00165",
+    "title": "ODES: a high level interface to ODE and DAE solvers"
+  },
+  "https://github.com/scikit-learn-contrib/categorical-encoding": {
+    "doi": "https://doi.org/10.21105/joss.00501",
+    "title": "Category Encoders: a scikit-learn-contrib package of transformers for encoding categorical data"
+  },
+  "https://savannah.nongnu.org/projects/complot/": {
+    "doi": "https://doi.org/10.21105/joss.00368",
+    "title": "ComPlot: Comparison Plotter to visually evaluate ocean model simulations"
+  },
+  "https://github.com/konstantinstadler/country_converter": {
+    "doi": "https://doi.org/10.21105/joss.00332",
+    "title": "The country converter coco - a Python package for converting country names between different classification schemes"
+  },
+  "https://github.com/pboesu/rucrdtw": {
+    "doi": "https://doi.org/10.21105/joss.00100",
+    "title": "rucrdtw: Fast time series subsequence search in R"
+  },
+  "https://github.com/ViDA-NYU/reprozip": {
+    "doi": "https://doi.org/10.21105/joss.00107",
+    "title": "ReproZip: The Reproducibility Packer"
+  },
+  "https://github.com/FastNFT/FNFT": {
+    "doi": "https://doi.org/10.21105/joss.00597",
+    "title": "FNFT: A Software Library for Computing Nonlinear Fourier Transforms"
+  },
+  "https://github.com/cdcrabtree/plotrr": {
+    "doi": "https://doi.org/10.21105/joss.00190",
+    "title": "Plotrr: Functions for making visual exploratory data analysis with nested data easier."
+  },
+  "https://bitbucket.org/dghoshal/frieda": {
+    "doi": "https://doi.org/10.21105/joss.00164",
+    "title": "FRIEDA: Flexible Robust Intelligent Elastic Data Management Framework"
+  },
+  "https://github.com/dartsim/dart": {
+    "doi": "https://doi.org/10.21105/joss.00500",
+    "title": "DART: Dynamic Animation and Robotics Toolkit"
+  },
+  "https://github.com/xuanxu/nimbus": {
+    "doi": "https://doi.org/10.21105/joss.00351",
+    "title": "Nimbus: a Ruby gem to implement Random Forest algorithms in a genomic selection context"
+  },
+  "https://github.com/mattpitkin/psrqpy": {
+    "doi": "https://doi.org/10.21105/joss.00538",
+    "title": "psrqpy: a python interface for querying the ATNF pulsar catalogue"
+  },
+  "https://github.com/bjodah/pyneqsys": {
+    "doi": "https://doi.org/10.21105/joss.00531",
+    "title": "pyneqsys: Solve symbolically defined systems of non-linear equations numerically"
+  },
+  "https://github.com/pacificclimate/ClimDown": {
+    "doi": "https://doi.org/10.21105/joss.00360",
+    "title": "ClimDown: Climate Downscaling in R"
+  },
+  "https://github.com/biosustain/optlang": {
+    "doi": "https://doi.org/10.21105/joss.00139",
+    "title": "Optlang: An algebraic modeling language for mathematical optimization"
+  },
+  "https://github.com/casics/nostril": {
+    "doi": "https://doi.org/10.21105/joss.00596",
+    "title": "Nostril: A nonsense string evaluator written in Python"
+  },
+  "https://github.com/ropenscilabs/plater": {
+    "doi": "https://doi.org/10.21105/joss.00106",
+    "title": "plater: Read, Tidy, and Display Data from Microtiter Plates"
+  },
+  "https://github.com/ropensci/rtimicropem": {
+    "doi": "https://doi.org/10.21105/joss.00333",
+    "title": "rtimicropem: an R package supporting the analysis of RTI MicroPEM output files"
+  },
+  "https://github.com/bjodah/chempy": {
+    "doi": "https://doi.org/10.21105/joss.00565",
+    "title": "ChemPy: A package useful for chemistry written in Python"
+  },
+  "https://github.com/JuliaDynamics/DynamicalSystems.jl": {
+    "doi": "https://doi.org/10.21105/joss.00598",
+    "title": "DynamicalSystems.jl: A Julia software library for chaos and nonlinear dynamics"
+  },
+  "https://github.com/baccuslab/pyret": {
+    "doi": "https://doi.org/10.21105/joss.00137",
+    "title": "Pyret: A Python package for analysis of neurophysiology data"
+  },
+  "https://github.com/ropensci/osmdata": {
+    "doi": "https://doi.org/10.21105/joss.00305",
+    "title": "osmdata"
+  },
+  "https://www.github.com/singularityhub/sregistry": {
+    "doi": "https://doi.org/10.21105/joss.00426",
+    "title": "Singularity Registry: Open Source Registry for Singularity Images"
+  },
+  "http://github.com/sdwfrost/Gillespie.jl": {
+    "doi": "https://doi.org/10.21105/joss.00042",
+    "title": "Gillespie.jl: Stochastic Simulation Algorithm in Julia"
+  },
+  "https://github.com/samreay/ChainConsumer": {
+    "doi": "https://doi.org/10.21105/joss.00045",
+    "title": "ChainConsumer"
+  },
+  "https://github.com/NiaOrg/NiaPy": {
+    "doi": "https://doi.org/10.21105/joss.00613",
+    "title": "NiaPy: Python microframework for building nature-inspired algorithms"
+  },
+  "https://github.com/openclimatedata/pyhector/": {
+    "doi": "https://doi.org/10.21105/joss.00248",
+    "title": "pyhector: A Python interface for the simple climate model Hector"
+  },
+  "https://github.com/DannyArends/CTLmapping": {
+    "doi": "https://doi.org/10.21105/joss.00087",
+    "title": "Correlation Trait Loci (CTL) mapping: phenotype network inference subject to genotype"
+  },
+  "https://github.com/ropensci/hydroscoper": {
+    "doi": "https://doi.org/10.21105/joss.00625",
+    "title": "hydroscoper: R interface to the Greek National Data Bank for Hydrological and Meteorological Information"
+  },
+  "https://github.com/timfolsom/hei": {
+    "doi": "https://doi.org/10.21105/joss.00417",
+    "title": "hei: Calculate Healthy Eating Index (HEI) Scores"
+  },
+  "https://github.com/OSC/Open-OnDemand": {
+    "doi": "https://doi.org/10.21105/joss.00622",
+    "title": "Open OnDemand: A web-based client portal for HPC centers"
+  },
+  "https://github.com/sanger-pathogens/gff3toembl.git": {
+    "doi": "https://doi.org/10.21105/joss.00080",
+    "title": "GFF3toEMBL: Preparing annotated assemblies for submission to EMBL"
+  },
+  "https://github.com/rasbt/biopandas": {
+    "doi": "https://doi.org/10.21105/joss.00279",
+    "title": "BioPandas: Working with molecular structures in pandas DataFrames"
+  },
+  "https://github.com/PeteHaitch/GenomicTuples": {
+    "doi": "https://doi.org/10.21105/joss.00020",
+    "title": "Representation and Manipulation of Genomic Tuples in R"
+  },
+  "https://github.com/BIOS-IMASL/chesweet": {
+    "doi": "https://doi.org/10.21105/joss.00488",
+    "title": "CheSweet: An application to predict glycan\u2019s chemicals shifts"
+  },
+  "http://github.com/genomematt/xenomapper/": {
+    "doi": "https://doi.org/10.21105/joss.00018",
+    "title": "Xenomapper: Mapping reads in a mixed species context"
+  },
+  "https://github.com/gboeing/osmnx/": {
+    "doi": "https://doi.org/10.21105/joss.00215",
+    "title": "OSMnx: A Python package to work with graph-theoretic OpenStreetMap street networks"
+  },
+  "https://github.com/dib-lab/sourmash/": {
+    "doi": "https://doi.org/10.21105/joss.00027",
+    "title": "sourmash: a library for MinHash sketching of DNA"
+  },
+  "https://github.com/diana-hep/carl": {
+    "doi": "https://doi.org/10.21105/joss.00011",
+    "title": "carl: a likelihood-free inference toolbox"
+  },
+  "https://github.com/physicsdavid/mPicker": {
+    "doi": "https://doi.org/10.21105/joss.00475",
+    "title": "An easy-to-use p5.js 3D object picker for visual artists"
+  },
+  "https://github.com/ctjacobs/git-rdm": {
+    "doi": "https://doi.org/10.21105/joss.00029",
+    "title": "Git-RDM: A research data management plugin for the Git version control system"
+  },
+  "https://github.com/caseyyoungflesh/MCMCvis": {
+    "doi": "https://doi.org/10.21105/joss.00640",
+    "title": "MCMCvis: Tools to Visualize, Manipulate, and Summarize MCMC Output"
+  },
+  "https://github.com/SCIInstitute/PFEIFER": {
+    "doi": "https://doi.org/10.21105/joss.00472",
+    "title": "PFEIFER: Preprocessing Framework for Electrograms Intermittently Fiducialized from Experimental Recordings"
+  },
+  "https://github.com/harpolea/r3d2": {
+    "doi": "https://doi.org/10.21105/joss.00016",
+    "title": "R3D2: Relativistic Reactive Riemann problem solver for Deflagrations and Detonations"
+  },
+  "https://bitbucket.org/meg/cbcbeat": {
+    "doi": "https://doi.org/10.21105/joss.00224",
+    "title": "cbcbeat: an adjoint-enabled framework for computational cardiac electrophysiology"
+  },
+  "https://github.com/ropenscilabs/ezknitr": {
+    "doi": "https://doi.org/10.21105/joss.00075",
+    "title": "ezknitr: Avoid the Typical Working Directory Pain When Using 'knitr'"
+  },
+  "https://github.com/bjmorgan/lattice_mc": {
+    "doi": "https://doi.org/10.21105/joss.00247",
+    "title": "lattice_mc: A Python Lattice-Gas Monte Carlo Module"
+  },
+  "https://github.com/ropensci/bomrang": {
+    "doi": "https://doi.org/10.21105/joss.00411",
+    "title": "bomrang: Fetch Australian Government Bureau of Meteorology Data in R"
+  },
+  "https://github.com/poissonconsulting/checkr": {
+    "doi": "https://doi.org/10.21105/joss.00624",
+    "title": "checkr: An R package for Assertive Programming"
+  },
+  "https://github.com/ElektraInitiative/libelektra": {
+    "doi": "https://doi.org/10.21105/joss.00044",
+    "title": "Elektra: universal framework to access configuration parameters"
+  },
+  "https://bitbucket.org/cardosan/brightway2-temporalis": {
+    "doi": "https://doi.org/10.21105/joss.00612",
+    "title": "Temporalis: an open source software for dynamic LCA"
+  },
+  "https://github.com/bede/kindel": {
+    "doi": "https://doi.org/10.21105/joss.00282",
+    "title": "Kindel: indel-aware consensus for nucleotide sequence alignments"
+  },
+  "https://github.com/JuliaNLSolvers/Optim.jl": {
+    "doi": "https://doi.org/10.21105/joss.00615",
+    "title": "Optim: A mathematical optimization package for Julia"
+  },
+  "https://github.com/msmbuilder/mdentropy/": {
+    "doi": "https://doi.org/10.21105/joss.00427",
+    "title": "MDEntropy: Information-Theoretic Analyses for Molecular Dynamics"
+  },
+  "https://github.com/barbagroup/pygbe": {
+    "doi": "https://doi.org/10.21105/joss.00306",
+    "title": "PyGBe-LSPR: Python and GPU Boundary-integral solver for electrostatics"
+  },
+  "https://github.com/bebatut/enasearch": {
+    "doi": "https://doi.org/10.21105/joss.00418",
+    "title": "ENASearch: A Python library for interacting with ENA's API"
+  },
+  "https://github.com/SimonGreenhill/phylogemetric": {
+    "doi": "https://doi.org/10.21105/joss.00028",
+    "title": "Phylogemetric: A Python library for calculating phylogenetic network metrics"
+  },
+  "https://github.com/xBimTeam/XbimEssentials": {
+    "doi": "https://doi.org/10.21105/joss.00473",
+    "title": "Xbim.Essentials: a library for interoperable building information applications"
+  },
+  "https://github.com/applicationskeleton/Skeleton": {
+    "doi": "https://doi.org/10.21105/joss.00017",
+    "title": "Application Skeleton: Generating Synthetic Applications for Infrastructure Research"
+  },
+  "https://github.com/dgerosa/filltex": {
+    "doi": "https://doi.org/10.21105/joss.00222",
+    "title": "filltex: Automatic queries to ADS and INSPIRE databases to fill LaTex bibliography"
+  },
+  "https://github.com/howardjp/phonics": {
+    "doi": "https://doi.org/10.21105/joss.00480",
+    "title": "Phonetic Algorithms in R"
+  },
+  "https://github.com/CoreRobotics/CoreRobotics": {
+    "doi": "https://doi.org/10.21105/joss.00489",
+    "title": "CoreRobotics: An object-oriented C++ library with cross-language wrappers for cross-platform robot control"
+  },
+  "https://github.com/conradsnicta/armadillo/": {
+    "doi": "https://doi.org/10.21105/joss.00026",
+    "title": "Armadillo: a template-based C++ library for linear algebra"
+  },
+  "https://github.com/mikldk/malan": {
+    "doi": "https://doi.org/10.21105/joss.00684",
+    "title": "malan: MAle Lineage ANalysis"
+  },
+  "https://github.com/ellessenne/comorbidity": {
+    "doi": "https://doi.org/10.21105/joss.00648",
+    "title": "comorbidity: An R package for computing comorbidity scores"
+  },
+  "https://github.com/jtauber/pyuca": {
+    "doi": "https://doi.org/10.21105/joss.00021",
+    "title": "pyuca: a Python implementation of the Unicode Collation Algorithm"
+  },
+  "https://github.com/TJKessler/ECNet": {
+    "doi": "https://doi.org/10.21105/joss.00401",
+    "title": "ECNet: Large scale machine learning projects for fuel property prediction"
+  },
+  "https://github.com/ropensci/ijtiff": {
+    "doi": "https://doi.org/10.21105/joss.00633",
+    "title": "ijtiff: An R package providing TIFF I/O for ImageJ users"
+  },
+  "https://github.com/MonashBioinformaticsPlatform/varistran": {
+    "doi": "https://doi.org/10.21105/joss.00257",
+    "title": "Varistran: Anscombe's variance stabilizing transformation for RNA-seq gene expression data"
+  },
+  "https://github.com/openeventdata/mordecai": {
+    "doi": "https://doi.org/10.21105/joss.00091",
+    "title": "Mordecai: Full Text Geoparsing and Event Geocoding"
+  },
+  "https://github.com/Dih5/xpecgen": {
+    "doi": "https://doi.org/10.21105/joss.00062",
+    "title": "xpecgen: A program to calculate x-ray spectra generated in tungsten anodes"
+  },
+  "https://github.com/gauteh/ibcao_py": {
+    "doi": "https://doi.org/10.21105/joss.00250",
+    "title": "IBCAO_py: A matplotlib library for using the International Bathymetric Chart of the Arctic Ocean with cartopy and matplotlib"
+  },
+  "https://github.com/neuropsychology/Neuropsydia.py/": {
+    "doi": "https://doi.org/10.21105/joss.00259",
+    "title": "Neuropsydia.py: A Python Module for Creating Experiments, Tasks and Questionnaires"
+  },
+  "https://github.com/FluxML/Flux.jl": {
+    "doi": "https://doi.org/10.21105/joss.00602",
+    "title": "Flux: Elegant machine learning with Julia"
+  },
+  "https://github.com/fakenmc/micompm": {
+    "doi": "https://doi.org/10.21105/joss.00430",
+    "title": "micompm: A MATLAB/Octave toolbox for multivariate independent comparison of observations"
+  },
+  "https://github.com/Groupe-ElementR/cartography": {
+    "doi": "https://doi.org/10.21105/joss.00054",
+    "title": "cartography: Create and Integrate Maps in your R Workflow"
+  },
+  "https://github.com/virgesmith/UKCensusAPI": {
+    "doi": "https://doi.org/10.21105/joss.00408",
+    "title": "UKCensusAPI: python and R interfaces to the nomisweb UK census data API"
+  },
+  "https://github.com/rodrigovrgs/cazy-parser": {
+    "doi": "https://doi.org/10.21105/joss.00053",
+    "title": "CAZy-parser a way to extract information from the Carbohydrate-Active enZYmes Database"
+  },
+  "https://github.com/iljah/hdintegrator": {
+    "doi": "https://doi.org/10.21105/joss.00437",
+    "title": "High-Dimensional Integrator"
+  },
+  "https://github.com/nhejazi/biotmle": {
+    "doi": "https://doi.org/10.21105/joss.00295",
+    "title": "biotmle: Targeted Learning for Biomarker Discovery"
+  },
+  "https://github.com/domoritz/label_generator": {
+    "doi": "https://doi.org/10.21105/joss.00235",
+    "title": "Text detection in screen images with a Convolutional Neural Network"
+  },
+  "https://github.com/databio/simpleCache": {
+    "doi": "https://doi.org/10.21105/joss.00463",
+    "title": "simpleCache: R caching for reproducible, distributed, large-scale projects"
+  },
+  "https://github.com/warrenlr/xmatchview": {
+    "doi": "https://doi.org/10.21105/joss.00497",
+    "title": "Visualizing genome synteny with xmatchview"
+  },
+  "https://github.com/DoSOCSv2/DoSOCSv2": {
+    "doi": "https://doi.org/10.21105/joss.00038",
+    "title": "DoSOCS: A System for SPDX 2.0 Document Creation and Storage"
+  },
+  "https://github.com/bjodah/pyodesys": {
+    "doi": "https://doi.org/10.21105/joss.00490",
+    "title": "pyodesys: Straightforward numerical integration of ODE systems from Python"
+  },
+  "https://github.com/chloroExtractorTeam/chloroExtractor": {
+    "doi": "https://doi.org/10.21105/joss.00464",
+    "title": "chloroExtractor: extraction and assembly of the chloroplast genome from whole genome shotgun data"
+  },
+  "https://github.com/kdmurray91/libqcpp": {
+    "doi": "https://doi.org/10.21105/joss.00232",
+    "title": "libqcpp: A C++14 sequence quality control library"
+  },
+  "https://github.com/mpastell/weave.jl": {
+    "doi": "https://doi.org/10.21105/joss.00204",
+    "title": "Weave.jl: Scientific Reports Using Julia"
+  },
+  "https://github.com/michaellevy/gwdegree": {
+    "doi": "https://doi.org/10.21105/joss.00036",
+    "title": "gwdegree: Improving interpretation of geometrically-weighted degree estimates in exponential random graph models"
+  },
+  "https://github.com/jordibc/mapelia": {
+    "doi": "https://doi.org/10.21105/joss.00660",
+    "title": "Mapelia and friends: create 3D models from maps"
+  },
+  "https://github.com/cMadan/prism": {
+    "doi": "https://doi.org/10.21105/joss.00031",
+    "title": "Prism: Multiple spline regression with regularization, dimensionality reduction, and feature selection"
+  },
+  "https://github.com/cvitolo/fuse": {
+    "doi": "https://doi.org/10.21105/joss.00052",
+    "title": "fuse: An R package for ensemble Hydrological Modelling"
+  },
+  "https://github.com/rorynolan/filesstrings": {
+    "doi": "https://doi.org/10.21105/joss.00260",
+    "title": "filesstrings: An R package for file and string manipulation"
+  },
+  "https://github.com/Edinburgh-Imaging/Masks2Metrics": {
+    "doi": "https://doi.org/10.21105/joss.00436",
+    "title": "Masks2Metrics (M2M): A Matlab Toolbox for Gold Standard Morphometrics"
+  },
+  "https://github.com/andim/noisyopt": {
+    "doi": "https://doi.org/10.21105/joss.00258",
+    "title": "Noisyopt: A Python library for optimizing noisy functions."
+  },
+  "https://github.com/hawk31/pyGPGO": {
+    "doi": "https://doi.org/10.21105/joss.00431",
+    "title": "pyGPGO: Bayesian Optimization for Python"
+  },
+  "https://github.com/dhermes/bezier": {
+    "doi": "https://doi.org/10.21105/joss.00267",
+    "title": "Helper for B\u00e9zier Curves, Triangles, and Higher Order Objects"
+  },
+  "https://github.com/eddelbuettel/rcppcnpy": {
+    "doi": "https://doi.org/10.21105/joss.00055",
+    "title": "RcppCNPy: Read-Write Support for NumPy Files in R"
+  },
+  "https://github.com/ben-aaron188/netanos": {
+    "doi": "https://doi.org/10.21105/joss.00293",
+    "title": "Web-based text anonymization with Node.js: Introducing NETANOS (Named entity-based Text Anonymization for Open Science)"
+  },
+  "http://mutabit.com/repos.fossil/grafoscopio/": {
+    "doi": "https://doi.org/10.21105/joss.00251",
+    "title": "Grafoscopio: A moldable tool for literate computing and reproducible research"
+  },
+  "https://github.com/carlganz/rintrojs": {
+    "doi": "https://doi.org/10.21105/joss.00063",
+    "title": "rintrojs: A Wrapper for the Intro.js Library"
+  },
+  "https://github.com/ornlneutronimaging/ImagingReso": {
+    "doi": "https://doi.org/10.21105/joss.00407",
+    "title": "ImagingReso: A Tool for Neutron Resonance Imaging"
+  },
+  "https://github.com/SALib/SALib": {
+    "doi": "https://doi.org/10.21105/joss.00097",
+    "title": "SALib: An open-source Python library for Sensitivity Analysis"
+  },
+  "https://github.com/BenLauwens/ResumableFunctions.jl.git": {
+    "doi": "https://doi.org/10.21105/joss.00400",
+    "title": "ResumableFunctions: C# sharp style generators for Julia."
+  },
+  "https://github.com/kakearney/ecopath_matlab-pkg": {
+    "doi": "https://doi.org/10.21105/joss.00064",
+    "title": "ecopath_matlab: A Matlab-based implementation of the Ecopath food web algorithm"
+  },
+  "https://github.com/howardjp/bumblebees": {
+    "doi": "https://doi.org/10.21105/joss.00256",
+    "title": "Virtual Bumblebees Artificial Life Simulation"
+  },
+  "https://github.com/juliohm/GeoStats.jl": {
+    "doi": "https://doi.org/10.21105/joss.00692",
+    "title": "GeoStats.jl \u2013 High-performance geostatistics in Julia"
+  },
+  "https://github.com/ropensci/codemetar": {
+    "doi": "https://doi.org/10.21105/joss.00454",
+    "title": "Generating CodeMeta Metadata for R Packages"
+  },
+  "https://github.com/Auburngrads/learningCurve": {
+    "doi": "https://doi.org/10.21105/joss.00202",
+    "title": "learningCurve: An implementation of Crawford's and Wright's learning curve production functions"
+  },
+  "https://github.com/brian-rose/climlab/": {
+    "doi": "https://doi.org/10.21105/joss.00659",
+    "title": "CLIMLAB: a Python toolkit for interactive, process-oriented climate modeling"
+  },
+  "https://github.com/juliasilge/tidytext": {
+    "doi": "https://doi.org/10.21105/joss.00037",
+    "title": "tidytext: Text Mining and Analysis Using Tidy Data Principles in R"
+  },
+  "https://github.com/scikit-learn-contrib/hdbscan": {
+    "doi": "https://doi.org/10.21105/joss.00205",
+    "title": "hdbscan: Hierarchical density based clustering"
+  },
+  "https://github.com/mathLab/EZyRB": {
+    "doi": "https://doi.org/10.21105/joss.00661",
+    "title": "EZyRB: Easy Reduced Basis method"
+  },
+  "https://github.com/terrytangyuan/autoplotly": {
+    "doi": "https://doi.org/10.21105/joss.00657",
+    "title": "autoplotly: An R package for automatic generation of interactive visualizations for statistical results"
+  },
+  "https://github.com/dseuss/mpnum": {
+    "doi": "https://doi.org/10.21105/joss.00465",
+    "title": "mpnum: A matrix product representation library for Python"
+  },
+  "https://github.com/biogo/ncbi": {
+    "doi": "https://doi.org/10.21105/joss.00234",
+    "title": "b\u00edogo/ncbi: interfaces to NCBI services for the Go language"
+  },
+  "https://github.com/caley/OpenEPSim": {
+    "doi": "https://doi.org/10.21105/joss.00650",
+    "title": "OpenEPSim: An Open Exclusion Process Simulation Tool"
+  },
+  "https://github.com/jakobbossek/grapherator": {
+    "doi": "https://doi.org/10.21105/joss.00528",
+    "title": "grapherator: A Modular Multi-Step Graph Generator"
+  },
+  "https://github.com/fstrozzi/bioruby-pipengine": {
+    "doi": "https://doi.org/10.21105/joss.00341",
+    "title": "Pipengine: an ultra light YAML-based pipeline execution engine"
+  },
+  "https://github.com/kortschak/arrgh": {
+    "doi": "https://doi.org/10.21105/joss.00517",
+    "title": "arrgh: a Go interface to the OpenCPU R server system"
+  },
+  "https://github.com/cokelaer/spectrum": {
+    "doi": "https://doi.org/10.21105/joss.00348",
+    "title": "'Spectrum': Spectral Analysis in Python"
+  },
+  "https://www.github.com/expfactory/expfactory": {
+    "doi": "https://doi.org/10.21105/joss.00521",
+    "title": "The Experiment Factory: Reproducible Experiment Containers"
+  },
+  "https://github.com/sgrieve/spatial_efd": {
+    "doi": "https://doi.org/10.21105/joss.00189",
+    "title": "spatial-efd: A spatial-aware implementation of elliptical Fourier analysis"
+  },
+  "https://github.com/bjmorgan/bsym": {
+    "doi": "https://doi.org/10.21105/joss.00370",
+    "title": "bsym: A basic symmetry module"
+  },
+  "https://github.com/camillescott/shmlast": {
+    "doi": "https://doi.org/10.21105/joss.00142",
+    "title": "shmlast: An improved implementation of Conditional Reciprocal Best Hits with LAST and Python"
+  },
+  "https://github.com/mattbellis/hmis": {
+    "doi": "https://doi.org/10.21105/joss.00384",
+    "title": "hmis: A python tool to visualize and analyze HMIS data"
+  },
+  "https://github.com/warrenlr/RAILS": {
+    "doi": "https://doi.org/10.21105/joss.00116",
+    "title": "RAILS and Cobbler: Scaffolding and automated finishing of draft genomes using long DNA sequences"
+  },
+  "https://github.com/h5preserve/h5preserve": {
+    "doi": "https://doi.org/10.21105/joss.00581",
+    "title": "h5preserve: Thin wrapper around h5py, inspired by camel"
+  },
+  "https://github.com/genomematt/survivalvolume": {
+    "doi": "https://doi.org/10.21105/joss.00111",
+    "title": "SurvivalVolume: interactive volume threshold survival graphs"
+  },
+  "https://github.com/pynucastro/pynucastro": {
+    "doi": "https://doi.org/10.21105/joss.00588",
+    "title": "pynucastro: an interface to nuclear reaction rates and code generator for reaction network equations"
+  },
+  "https://github.com/sanger-pathogens/mlst_check": {
+    "doi": "https://doi.org/10.21105/joss.00118",
+    "title": "Multilocus sequence typing by blast from de novo assemblies against PubMLST"
+  },
+  "https://github.com/msmexplorer/msmexplorer": {
+    "doi": "https://doi.org/10.21105/joss.00188",
+    "title": "MSMExplorer: Data Visualizations for Biomolecular Dynamics"
+  },
+  "https://github.com/GabrieleRovigatti/prodest": {
+    "doi": "https://doi.org/10.21105/joss.00371",
+    "title": "Production Function Estimation in R: The prodest Package"
+  },
+  "https://github.com/nterhoeven/reper": {
+    "doi": "https://doi.org/10.21105/joss.00527",
+    "title": "reper: Genome-wide identification, classification and quantification of repetitive elements without an assembled genome"
+  },
+  "https://github.com/raamana/pyradigm": {
+    "doi": "https://doi.org/10.21105/joss.00382",
+    "title": "Python class defining a machine learning dataset ensuring key-based correspondence and maintaining integrity"
+  },
+  "https://github.com/ashleefv/ACEInhibPKPD": {
+    "doi": "https://doi.org/10.21105/joss.00340",
+    "title": "ACEInhibPKPD: An open-source MATLAB app for a pharmacokinetic/pharmacodynamic model of ACE inhibition"
+  },
+  "https://github.com/keblu/nse": {
+    "doi": "https://doi.org/10.21105/joss.00172",
+    "title": "nse: Computation of Numerical Standard Errors in R"
+  },
+  "https://github.com/openclimatedata/pymagicc": {
+    "doi": "https://doi.org/10.21105/joss.00516",
+    "title": "Pymagicc: A Python wrapper for the simple climate model MAGICC"
+  },
+  "https://github.com/ropensci/tidyhydat": {
+    "doi": "https://doi.org/10.21105/joss.00511",
+    "title": "tidyhydat: Extract and Tidy Canadian Hydrometric Data"
+  },
+  "https://github.com/mikldk/disclapmix": {
+    "doi": "https://doi.org/10.21105/joss.00748",
+    "title": "Discrete Laplace mixture model with applications in forensic genetics"
+  },
+  "https://github.com/ropensci/USAboundaries": {
+    "doi": "https://doi.org/10.21105/joss.00314",
+    "title": "USAboundaries: Historical and Contemporary Boundaries of the United States of America"
+  },
+  "https://github.com/JoshKarpel/idesolver": {
+    "doi": "https://doi.org/10.21105/joss.00542",
+    "title": "IDESolver: a general purpose integro-differential equation solver"
+  },
+  "https://github.com/sewardlee337/finreportr": {
+    "doi": "https://doi.org/10.21105/joss.00119",
+    "title": "finreportr: Financial Data from U.S. Securities and Exchange Commission"
+  },
+  "https://github.com/scivision/pymap3d": {
+    "doi": "https://doi.org/10.21105/joss.00580",
+    "title": "PyMap3D: 3-D coordinate conversions for terrestrial and geospace environments"
+  },
+  "https://github.com/jrbourbeau/pyunfold": {
+    "doi": "https://doi.org/10.21105/joss.00741",
+    "title": "PyUnfold: A Python package for iterative unfolding"
+  },
+  "https://github.com/mwmclean/RefManageR": {
+    "doi": "https://doi.org/10.21105/joss.00338",
+    "title": "RefManageR: Import and Manage BibTeX and BibLaTeX References in R"
+  },
+  "https://github.com/mllg/batchtools": {
+    "doi": "https://doi.org/10.21105/joss.00135",
+    "title": "batchtools: Tools for R to work on batch systems"
+  },
+  "https://github.com/scikit-hep/root_numpy": {
+    "doi": "https://doi.org/10.21105/joss.00307",
+    "title": "root_numpy: The interface between ROOT and NumPy"
+  },
+  "https://github.com/usnistgov/ChebTools": {
+    "doi": "https://doi.org/10.21105/joss.00569",
+    "title": "ChebTools: C++11 (and Python) tools for working with Chebyshev expansions"
+  },
+  "https://github.com/csu-hmc/opty": {
+    "doi": "https://doi.org/10.21105/joss.00300",
+    "title": "opty: Software for trajectory optimization and parameter identification using direct collocation"
+  },
+  "https://github.com/Molmed/checkQC": {
+    "doi": "https://doi.org/10.21105/joss.00556",
+    "title": "CheckQC: Quick quality control of Illumina sequencing runs"
+  },
+  "https://github.com/barbagroup/PetIBM": {
+    "doi": "https://doi.org/10.21105/joss.00558",
+    "title": "PetIBM: toolbox and applications of the immersed-boundary method on distributed-memory architectures"
+  },
+  "https://github.com/iferres/phylen": {
+    "doi": "https://doi.org/10.21105/joss.00593",
+    "title": "Phylen: automatic phylogenetic reconstruction using the EggNOG database"
+  },
+  "https://github.com/kdesimone/popeye": {
+    "doi": "https://doi.org/10.21105/joss.00103",
+    "title": "popeye: a population receptive field estimation tool"
+  },
+  "https://github.com/sepandhaghighi/pyrgg": {
+    "doi": "https://doi.org/10.21105/joss.00331",
+    "title": "Pyrgg: Python Random Graph Generator"
+  },
+  "https://github.com/PsyChiLin/EFAshiny": {
+    "doi": "https://doi.org/10.21105/joss.00567",
+    "title": "EFAshiny: An User-Friendly Shiny Application for Exploratory Factor Analysis"
+  },
+  "https://github.com/conradsnicta/armadillo-gmm": {
+    "doi": "https://doi.org/10.21105/joss.00365",
+    "title": "gmm_diag and gmm_full: C++ classes for multi-threaded Gaussian mixture models and Expectation-Maximisation"
+  },
+  "https://github.com/ropensci/EndoMineR": {
+    "doi": "https://doi.org/10.21105/joss.00701",
+    "title": "EndoMineR for the extraction of endoscopic and associated pathology data from medical reports"
+  },
+  "https://github.com/biogo/hts": {
+    "doi": "https://doi.org/10.21105/joss.00168",
+    "title": "b\u00edogo/hts: high throughput sequence handling for the Go language"
+  },
+  "https://github.com/kc-lab/dms2dfe": {
+    "doi": "https://doi.org/10.21105/joss.00362",
+    "title": "dms2dfe: Comprehensive Workflow for Analysis of Deep Mutational Scanning Data"
+  },
+  "https://github.com/simupy/simupy": {
+    "doi": "https://doi.org/10.21105/joss.00396",
+    "title": "SimuPy: A Python framework for modeling and simulating dynamical systems"
+  },
+  "https://github.com/Effective-Quadratures/Effective-Quadratures": {
+    "doi": "https://doi.org/10.21105/joss.00166",
+    "title": "Effective-Quadratures (EQ): Polynomials for Computational Engineering Studies"
+  },
+  "https://github.com/SebastianoF/bruker2nifti": {
+    "doi": "https://doi.org/10.21105/joss.00354",
+    "title": "Bruker2nifti: Magnetic Resonance Images converter from Bruker ParaVision to Nifti format"
+  },
+  "https://github.com/onecodex/finch-rs": {
+    "doi": "https://doi.org/10.21105/joss.00505",
+    "title": "Finch: a tool adding dynamic abundance filtering to genomic MinHashing"
+  },
+  "https://github.com/kweis/acronym": {
+    "doi": "https://doi.org/10.21105/joss.00102",
+    "title": "acronym: An Automatic Reduction Pipeline for Astronomical Images"
+  },
+  "https://github.com/edoddridge/aronnax": {
+    "doi": "https://doi.org/10.21105/joss.00592",
+    "title": "Aronnax: An idealised isopycnal ocean model"
+  },
+  "https://github.com/piermorel/gramm": {
+    "doi": "https://doi.org/10.21105/joss.00568",
+    "title": "Gramm: grammar of graphics plotting in Matlab"
+  },
+  "https://github.com/openeventdata/petrarch2": {
+    "doi": "https://doi.org/10.21105/joss.00133",
+    "title": "PETRARCH2: Another Event Coding Program"
+  },
+  "https://github.com/barbagroup/cuIBM": {
+    "doi": "https://doi.org/10.21105/joss.00301",
+    "title": "cuIBM: a GPU-based immersed boundary method code"
+  },
+  "https://github.com/HajkD/philentropy": {
+    "doi": "https://doi.org/10.21105/joss.00765",
+    "title": "Philentropy: Information Theory and Distance Quantification with R"
+  },
+  "https://github.com/julia-wrobel/registr": {
+    "doi": "https://doi.org/10.21105/joss.00557",
+    "title": "register: Registration for Exponential Family Functional Data"
+  },
+  "https://github.com/pjamesjoyce/lcopt": {
+    "doi": "https://doi.org/10.21105/joss.00339",
+    "title": "Lcopt - An interactive tool for creating fully parameterised Life Cycle Assessment (LCA) foreground models"
+  },
+  "https://github.com/ropensci/drake": {
+    "doi": "https://doi.org/10.21105/joss.00550",
+    "title": "The drake R package: a pipeline toolkit for reproducibility and high-performance computing"
+  },
+  "https://github.com/sequana/sequana/": {
+    "doi": "https://doi.org/10.21105/joss.00352",
+    "title": "'Sequana': a Set of Snakemake NGS pipelines"
+  },
+  "https://github.com/ropensci/lawn": {
+    "doi": "https://doi.org/10.21105/joss.00194",
+    "title": "lawn: An R client for the Turf Javascript Library for Geospatial Analysis"
+  },
+  "https://github.com/ropensci/visdat": {
+    "doi": "https://doi.org/10.21105/joss.00355",
+    "title": "visdat: Visualising Whole Data Frames"
+  },
+  "https://github.com/biogo/biogo": {
+    "doi": "https://doi.org/10.21105/joss.00167",
+    "title": "b\u00edogo: a simple high-performance bioinformatics toolkit for the Go language"
+  },
+  "https://github.com/stephenturner/qqman/": {
+    "doi": "https://doi.org/10.21105/joss.00731",
+    "title": "qqman: an R package for visualizing GWAS results using Q-Q and manhattan plots"
+  },
+  "https://github.com/octapps/octapps": {
+    "doi": "https://doi.org/10.21105/joss.00707",
+    "title": "OctApps: a library of Octave functions for continuous gravitational-wave data analysis"
+  },
+  "https://github.com/Chilipp/psyplot.git": {
+    "doi": "https://doi.org/10.21105/joss.00363",
+    "title": "The psyplot interactive visualization framework"
+  },
+  "https://github.com/kactus2/kactus2dev": {
+    "doi": "https://doi.org/10.21105/joss.00151",
+    "title": "Kactus2: A graphical EDA tool built on the IP-XACT standard"
+  },
+  "https://github.com/dit/dit": {
+    "doi": "https://doi.org/10.21105/joss.00738",
+    "title": "dit: a Python package for discrete information theory"
+  },
+  "https://github.com/abntex/limarka": {
+    "doi": "https://doi.org/10.21105/joss.00169",
+    "title": "Limarka: making possible Brazilian students writing dissertation and thesis with Markdown"
+  },
+  "https://github.com/sns-chops/multiphonon": {
+    "doi": "https://doi.org/10.21105/joss.00440",
+    "title": "Multiphonon: Phonon Density of States tools for Inelastic Neutron Scattering Powder Data"
+  },
+  "https://github.com/dfm/corner.py": {
+    "doi": "https://doi.org/10.21105/joss.00024",
+    "title": "corner.py: Scatterplot matrices in Python"
+  },
+  "https://github.com/oliviergimenez/GammaGompertzCR": {
+    "doi": "https://doi.org/10.21105/joss.00216",
+    "title": "Fitting a Gamma-Gompertz survival model to capture-recapture data collected on free-ranging animal populations"
+  },
+  "https://github.com/phenoscape/scowl": {
+    "doi": "https://doi.org/10.21105/joss.00023",
+    "title": "Scowl: a Scala DSL for programming with the OWL API"
+  },
+  "https://github.com/ropensci/bikedata": {
+    "doi": "https://doi.org/10.21105/joss.00471",
+    "title": "bikedata"
+  },
+  "http://github.com/jakevdp/mst_clustering": {
+    "doi": "https://doi.org/10.21105/joss.00012",
+    "title": "mst_clustering: Clustering via Euclidean Minimum Spanning Trees"
+  },
+  "https://github.com/barbagroup/AmgXWrapper": {
+    "doi": "https://doi.org/10.21105/joss.00280",
+    "title": "AmgXWrapper: An interface between PETSc and the NVIDIA AmgX library"
+  },
+  "https://github.com/SebastianBocquet/pygtc": {
+    "doi": "https://doi.org/10.21105/joss.00046",
+    "title": "pygtc: beautiful parameter covariance plots (aka. Giant Triangle Confusograms)"
+  },
+  "https://github.com/paulcon/active_subspaces": {
+    "doi": "https://doi.org/10.21105/joss.00079",
+    "title": "Python Active-subspaces Utility Library"
+  },
+  "https://sourceforge.net/p/mcapl/mcapl_code/ci/master/tree/": {
+    "doi": "https://doi.org/10.21105/joss.00617",
+    "title": "The MCAPL Framework including the Agent Infrastructure Layer an Agent Java Pathfinder"
+  },
+  "https://github.com/paulgovan/BayesianNetwork": {
+    "doi": "https://doi.org/10.21105/joss.00425",
+    "title": "BayesianNetwork: Interactive Bayesian Network Modeling and Analysis"
+  },
+  "https://github.com/sbogutzky/PsychoPhysioPipeline": {
+    "doi": "https://doi.org/10.21105/joss.00041",
+    "title": "PsychoPhysioPipeline: A Processing and Analysis Pipeline for Psychophysiological Research"
+  },
+  "https://github.com/haythamfayek/MatDL": {
+    "doi": "https://doi.org/10.21105/joss.00413",
+    "title": "MatDL: A Lightweight Deep Learning Library in MATLAB"
+  },
+  "https://github.com/roguephysicist/SHGYield": {
+    "doi": "https://doi.org/10.21105/joss.00242",
+    "title": "SHGYield"
+  },
+  "https://github.com/TACC/launcher": {
+    "doi": "https://doi.org/10.21105/joss.00289",
+    "title": "Launcher: A simple tool for executing high throughput computing workloads"
+  },
+  "http://www.univ-orleans.fr/mapmo/soft/FullSWOF/": {
+    "doi": "https://doi.org/10.21105/joss.00448",
+    "title": "FullSWOF: Full Shallow-Water equations for Overland Flow"
+  },
+  "https://github.com/luk87/YoungTab": {
+    "doi": "https://doi.org/10.21105/joss.00221",
+    "title": "YoungTab"
+  },
+  "https://github.com/neuropsychology/psycho.R": {
+    "doi": "https://doi.org/10.21105/joss.00470",
+    "title": "The psycho Package: an Efficient and Publishing-Oriented Workflow for Psychological Science"
+  },
+  "https://github.com/achennu/microbenthos": {
+    "doi": "https://doi.org/10.21105/joss.00674",
+    "title": "MicroBenthos: a modeling framework for microbial benthic ecology"
+  },
+  "https://github.com/UniNE-CHYN/hytool": {
+    "doi": "https://doi.org/10.21105/joss.00441",
+    "title": "Hytool: an open source matlab toolbox for the interpretation of hydraulic tests using analytical solutions"
+  },
+  "https://github.com/ITWM-TVFS/Ensight4Matlab": {
+    "doi": "https://doi.org/10.21105/joss.00217",
+    "title": "Ensight4Matlab: read, process, and write files in EnSight\u00ae Gold format from C++ or MATLAB\u00ae"
+  },
+  "https://github.com/genenetwork/genenetwork2": {
+    "doi": "https://doi.org/10.21105/joss.00025",
+    "title": "GeneNetwork: framework for web-based genetics"
+  },
+  "https://github.com/sanger-pathogens/saffrontree": {
+    "doi": "https://doi.org/10.21105/joss.00243",
+    "title": "SaffronTree: Fast, reference-free pseudo-phylogenomic trees from reads or contigs."
+  },
+  "https://github.com/bihealth/vcfpy": {
+    "doi": "https://doi.org/10.21105/joss.00085",
+    "title": "VCFPy: a Python 3 library with good support for both reading and writing VCF"
+  },
+  "https://github.com/chtheodoro/Habfuzz": {
+    "doi": "https://doi.org/10.21105/joss.00082",
+    "title": "Habfuzz: A tool to calculate the instream hydraulic habitat suitability using fuzzy logic and fuzzy Bayesian inference"
+  },
+  "https://github.com/cmutel/pandarus": {
+    "doi": "https://doi.org/10.21105/joss.00244",
+    "title": "Pandarus: GIS toolkit for regionalized life cycle assessment"
+  },
+  "https://github.com/genexplain/geneXplainR": {
+    "doi": "https://doi.org/10.21105/joss.00412",
+    "title": "geneXplainR: An R interface for the geneXplain platform"
+  },
+  "https://github.com/ContextLab/quail": {
+    "doi": "https://doi.org/10.21105/joss.00424",
+    "title": "Quail: A Python toolbox for analyzing and plotting free recall data"
+  },
+  "https://github.com/microPIECE-team/microPIECE": {
+    "doi": "https://doi.org/10.21105/joss.00616",
+    "title": "microPIECE - microRNA pipeline enhanced by CLIP experiments"
+  },
+  "https://github.com/dib-lab/khmer": {
+    "doi": "https://doi.org/10.21105/joss.00272",
+    "title": "khmer release v2.1: software for biological sequence analysis"
+  },
+  "https://github.com/sbogutzky/PsychoPhysioCollector": {
+    "doi": "https://doi.org/10.21105/joss.00040",
+    "title": "PsychoPhysioCollector: A Smartphone-Based Data Collection App for Psychophysiological Research"
+  },
+  "https://github.com/virgesmith/humanleague": {
+    "doi": "https://doi.org/10.21105/joss.00629",
+    "title": "humanleague: a C++ microsynthesis package with R and python interfaces"
+  },
+  "https://github.com/OpenSpace/OpenSpace": {
+    "doi": "https://doi.org/10.21105/joss.00281",
+    "title": "OpenSpace: An open-source astrovisualization framework"
+  }
+}
