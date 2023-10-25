@@ -3,6 +3,12 @@ import json
 import re
 
 
+def clean_url(link: str):
+    cleaned_url_match = re.search("(?i)https?:\/\/(www\.)?(.+)", link)
+    if cleaned_url_match:
+        return cleaned_url_match.group(2).strip("/")
+
+
 def reformat_bulk_ror(bulk_ror_json: str, output_file_prefix: str):
     """
     Take bulk ROR JSON, create dicts mapping cleaned url (domain name or full url, minus https?://(www)?
@@ -19,9 +25,8 @@ def reformat_bulk_ror(bulk_ror_json: str, output_file_prefix: str):
     reformatted_domain = {}
     for record in bulk_ror:
         for link in record["links"]:
-            cleaned_url_match = re.search("(?i)https?:\/\/(www\.)?(.+)", link)
-            if cleaned_url_match:
-                cleaned_url = cleaned_url_match.group(2)
+            cleaned_url = clean_url(link)
+            if cleaned_url:
                 domain = cleaned_url.strip("/").split("/")[0]
                 for obj, url in [[reformatted_full, cleaned_url], [reformatted_domain, domain]]:
                     if url not in obj:

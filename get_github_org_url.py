@@ -44,14 +44,16 @@ def get_owner(owner: str) -> dict:
     print(user_resp)
     return None
 
+
 def get_url(owner: str) -> str:
     owner_meta = get_owner(owner)
     return owner_meta.get("blog")
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("github_org_name")
+    parser.add_argument("owner_name")
     args = parser.parse_args()
 
-    url = get_url(args.github_org_name)
-    print(f"URL for {args.github_org_name} is {url} !")
+    url = get_url(args.owner_name)
+    print(f"URL for {args.owner_name} is {url} !")
