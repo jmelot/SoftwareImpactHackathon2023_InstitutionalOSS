@@ -2,6 +2,10 @@
 
 Goal of our efforts during this hackathon: surface a list of _possible links_ from software repositories to ROR IDs (the idea being that this would be followed by manual curations).
 
+## Resources
+
+Regex for grabbing GitHub repos from freetext: `(?i)github.com/([A-Za-z0-9-_.]+/[A-Za-z0-9-_.]*[A-Za-z0-9-_])`
+
 This is a template repo for external hackathon projects. Please build your project off of this template:
 1. Click the ‘use this template’ button above to create a new repository, and choose an appropriate name for your project. The suggested naming scheme is: `SoftwareImpactHackathon2023_PROJECT`.
 2. Turn on basic [security features](https://docs.github.com/en/code-security/getting-started/github-security-features) for your repository under Settings -> Security and Analysis. We strongly recommend you enable at least [Private vulnerability reporting](https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/configuring-private-vulnerability-reporting-for-a-repository), [Dependabot security updates](https://docs.github.com/en/code-security/dependabot/dependabot-security-updates/configuring-dependabot-security-updates) and [Secret Scanning](https://docs.github.com/en/code-security/secret-scanning/configuring-secret-scanning-for-your-repositories).
