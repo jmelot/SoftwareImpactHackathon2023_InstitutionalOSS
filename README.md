@@ -13,6 +13,7 @@ Goal of our efforts during this hackathon: surface a list of _possible links_ fr
 * Script for extracting github urls from the Journal of Open-Source software and mapping them to DOIs and paper titles: `get_dois_and_repos_from_joss.py`
     * Resulting data in `repo_to_doi_and_title.json`
 * Script for searching openalex API using dois/pmids from RRID dataset (`working file software.csv`) and pulling in metadata, including RORs and author information `rrid_dataset_mapped_to_openalex.R`
+* [Queries](./TheStackDataset.md) to retrieve READMEs from [The Stack](https://huggingface.co/datasets/bigcode/the-stack) that contain possible institutions, and [sample data](./stack_institution_readmes/sample.jsonl) 
 
 ## (partial) Solutions
 
