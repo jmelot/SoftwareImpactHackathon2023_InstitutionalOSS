@@ -37,6 +37,18 @@ $ ./ror_name_lookup.rb "/path/to/working file software.csv"
 # the items without RORs for a name have proposed columns added at end columns to new
 # output file.
 ```
+
+There is a further script to take the output of the above script and process down
+to a smaller set of items that have RORs and with a minimal set of columns. It produces
+a file `../working_file_minimal.csv` with fields `software_name`, `github_slug`,
+`ror_id`, `org_name`, `extraction_methods`.
+
+```bash
+$cd ruby
+./csv_ror_mnimal.rb
+```
+
+
 ## RRID to ROR Software Mapping Data File Readme Section
 
 This is a file that has been extracted from the SciCrunch Registry, accessible on the web: [https://scicrunch.org/resources](https://scicrunch.org/resources/data/source/nlx_144509-1/search)

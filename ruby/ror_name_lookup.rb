@@ -13,10 +13,10 @@ in_file = ARGV[0]
 # Returns the proposed name and ror id {proposed: 'name', ror_id: 'id'}
 def find_best_result(response:)
   hash = response.parse.with_indifferent_access
-  return {proposed: '', ror_id: ''} if hash[:number_of_results] < 1
+  return { proposed: '', ror_id: '' } if hash[:number_of_results] < 1
 
   rors = hash[:items].map(&:with_indifferent_access)
-  ror = rors.select{ |i| i[:chosen] == true }.first
+  ror = rors.select { |i| i[:chosen] == true }.first
 
   # I believe it sorts by best matches first
   ror = rors.first if ror.nil?
@@ -25,7 +25,7 @@ def find_best_result(response:)
 end
 
 if in_file.blank?
-  "Please put the path to the input file as the first argument"
+  puts "Please put the path to the input file as the first argument"
   exit
 end
 
@@ -35,15 +35,15 @@ csv = CSV.read(in_file, headers: true)
 # this seems to be all the meaningful and consistent columns in this type of csv
 last_column = 39
 fixed_headers = csv.headers[0..last_column]
-new_headers = ['proposed_name', 'proposed_ror_id']
+new_headers = %w[proposed_name proposed_ror_id]
 
-CSV.open(File.join(File.dirname(in_file), 'working_file_with_rors_added_by_name.csv'), "w") do |csv_out|
+CSV.open(File.join(File.dirname(in_file), 'working_file_with_rors_added_by_name.csv'), 'w') do |csv_out|
   csv_out << (fixed_headers + new_headers).flatten
   csv.each do |row|
     org_name = row['Parent Org Name']
     filled_ror = row['ROR and other mappings']
-    org_info = {proposed: '', ror_id: ''}
-    if org_name.present? && org_name != '#N/A' && ( filled_ror.blank? || filled_ror == '#N/A' )
+    org_info = { proposed: '', ror_id: '' }
+    if org_name.present? && org_name != '#N/A' && (filled_ror.blank? || filled_ror == '#N/A' || filled_ror.to_s == '0')
       query = { affiliation: org_name }.to_query
       url = "https://api.ror.org/organizations?#{query}"
       puts "query #{org_name}"
@@ -56,6 +56,5 @@ CSV.open(File.join(File.dirname(in_file), 'working_file_with_rors_added_by_name.
     csv_out << new_row
   end
 end
-
 
 puts 'done'
