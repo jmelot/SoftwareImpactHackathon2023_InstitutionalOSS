@@ -22,11 +22,11 @@ def reformat_orca_url_matches(url_matches: str, full_data: str) -> list:
             org_to_repos[owner].append(repo)
     with open(url_matches) as f:
         org_to_ror = json.loads(f.read())
-    for org in org_to_repos:
-        unique_repos = set(org_to_repos[org])
+    for owner in org_to_repos:
+        unique_repos = set(org_to_repos[owner])
         for repo in unique_repos:
             name = f"{owner}/{repo}"
-            for ror_id in org_to_ror.get(org, []):
+            for ror_id in org_to_ror.get(owner, []):
                 reformatted.append({
                     "software_name": name,
                     "github_slug": name,
