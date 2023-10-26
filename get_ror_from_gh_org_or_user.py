@@ -4,7 +4,8 @@ from get_github_org_url import get_url
 from get_urls_from_bulk_ror import clean_url
 
 
-def check_for_ror_url(owner_name: str, ror_domain_json: str, ror_full_url_json: str):
+def check_for_ror_url(owner_name: str, ror_domain_json: str = "ror_url_to_ids_domain.json",
+                      ror_full_url_json: str = "ror_url_to_ids_full.json"):
     """
     Check whether a github org/user url appears in ROR, and return the ROR ids for that url if so
     :param owner_name:
@@ -16,6 +17,9 @@ def check_for_ror_url(owner_name: str, ror_domain_json: str, ror_full_url_json: 
     if not gh_url:
         print(f"No url found for {owner_name} on github")
         return
+    if "linkedin.com" in gh_url or "sites.google.com" in gh_url:
+        print(f"Skipping {gh_url} for {owner_name}")
+        return
     cleaned_gh_url = clean_url(gh_url)
 
     with open(ror_full_url_json) as f:
@@ -24,6 +28,8 @@ def check_for_ror_url(owner_name: str, ror_domain_json: str, ror_full_url_json: 
         return full_ror_json[cleaned_gh_url]["ror_ids"]
     with open(ror_domain_json) as f:
         domain_json = json.loads(f.read())
+    print(gh_url)
+    print(cleaned_gh_url)
     gh_url_domain = cleaned_gh_url.split("/")[0]
     if gh_url_domain in domain_json:
         return domain_json[gh_url_domain]["ror_ids"]

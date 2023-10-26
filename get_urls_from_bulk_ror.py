@@ -7,6 +7,7 @@ def clean_url(link: str):
     cleaned_url_match = re.search("(?i)https?:\/\/(www\.)?(.+)", link)
     if cleaned_url_match:
         return cleaned_url_match.group(2).strip("/")
+    return link
 
 
 def reformat_bulk_ror(bulk_ror_json: str, output_file_prefix: str):
