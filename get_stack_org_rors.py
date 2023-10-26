@@ -43,7 +43,7 @@ def get_stack_org_rors(stack_path: str, output_file: str) -> None:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--stack_data", default=os.path.join("stack_institution_readmes", "full_data"))
-    parser.add_argument("--output_file", default="orca_org_rors.json")
+    parser.add_argument("--output_file", default="stack_org_rors.json")
     args = parser.parse_args()
 
     get_stack_org_rors(args.stack_data, args.output_file)
