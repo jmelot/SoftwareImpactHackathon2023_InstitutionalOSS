@@ -27,6 +27,16 @@ $ python3 get_ror_from_gh_org_or_user.py jmelot
 No url found for jmelot on github
 ```
 
+## Populating most likely organization and RORs for *working file software.csv*
+
+```bash
+$ cd ruby
+$ bundle install # if you need to install dependencies
+$ ./ror_name_lookup.rb "/path/to/working file software.csv"
+# it should output working_file_with_rors_added_by_name.csv to samne directory
+# the items without RORs for a name have proposed columns added at end columns to new
+# output file.
+```
 ## RRID to ROR Software Mapping Data File Readme Section
 
 This is a file that has been extracted from the SciCrunch Registry, accessible on the web: [https://scicrunch.org/resources](https://scicrunch.org/resources/data/source/nlx_144509-1/search)
