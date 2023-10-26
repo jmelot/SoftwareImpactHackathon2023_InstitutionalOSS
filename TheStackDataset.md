@@ -1,3 +1,5 @@
+## Extracting READMEs
+
 How we pulled relevant READMEs from The Stack:
 
 1. Ingest [The Stack](https://huggingface.co/datasets/bigcode/the-stack) into BigQuery `thestack.files` <-- already done at CSET
@@ -34,3 +36,20 @@ where (lower(content) like "%institute%") or (lower(content) like "%university%"
 ```
 
 4. Export to Google Cloud Storage, take sample of 5K repos and READMEs, put output in `stack_institution_readmes/sample.jsonl` 
+
+## Extracting organization names
+
+We used [this NER tool](https://github.com/ror-community/affiliation-matching-experimental/tree/main/ner_tests/inference) to extract organization names from the READMEs.
+
+Out of the sampled 5,000 READMEs, 1,486 contain an organization name according to the NER tool. Some extracted names are incorrect, for example from [this README](https://github.com/kiarash96/Bobby) the string "Bobby is going to university" was extracted as an organization name :).
+
+## Mapping organization names to ROR IDs
+
+We used affiliation matching functionality from ROR API to map the names to ROR IDs. Example request:
+
+```
+https://api.ror.org/organizations?affiliation=University%20of%20Warsaw
+```
+
+Out of 1,486 organization names extracted by NER tool, 787 of them were mapped to ROR IDs.
+
