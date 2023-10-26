@@ -41,7 +41,7 @@ $ ./ror_name_lookup.rb "/path/to/working file software.csv"
 ## Results schema
 
 Our results are consolidated using `consolidate_links.py` and put in `software_to_ror.csv`. Note that there may be multiple rows per software-ror pair, if our linkage method returned multiple ROR ids for a given
-piece of software
+piece of software. We have currently found 1723 software-ROR links containing 561 distinct ROR ids.
 
 | Field name | Description | Field type |
 | --- | --- | --- |

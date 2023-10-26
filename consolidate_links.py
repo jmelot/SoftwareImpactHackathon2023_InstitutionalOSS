@@ -58,16 +58,19 @@ def merge_rows(orca: list) -> list:
 def write_reformatted(orca_url_matches, orca_data, output_file):
     orca = reformat_orca(orca_url_matches, orca_data)
     merged_rows = merge_rows(orca)
+    rors = set()
     with open(output_file, mode="w") as f:
         writer = csv.DictWriter(f, fieldnames=["software_name", "github_slug", "ror_id", "extraction_methods"])
         writer.writeheader()
         for row in merged_rows:
+            rors.add(row["ror_id"])
             writer.writerow({
                 "software_name": row["software_name"],
                 "github_slug": row["github_slug"],
                 "ror_id": row["ror_id"],
                 "extraction_methods": ";".join(row["extraction_methods"])
             })
+    print(f"Wrote {len(merged_rows)} software-ror links containing {len(rors)} distinct ROR ids")
 
 
 if __name__ == "__main__":
