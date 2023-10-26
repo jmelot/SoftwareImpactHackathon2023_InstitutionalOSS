@@ -57,7 +57,6 @@ def merge_rows(datasets: list) -> list:
             else:
                 row["extraction_methods"] = [row.pop("extraction_method")]
                 id_to_record[id] = row
-    # todo: add more elements to id_to_record here
     merged = [record for _, record in id_to_record.items()]
     merged.sort(key=lambda row: f"{row['software_name']}/{row['ror_id']}".lower())
     return merged
