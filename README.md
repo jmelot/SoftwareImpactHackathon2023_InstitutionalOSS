@@ -12,11 +12,10 @@ Goal of our efforts during this hackathon: surface a list of _possible links_ fr
     * Resulting data in `repo_to_doi_and_title.json`
 * Script for searching openalex API using dois/pmids from RRID dataset (`working file software.csv`) and pulling in metadata, including RORs and author information `rrid_dataset_mapped_to_openalex.R`
 * [Dataset] [Queries](./TheStackDataset.md) to retrieve READMEs from [The Stack](https://huggingface.co/datasets/bigcode/the-stack) that contain possible institutions, and [sample data](./stack_institution_readmes/sample.jsonl) 
-* [Dataset] 398 GitHub software repo owners extracted from [ORCA](https://orca.eto.tech/orca_download.jsonl) data and mapped to ROR ids based on their URLs (see `get_ror_from_gh_org.py`): `orca_org_rors.json`
 
 ## (partial) Solutions
 
-Script for retrieving ROR IDs from github users or org names, if available: `get_ror_from_gh_org.py`. Sample usage:
+* Script for retrieving ROR IDs from github users or org names, if available: `get_ror_from_gh_org.py`. Sample usage:
 
 ```bash
 $ python3 get_ror_from_gh_org_or_user.py MITHaystack
@@ -26,8 +25,9 @@ No ROR id found for url https://maciej.pacut.pl from foo on github
 $ python3 get_ror_from_gh_org_or_user.py jmelot
 No url found for jmelot on github
 ```
+* [Dataset] 398 GitHub software repo owners extracted from [ORCA](https://orca.eto.tech/orca_download.jsonl) data and mapped to ROR ids based on their URLs (see `get_ror_from_gh_org.py`): `orca_org_rors.json`
 
-## Populating most likely organization and RORs for *working file software.csv*
+* Script to populate most likely organization and RORs for *working file software.csv*
 
 ```bash
 $ cd ruby
@@ -37,6 +37,7 @@ $ ./ror_name_lookup.rb "/path/to/working file software.csv"
 # the items without RORs for a name have proposed columns added at end columns to new
 # output file.
 ```
+
 ## RRID to ROR Software Mapping Data File Readme Section
 
 This is a file that has been extracted from the SciCrunch Registry, accessible on the web: [https://scicrunch.org/resources](https://scicrunch.org/resources/data/source/nlx_144509-1/search)
