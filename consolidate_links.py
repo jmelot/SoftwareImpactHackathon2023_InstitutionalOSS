@@ -57,6 +57,24 @@ def reformat_stack_readme_matches(stack_matches: str) -> list:
                     "ror_id": ror_id,
                     "extraction_method": "ner_text_extraction"
                 })
+
+
+def reformat_working_curated(working_curated: str) -> list:
+    """
+    Reformat working curated data into the standard format
+    :param working_curated: Name of file containing minimal working curated data
+    :return: List of reformatted records
+    """
+    reformatted = []
+    with open(working_curated) as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            reformatted.append({
+                "software_name": row["software_name"],
+                "github_slug": row["github_slug"],
+                "ror_id": row["ror_id"],
+                "extraction_method": row["extraction_methods"]
+            })
     return reformatted
 
 
@@ -86,7 +104,8 @@ def merge_rows(datasets: list) -> list:
     return merged
 
 
-def write_reformatted(orca_url_matches: str, orca_data: str, stack_readme_matches: str, output_file: str):
+def write_reformatted(orca_url_matches: str, orca_data: str, stack_readme_matches: str, working_curated: str,
+                      output_file: str):
     """
     Merge data from disparate sources and write out in a single CSV
     :param orca_url_matches: matches from repo owner urls to ROR urls
@@ -97,9 +116,11 @@ def write_reformatted(orca_url_matches: str, orca_data: str, stack_readme_matche
     """
     orca = reformat_orca_url_matches(orca_url_matches, orca_data)
     stack_readme = reformat_stack_readme_matches(stack_readme_matches)
+    working = reformat_working_curated(working_curated)
     # TODO: write a reformat_<your data> function to put data in the format shown in `reformat_orca_url_matches`,
     # then put the output in the array below
-    merged_rows = merge_rows([orca, stack_readme])
+    merged_rows = merge_rows([orca, stack_readme, working])
+
     rors = set()
     with open(output_file, mode="w") as f:
         writer = csv.DictWriter(f, fieldnames=["software_name", "github_slug", "ror_id", "extraction_methods"])
@@ -126,4 +147,5 @@ if __name__ == "__main__":
     # TODO: add more arguments to ingest more data sources
     args = parser.parse_args()
 
-    write_reformatted(args.orca_url_matches, args.orca_data, args.stack_readme_affiliations, args.output_file)
+    write_reformatted(args.orca_url_matches, args.orca_data, args.stack_readme_affiliations, args.working_curated,
+                      args.output_file)
