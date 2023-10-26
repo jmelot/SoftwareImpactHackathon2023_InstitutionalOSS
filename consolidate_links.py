@@ -43,7 +43,7 @@ def merge_rows(orca: list) -> list:
     # `id_to_record`, we will add the extraction method to the existing list. If not, we will add a new
     # record to `id_to_record`
     for row in orca:
-        id = f"{row['software_name']}/{row['ror_id']}"
+        id = f"{row['software_name']}/{row['ror_id']}".lower()
         extraction_method = row["extraction_method"]
         if id in id_to_record:
             if extraction_method not in id_to_record[id]["extraction_methods"]:
