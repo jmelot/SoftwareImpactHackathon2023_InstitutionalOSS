@@ -54,12 +54,12 @@ $cd ruby
 Our results are consolidated using `consolidate_links.py` and put in `software_to_ror.csv`. Note that there may be multiple rows per software-ror pair, if our linkage method returned multiple ROR ids for a given
 piece of software. We have currently found 2511 software-ROR links containing 1012 distinct ROR ids.
 
-| Field name | Description | Field type |
-| --- | --- | --- |
-| software_name | Human-generated name of software (e.g. `Tensorflow`) | text |
-| github_slug | Github owner and repo name, e.g. `apache/airflow` | text |
-| ror_id | ROR id, in url form, e.g. `https://ror.org/02qenvm24` | text |
-| extraction_methods | semicolon-separated list of methods used to extract the software-ror pair (selected from `affiliation_links`, `targeted_affiliation_links`, `url_matches`, `name_matches`) | text |
+| Field name | Description                                                                                                                                                                                            | Field type |
+| --- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| --- |
+| software_name | Human-generated name of software (e.g. `Tensorflow`)                                                                                                                                                   | text |
+| github_slug | Github owner and repo name, e.g. `apache/airflow`                                                                                                                                                      | text |
+| ror_id | ROR id, in url form, e.g. `https://ror.org/02qenvm24`                                                                                                                                                  | text |
+| extraction_methods | semicolon-separated list of methods used to extract the software-ror pair (selected from <br/><br/>`affiliation_links`, `targeted_affiliation_links`, `url_matches`, `name_matches`, `human_curateed`) | text |
 
 The extraction methods we currently track - all of which are imperfect - are:
 
