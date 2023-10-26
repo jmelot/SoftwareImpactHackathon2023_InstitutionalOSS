@@ -65,7 +65,7 @@ The extraction methods we currently track - all of which are imperfect - are:
 
 * `affiliation_links` - links from software mentioned in a paper to the ROR ids of author affiliations of that paper
 * `targeted_affiliation_links` - links from software mentioned in a paper _that is likely to describe that software_ (for example paper-repo pairs extracted from JOSS, see `get_dois_and_repos_from_joss.py`) to the ROR ids of author affiliations of that paper
-* `url_matches` - links from github repo owner names, which may be individual user accounts or organization accounts, to ROR based on URL match, see `get_ror_from_gh_org_or_user.py` and `get_orca_org_rors.py`
+* `url_matches` - links from github repo owner names, which may be individual user accounts or organization accounts, to ROR based on URL match, see `get_ror_from_gh_org_or_user.py`, `get_orca_org_rors.py`, and `get_stack_org_rors.py`
 * `name_matches` - links from affiliation names, associated with software by a human (see `working file *.csv`) to ROR (see `ror_name_lookup.rb`)
 
 ## RRID to ROR Software Mapping Data File Readme Section
