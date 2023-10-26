@@ -2,8 +2,6 @@
 
 Goal of our efforts during this hackathon: surface a list of _possible links_ from software repositories to ROR IDs (the idea being that this would be followed by manual curations).
 
-[Project planning document](https://docs.google.com/document/d/1dxEUORt-m0I9tDicAQU77__gDR4TvVnUGXOatI1CS_A/edit).
-
 ## Resources
 
 * Regex for grabbing GitHub repos from freetext: `(?i)github.com/([A-Za-z0-9-_.]+/[A-Za-z0-9-_.]*[A-Za-z0-9-_])`
@@ -13,10 +11,11 @@ Goal of our efforts during this hackathon: surface a list of _possible links_ fr
 * Script for extracting github urls from the Journal of Open-Source software and mapping them to DOIs and paper titles: `get_dois_and_repos_from_joss.py`
     * Resulting data in `repo_to_doi_and_title.json`
 * Script for searching openalex API using dois/pmids from RRID dataset (`working file software.csv`) and pulling in metadata, including RORs and author information `rrid_dataset_mapped_to_openalex.R`
+* [Dataset] [Queries](./TheStackDataset.md) to retrieve READMEs from [The Stack](https://huggingface.co/datasets/bigcode/the-stack) that contain possible institutions, and [sample data](./stack_institution_readmes/sample.jsonl) 
 
 ## (partial) Solutions
 
-Script for retrieving ROR IDs from github users or org names, if available: `get_ror_from_gh_org.py`. Sample usage:
+* Script for retrieving ROR IDs from github users or org names, if available: `get_ror_from_gh_org.py`. Sample usage:
 
 ```bash
 $ python3 get_ror_from_gh_org_or_user.py MITHaystack
@@ -26,14 +25,15 @@ No ROR id found for url https://maciej.pacut.pl from foo on github
 $ python3 get_ror_from_gh_org_or_user.py jmelot
 No url found for jmelot on github
 ```
+* [Dataset] 398 GitHub software repo owners extracted from [ORCA](https://orca.eto.tech/orca_download.jsonl) data and mapped to ROR ids based on their URLs (see `get_ror_from_gh_org.py`): `orca_org_rors.json`
 
-## Populating most likely organization and RORs for *working file software.csv*
+* Script to populate most likely organization and RORs for *working file software.csv*
 
 ```bash
 $ cd ruby
 $ bundle install # if you need to install dependencies
 $ ./ror_name_lookup.rb "/path/to/working file software.csv"
-# it should output working_file_with_rors_added_by_name.csv to samne directory
+# it should output working_file_with_rors_added_by_name.csv to same directory
 # the items without RORs for a name have proposed columns added at end columns to new
 # output file.
 ```
@@ -48,6 +48,25 @@ $cd ruby
 ./csv_ror_mnimal.rb
 ```
 
+
+## Results schema
+
+Our results are consolidated using `consolidate_links.py` and put in `software_to_ror.csv`. Note that there may be multiple rows per software-ror pair, if our linkage method returned multiple ROR ids for a given
+piece of software. We have currently found 1723 software-ROR links containing 561 distinct ROR ids.
+
+| Field name | Description | Field type |
+| --- | --- | --- |
+| software_name | Human-generated name of software (e.g. `Tensorflow`) | text |
+| github_slug | Github owner and repo name, e.g. `apache/airflow` | text |
+| ror_id | ROR id, in url form, e.g. `https://ror.org/02qenvm24` | text |
+| extraction_methods | semicolon-separated list of methods used to extract the software-ror pair (selected from `affiliation_links`, `targeted_affiliation_links`, `url_matches`, `name_matches`) | text |
+
+The extraction methods we currently track - all of which are imperfect - are:
+
+* `affiliation_links` - links from software mentioned in a paper to the ROR ids of author affiliations of that paper
+* `targeted_affiliation_links` - links from software mentioned in a paper _that is likely to describe that software_ (for example paper-repo pairs extracted from JOSS, see `get_dois_and_repos_from_joss.py`) to the ROR ids of author affiliations of that paper
+* `url_matches` - links from github repo owner names, which may be individual user accounts or organization accounts, to ROR based on URL match, see `get_ror_from_gh_org_or_user.py` and `get_orca_org_rors.py`
+* `name_matches` - links from affiliation names, associated with software by a human (see `working file *.csv`) to ROR (see `ror_name_lookup.rb`)
 
 ## RRID to ROR Software Mapping Data File Readme Section
 

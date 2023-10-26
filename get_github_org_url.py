@@ -3,7 +3,7 @@ import requests
 import time
 import os
 
-RATE_LIMIT_INTERVAL = 2
+RATE_LIMIT_INTERVAL = 1
 
 
 def mk_auth() -> tuple:
@@ -40,14 +40,12 @@ def get_owner(owner: str) -> dict:
     if user_resp.status_code == 200:
         return user_resp.json()
     print(f"{owner} not found as org or user")
-    print(org_resp)
-    print(user_resp)
-    return None
 
 
 def get_url(owner: str) -> str:
     owner_meta = get_owner(owner)
-    return owner_meta.get("blog")
+    if owner_meta:
+        return owner_meta.get("blog")
 
 
 if __name__ == "__main__":
