@@ -87,22 +87,26 @@ combined_software_orgs <- unique(combined_software_orgs)
 # Compare ROR info to RRID dataset ----
 # not detailed yet
 czi_combined_formatted <- plyr::rbind.fill(czi_df_with_doi, czi_df_with_pmid) %>%
-  unique() 
+  unique() %>%
+  mutate(most_popular_pmid = gsub("pmid:", "", most_popular_pmid))
 
-czi_combined_formatted1 <- inner_join(czi_combined_formatted, combined_software_orgs, by=c("most_popular_doi"="doi")) 
-czi_combined_formatted2 <- inner_join(czi_combined_formatted, combined_software_orgs, by=c("most_popular_pmid"="pmid")) 
+czi_combined_formatted1 <- inner_join(czi_combined_formatted, combined_software_orgs, by=c("most_popular_doi"="doi")) %>% filter(!is.na(most_popular_doi))
+czi_combined_formatted2 <- inner_join(czi_combined_formatted, combined_software_orgs, by=c("most_popular_pmid"="pmid")) %>% filter(!is.na(most_popular_pmid))
 czi_combined_formatted <- full_join(czi_combined_formatted1, czi_combined_formatted2)
 czi_combined_formatted <- czi_combined_formatted %>% filter(!is.na(institution_ror)) # removing rows with no ror mapping via openalex
 
 # Compare ROR info to RRID dataset ----
 czi_software_ror_mapped <- czi_combined_formatted %>%
-  select(mention, pmid, ext.link, most_popular_doi, institution_ror, au_display_name, au_orcid, author_position, au_affiliation_raw) %>%
+  select(mention, doi, most_popular_pmid, ext.link, most_popular_doi, institution_ror, au_display_name, au_orcid, author_position, au_affiliation_raw) %>%
   unique() %>%
+  rename(doi_from_open_alex = doi) %>%
   rename(doi = most_popular_doi) %>%
+  mutate(doi = ifelse(is.na(doi), doi_from_open_alex, doi)) %>%
+  rename(pmid = most_popular_pmid) %>%
   rename(software_name = mention) %>%
   mutate(gh_repo = ifelse(grepl("github",ext.link), paste(ext.link), "")) %>%
   mutate(other_repo = ifelse(grepl("github",ext.link), "", paste(ext.link))) %>%
-  select(-ext.link) %>%
+  select(-ext.link, -doi_from_open_alex) %>%
   unique()
   
 

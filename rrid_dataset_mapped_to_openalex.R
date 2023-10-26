@@ -87,20 +87,21 @@ rrid_combined_formatted <- plyr::rbind.fill(rrid_df_with_doi, rrid_df_with_pmid)
   unique() %>%
   mutate(pmid_valid = gsub("pmid:", "", pmid_valid)) #making pmid format the same for joining 
 
-rrid_combined_formatted1 <- inner_join(rrid_combined_formatted, combined_software_orgs, by=c("doi_valid"="doi")) %>% select(-pmid_valid)
-rrid_combined_formatted2 <- inner_join(rrid_combined_formatted, combined_software_orgs, by=c("pmid_valid"="pmid")) %>% select(-doi_valid)
+rrid_combined_formatted1 <- inner_join(rrid_combined_formatted, combined_software_orgs, by=c("doi_valid"="doi")) %>% select(-pmid_valid) %>% filter(!is.na(doi_valid))
+rrid_combined_formatted2 <- inner_join(rrid_combined_formatted, combined_software_orgs, by=c("pmid_valid"="pmid")) %>% select(-doi_valid) %>% filter(!is.na(pmid_valid))
 rrid_combined_formatted <- full_join(rrid_combined_formatted1, rrid_combined_formatted2)
 rrid_combined_formatted <- rrid_combined_formatted %>% filter(!is.na(institution_ror)) # removing rows with no ror mapping via openalex
 
 # Compare ROR info to RRID dataset ----
 RRID_software_ror_mapped <- rrid_combined_formatted %>%
-  select(Resource_Name, Resource_URL, pmid, doi_valid, institution_ror, au_display_name, au_orcid, author_position, au_affiliation_raw) %>%
+  select(Resource_Name, Resource_URL, pmid_valid, doi_valid, institution_ror, au_display_name, au_orcid, author_position, au_affiliation_raw) %>%
   unique() %>%
   group_by(Resource_Name, Resource_URL, doi_valid, institution_ror, au_display_name, au_orcid, author_position, au_affiliation_raw) %>%
-  arrange(desc(pmid)) %>%
+  arrange(desc(pmid_valid)) %>%
   slice_head() %>%
   ungroup() %>%
-  rename(doi = doi_valid) %>%
+  rename(doi = doi_valid, 
+         pmid = pmid_valid) %>%
   mutate(gh_repo = ifelse(grepl("github",Resource_URL), paste(Resource_URL), "")) %>%
   mutate(other_repo = ifelse(grepl("github",Resource_URL), "", paste(Resource_URL))) %>%
   select(-Resource_URL) %>%
