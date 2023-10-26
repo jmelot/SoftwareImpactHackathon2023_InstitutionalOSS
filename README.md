@@ -38,6 +38,17 @@ $ ./ror_name_lookup.rb "/path/to/working file software.csv"
 # output file.
 ```
 
+There is a further script to take the output of the above script and process down
+to a smaller set of items that have RORs and with a minimal set of columns. It produces
+a file `../working_file_minimal.csv` with fields `software_name`, `github_slug`,
+`ror_id`, `org_name`, `extraction_methods`.
+
+```bash
+$cd ruby
+./csv_ror_mnimal.rb
+```
+
+
 ## Results schema
 
 Our results are consolidated using `consolidate_links.py` and put in `software_to_ror.csv`. Note that there may be multiple rows per software-ror pair, if our linkage method returned multiple ROR ids for a given
