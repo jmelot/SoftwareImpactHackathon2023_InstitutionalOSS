@@ -1,6 +1,7 @@
 import argparse
 import csv
 import json
+import os
 
 
 def reformat_orca_url_matches(url_matches: str, full_data: str) -> list:
@@ -36,6 +37,29 @@ def reformat_orca_url_matches(url_matches: str, full_data: str) -> list:
     return reformatted
 
 
+def reformat_stack_readme_matches(stack_matches: str) -> list:
+    """
+    Reformat url matches over the ORCA data into the standard format
+    :param url_matches: Name of file containing owner <-> ROR matches found from URL match over ORCA data
+    :param full_data: Full ORCA data download
+    :return: List of reformatted records
+    """
+    org_to_repos = {}
+    reformatted = []
+    with open(stack_matches) as f:
+        reader = csv.DictReader(f)
+        for line in reader:
+            ror_id = line["ror_id"]
+            if ror_id:
+                reformatted.append({
+                    "software_name": line["repo_name"],
+                    "github_slug": line["repo_name"],
+                    "ror_id": ror_id,
+                    "extraction_method": "ner_text_extraction"
+                })
+    return reformatted
+
+
 def merge_rows(datasets: list) -> list:
     """
     Merge data across disparate sources, with one row per software-ROR pair
@@ -62,17 +86,20 @@ def merge_rows(datasets: list) -> list:
     return merged
 
 
-def write_reformatted(orca_url_matches: str, orca_data: str, output_file: str):
+def write_reformatted(orca_url_matches: str, orca_data: str, stack_readme_matches: str, output_file: str):
     """
     Merge data from disparate sources and write out in a single CSV
     :param orca_url_matches: matches from repo owner urls to ROR urls
     :param orca_data: ORCA data download, containing additional metadata for each ORCA repo
+    :param stack_readme_matches: Affiliations extracted from The Stack readmes using NER
     :param output_file: File where output csvs should be written
     :return: None
     """
     orca = reformat_orca_url_matches(orca_url_matches, orca_data)
-    # TODO: write a reformat_<your data> function to put data in the format shown in `reformat_orca_url_matches`
-    merged_rows = merge_rows([orca])
+    stack_readme = reformat_stack_readme_matches(stack_readme_matches)
+    # TODO: write a reformat_<your data> function to put data in the format shown in `reformat_orca_url_matches`,
+    # then put the output in the array below
+    merged_rows = merge_rows([orca, stack_readme])
     rors = set()
     with open(output_file, mode="w") as f:
         writer = csv.DictWriter(f, fieldnames=["software_name", "github_slug", "ror_id", "extraction_methods"])
@@ -92,8 +119,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--orca_url_matches", default="orca_org_rors.json")
     parser.add_argument("--orca_data", default="orca_download.jsonl")
+    parser.add_argument("--stack_readme_affiliations",
+                        default=os.path.join("stack_institution_readmes", "repo_institution_ids.csv"))
     parser.add_argument("--output_file", default="software_to_ror.csv")
     # TODO: add more arguments to ingest more data sources
     args = parser.parse_args()
 
-    write_reformatted(args.orca_url_matches, args.orca_data, args.output_file)
+    write_reformatted(args.orca_url_matches, args.orca_data, args.stack_readme_affiliations, args.output_file)
