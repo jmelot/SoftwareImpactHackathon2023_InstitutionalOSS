@@ -4,7 +4,7 @@ This project surfaces a list of _possible links_ from software repositories to R
 
 ## Dataset 
 
-Our software to ROR links are consolidated using `consolidate_links.py` and available in `software_to_ror.csv` and `software_to_ror.json`. 
+Our software to ROR links are consolidated using `resources/consolidate_links.py` and available in `software_to_ror.csv` and `software_to_ror.json`. 
 There may be multiple entries per software-ror pair, if our linkage method returned multiple ROR ids for a given
 piece of software. We have currently found 13918 software-ROR links containing 3608 distinct ROR ids. Some of these are sure to be 
 spurious links, and we're working on methods to identify and remove these.
@@ -29,6 +29,8 @@ The extraction/matching methods we currently use - all of which are imperfect - 
 * `human_curated` - ROR ids that a human identified as being affiliated with a piece of software (see `RRID to ROR Software Mapping Data` below)
 
 ## Resources
+
+All paths are relative to the `resources` directory.
 
 * Regex for grabbing GitHub repos from freetext: `(?i)github.com/([A-Za-z0-9-_.]+/[A-Za-z0-9-_.]*[A-Za-z0-9-_])`
 * Script for extracting urls of Github orgs/users: `get_github_org_url.py` - part of ROR url to GitHub org/user url linking
