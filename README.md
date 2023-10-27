@@ -2,6 +2,12 @@
 
 This project surfaces a list of _possible links_ from software repositories to ROR IDs.
 
+## Criteria for Linking
+
+The criteria for linking software to a research organzation are:
+    The software has a creator/contributor who is affiliated with an organization.
+    The software is hosted by an account associated with the organization
+
 ## Dataset 
 
 Our software to ROR links are consolidated using `resources/consolidate_links.py` and available in `software_to_ror.csv` and `software_to_ror.json`. 
