@@ -48,13 +48,12 @@ $cd ruby
 ./csv_ror_mnimal.rb
 ```
 
-
 ## Results schema
 
 Our results are consolidated using `consolidate_links.py` and put in `software_to_ror.csv`. Note that there may be multiple rows per software-ror pair, if our linkage method returned multiple ROR ids for a given
 piece of software. We have currently found 2511 software-ROR links containing 1012 distinct ROR ids.
 
-| Field name | Description                                                                                                                                                                                            | Field type |
+| Field name | Description | Field type |
 | --- |--- | --- |
 | software_name | Human-generated name of software (e.g. `Tensorflow`) | text |
 | github_slug | Github owner and repo name, e.g. `apache/airflow` | text |
