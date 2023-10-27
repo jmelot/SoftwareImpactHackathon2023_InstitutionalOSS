@@ -35,6 +35,7 @@ The extraction/matching methods we currently use - all of which are imperfect - 
 * `url_matches` - links from github repo owner names, which may be individual user accounts or organization accounts, to ROR based on URL match, see `get_ror_from_gh_org_or_user.py`, `get_orca_org_rors.py`, and `get_stack_org_rors.py`
 * `by_name` - links from affiliation names, associated with software by a human (see `working file *.csv`) to ROR (see `ror_name_lookup.rb`) matched using the ROR API
 * `human_curated` - ROR ids that a human identified as being affiliated with a piece of software (see `RRID to ROR Software Mapping Data` below)
+* `openaire_x_czi` - join doi-to-ROR-ids from OpenAIRE (based on string matching on the affiliation strings of the authors from Crossref) to CZI mentions dataset that provides doi-to-software relations (only Github repo URLs were used) -- code available under `openaire_x_czi` folder -- data available at `openaire_x_czi/openaire-doi-to-ror-ids/output-data/doi_to_rorid.csv.gz` (TODO: needs to be unified and merged with the data of other methods)
 
 ## Resources
 
