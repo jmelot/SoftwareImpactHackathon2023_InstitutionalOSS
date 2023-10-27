@@ -44,7 +44,6 @@ def reformat_stack_readme_matches(stack_matches: str) -> list:
     :param full_data: Full ORCA data download
     :return: List of reformatted records
     """
-    org_to_repos = {}
     reformatted = []
     with open(stack_matches) as f:
         reader = csv.DictReader(f)
@@ -57,6 +56,7 @@ def reformat_stack_readme_matches(stack_matches: str) -> list:
                     "ror_id": ror_id,
                     "extraction_method": "ner_text_extraction"
                 })
+    return reformatted
 
 
 def reformat_working_curated(working_curated: str) -> list:
