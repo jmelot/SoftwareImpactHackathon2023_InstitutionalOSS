@@ -1,6 +1,32 @@
 # Linking Research Software to Research Organizations
 
-Goal of our efforts during this hackathon: surface a list of _possible links_ from software repositories to ROR IDs (the idea being that this would be followed by manual curations).
+This project surfaces a list of _possible links_ from software repositories to ROR IDs.
+
+## Dataset 
+
+Our software to ROR links are consolidated using `consolidate_links.py` and available in `software_to_ror.csv` and `software_to_ror.json`. 
+There may be multiple entries per software-ror pair, if our linkage method returned multiple ROR ids for a given
+piece of software. We have currently found 13918 software-ROR links containing 3608 distinct ROR ids. Some of these are sure to be 
+spurious links, and we're working on methods to identify and remove these.
+
+The JSON output maps ROR ids to software to github slug (if available) and extraction method. The CSV contains the same
+information, structured like this:
+
+| Field name | Description | Field type |
+| --- |--- | --- |
+| software_name | Human-generated name of software (e.g. `Tensorflow`) | text |
+| github_slug | Github owner and repo name, e.g. `apache/airflow` | text |
+| ror_id | ROR id, in url form, e.g. `https://ror.org/02qenvm24` | text |
+| extraction_methods | semicolon-separated list of methods used to extract the software-ror pair, from the set described below | text |
+
+The extraction/matching methods we currently use - all of which are imperfect - are:
+
+* `czi_affiliation_links` - links from software mentioned in a paper to the ROR ids of author affiliations of that paper, for the CZI software mentions dataset (see `czi_dataset_mapped_to_openalex.R`)
+* `joss_affiliation_links` - links from software described in a JOSS paper to the ROR ids of the author affiliations of that paper (see `get_dois_and_repos_from_joss.py`)
+* `ner_text_extraction` - links from github READMEs to ROR ids of affiliations extracted from those READMEs using NER (see `TheStackDataset.md`)
+* `url_matches` - links from github repo owner names, which may be individual user accounts or organization accounts, to ROR based on URL match, see `get_ror_from_gh_org_or_user.py`, `get_orca_org_rors.py`, and `get_stack_org_rors.py`
+* `by_name` - links from affiliation names, associated with software by a human (see `working file *.csv`) to ROR (see `ror_name_lookup.rb`) matched using the ROR API
+* `human_curated` - ROR ids that a human identified as being affiliated with a piece of software (see `RRID to ROR Software Mapping Data` below)
 
 ## Resources
 
@@ -12,9 +38,6 @@ Goal of our efforts during this hackathon: surface a list of _possible links_ fr
     * Resulting data in `repo_to_doi_and_title.json`
 * Script for searching openalex API using dois/pmids from RRID dataset (`working file software.csv`) and pulling in metadata, including RORs and author information `rrid_dataset_mapped_to_openalex.R`
 * [Dataset] [Queries](./TheStackDataset.md) to retrieve READMEs from [The Stack](https://huggingface.co/datasets/bigcode/the-stack) that contain possible institutions, and [sample data](./stack_institution_readmes/sample.jsonl) 
-
-## (partial) Solutions
-
 * Script for retrieving ROR IDs from github users or org names, if available: `get_ror_from_gh_org.py`. Sample usage:
 
 ```bash
@@ -26,7 +49,6 @@ $ python3 get_ror_from_gh_org_or_user.py jmelot
 No url found for jmelot on github
 ```
 * [Dataset] 398 GitHub software repo owners extracted from [ORCA](https://orca.eto.tech/orca_download.jsonl) data and mapped to ROR ids based on their URLs (see `get_ror_from_gh_org.py`): `orca_org_rors.json`
-
 * Script to populate most likely organization and RORs for *working file software.csv*
 
 ```bash
@@ -48,30 +70,11 @@ $cd ruby
 ./csv_ror_mnimal.rb
 ```
 
-## Results schema
+## Ground truth
 
-Our results are consolidated using `consolidate_links.py` and put in `software_to_ror.csv`. Note that there may be multiple rows per software-ror pair, if our linkage method returned multiple ROR ids for a given
-piece of software. We have currently found 14213 software-ROR links containing 3609 distinct ROR ids. Some of these are sure to be 
-spurious links, and we're working on cleaning them up.
+### RRID to ROR Software Mapping Data
 
-| Field name | Description | Field type |
-| --- |--- | --- |
-| software_name | Human-generated name of software (e.g. `Tensorflow`) | text |
-| github_slug | Github owner and repo name, e.g. `apache/airflow` | text |
-| ror_id | ROR id, in url form, e.g. `https://ror.org/02qenvm24` | text |
-| extraction_methods | semicolon-separated list of methods used to extract the software-ror pair (selected from <br/><br/>`affiliation_links`, `targeted_affiliation_links`, `url_matches`, `name_matches`, `human_curated`) | text |
-
-The extraction methods we currently track - all of which are imperfect - are:
-
-* `affiliation_links` - links from software mentioned in a paper to the ROR ids of author affiliations of that paper
-* `targeted_affiliation_links` - links from software mentioned in a paper _that is likely to describe that software_ (for example paper-repo pairs extracted from JOSS, see `get_dois_and_repos_from_joss.py`) to the ROR ids of author affiliations of that paper
-* `ner_text_extraction` - links from github READMEs to ROR ids of affiliations extracted from those READMEs using NER
-* `url_matches` - links from github repo owner names, which may be individual user accounts or organization accounts, to ROR based on URL match, see `get_ror_from_gh_org_or_user.py`, `get_orca_org_rors.py`, and `get_stack_org_rors.py`
-* `name_matches` - links from affiliation names, associated with software by a human (see `working file *.csv`) to ROR (see `ror_name_lookup.rb`)
-
-## RRID to ROR Software Mapping Data File Readme Section
-
-This is a file that has been extracted from the SciCrunch Registry, accessible on the web: [https://scicrunch.org/resources](https://scicrunch.org/resources/data/source/nlx_144509-1/search)
+`working file software.csv` is a file that has been extracted from the SciCrunch Registry, accessible on the web: [https://scicrunch.org/resources](https://scicrunch.org/resources/data/source/nlx_144509-1/search)
 
 The data is human curated and filtered by "Software" additional resource type. 
 These data are openly available and any resource can be freely accessed by using the scicrunch or another resolving service without an API key (be kind with the number of times you access this or be banned). Example: 
