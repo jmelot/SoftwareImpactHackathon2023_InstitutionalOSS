@@ -6,7 +6,7 @@ def get_doi_to_software():
 
     df = pd.read_csv(csv_file, sep="\t")
 
-    selected_data = df[['doi', 'ID']]
+    selected_data = df[['doi', 'software', 'ID']]
 
     return selected_data
 
