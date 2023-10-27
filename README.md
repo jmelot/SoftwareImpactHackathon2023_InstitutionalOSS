@@ -8,6 +8,7 @@ The criteria for linking software to a research organization are:
 
 * The software has a creator/contributor who is affiliated with an organization.
 * The software is hosted by an account associated with the organization
+* The software repository explicitly references the organization (in code, readme, documentation, etc.)
 
 ## Dataset 
 
