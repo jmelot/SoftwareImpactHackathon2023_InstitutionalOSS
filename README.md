@@ -74,7 +74,7 @@ $cd ruby
 
 ## Ground truth
 
-### RRID to ROR Software Mapping Data
+### RRID to ROR Software Mapping Data, Please cite as Bandrowski 2023 Zenodo DOI:10.5281/zenodo.10048228
 
 `working file software.csv` is a file that has been extracted from the SciCrunch Registry, accessible on the web: [https://scicrunch.org/resources](https://scicrunch.org/resources/data/source/nlx_144509-1/search)
 
