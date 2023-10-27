@@ -51,7 +51,8 @@ $cd ruby
 ## Results schema
 
 Our results are consolidated using `consolidate_links.py` and put in `software_to_ror.csv`. Note that there may be multiple rows per software-ror pair, if our linkage method returned multiple ROR ids for a given
-piece of software. We have currently found 2511 software-ROR links containing 1012 distinct ROR ids.
+piece of software. We have currently found 14213 software-ROR links containing 3609 distinct ROR ids. Some of these are sure to be 
+spurious links, and we're working on cleaning them up.
 
 | Field name | Description | Field type |
 | --- |--- | --- |
