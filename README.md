@@ -4,9 +4,10 @@ This project surfaces a list of _possible links_ from software repositories to R
 
 ## Criteria for Linking
 
-The criteria for linking software to a research organzation are:
-    The software has a creator/contributor who is affiliated with an organization.
-    The software is hosted by an account associated with the organization
+The criteria for linking software to a research organization are:
+
+* The software has a creator/contributor who is affiliated with an organization.
+* The software is hosted by an account associated with the organization
 
 ## Dataset 
 
