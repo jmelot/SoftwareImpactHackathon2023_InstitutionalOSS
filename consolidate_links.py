@@ -78,6 +78,25 @@ def reformat_working_curated(working_curated: str) -> list:
     return reformatted
 
 
+def reformat_czi_software_mapping(czi_software_to_rors: str) -> list:
+    """
+    Reformat CZI software to ror ids into the standard format
+    :param czi_software_to_rors: Name of file containing czi software to author affiliation rors
+    :return: List of reformatted records
+    """
+    reformatted = []
+    with open(czi_software_to_rors) as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            reformatted.append({
+                "software_name": row["software_name"],
+                "github_slug": row["gh_repo"],
+                "ror_id": row["institution_ror"],
+                "extraction_method": "affiliation_links"
+            })
+        return reformatted
+
+
 def merge_rows(datasets: list) -> list:
     """
     Merge data across disparate sources, with one row per software-ROR pair
@@ -96,7 +115,7 @@ def merge_rows(datasets: list) -> list:
             extraction_method = row["extraction_method"]
             if id in id_to_record:
                 if extraction_method not in id_to_record[id]["extraction_methods"]:
-                    id_to_record[id]["extraction_methods"].push(extraction_method)
+                    id_to_record[id]["extraction_methods"].append(extraction_method)
             else:
                 row["extraction_methods"] = [row.pop("extraction_method")]
                 id_to_record[id] = row
@@ -106,21 +125,24 @@ def merge_rows(datasets: list) -> list:
 
 
 def write_reformatted(orca_url_matches: str, orca_data: str, stack_readme_matches: str, working_curated: str,
-                      output_file: str):
+                      czi_software_rors: str, output_file: str):
     """
     Merge data from disparate sources and write out in a single CSV
     :param orca_url_matches: matches from repo owner urls to ROR urls
     :param orca_data: ORCA data download, containing additional metadata for each ORCA repo
     :param stack_readme_matches: Affiliations extracted from The Stack readmes using NER
+    :param working_curated: Curated data, augmented with matches based on ROR API
+    :param czi_software_rors: RORs pulled from author affiliations from CZI software-repo links
     :param output_file: File where output csvs should be written
     :return: None
     """
     orca = reformat_orca_url_matches(orca_url_matches, orca_data)
     stack_readme = reformat_stack_readme_matches(stack_readme_matches)
     working = reformat_working_curated(working_curated)
+    czi_software = reformat_czi_software_mapping(czi_software_rors)
     # TODO: write a reformat_<your data> function to put data in the format shown in `reformat_orca_url_matches`,
     # then put the output in the array below
-    merged_rows = merge_rows([orca, stack_readme, working])
+    merged_rows = merge_rows([orca, stack_readme, working, czi_software])
 
     rors = set()
     with open(output_file, mode="w") as f:
@@ -144,9 +166,10 @@ if __name__ == "__main__":
     parser.add_argument("--stack_readme_affiliations",
                         default=os.path.join("stack_institution_readmes", "repo_institution_ids.csv"))
     parser.add_argument("--working_curated", default="working_file_minimal.csv")
+    parser.add_argument("--czi_software_rors", default="czi_software_ror_mapped.csv")
     parser.add_argument("--output_file", default="software_to_ror.csv")
     # TODO: add more arguments to ingest more data sources
     args = parser.parse_args()
 
     write_reformatted(args.orca_url_matches, args.orca_data, args.stack_readme_affiliations, args.working_curated,
-                      args.output_file)
+                      args.czi_software_rors, args.output_file)
