@@ -91,6 +91,7 @@ def merge_rows(datasets: list) -> list:
     # record to `id_to_record`
     for dataset in datasets:
         for row in dataset:
+            row["software_name"] = row["software_name"].strip()
             id = f"{row['software_name']}/{row['ror_id']}".lower()
             extraction_method = row["extraction_method"]
             if id in id_to_record:

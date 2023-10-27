@@ -1,9 +1,4 @@
 software_name,github_slug,ror_id,extraction_methods
- Clinical Outcomes Research Initiative ,,https://ror.org/009avj582,human_curated
- Genotype-IBD Sharing Test ,,https://ror.org/02vm5rt34,human_curated
- Globin Gene Server ,,https://ror.org/04p491231,human_curated
- SNPHunter ,,https://ror.org/03vek6s52,human_curated
- XRNA,,https://ror.org/03s65by71,human_curated
 %MinMax,,https://ror.org/00mkhxb43,by_name
 0TYoung0/WEBD,0TYoung0/WEBD,https://ror.org/02bbqcn27,ner_text_extraction
 10XGenomics/single-cell-3prime-paper,10XGenomics/single-cell-3prime-paper,https://ror.org/01sxvbm95,url_matches
@@ -698,6 +693,7 @@ Classifier Visualization in R,,https://ror.org/01w19ak89,by_name
 CLEAVE,,https://ror.org/05rrcem69,by_name
 clementFoyer/UoB-beamer-theme,clementFoyer/UoB-beamer-theme,https://ror.org/0524sp257,ner_text_extraction
 Clemson Computational Biophysics and Bioinformatics,,https://ror.org/037s24f05,human_curated
+Clinical Outcomes Research Initiative,,https://ror.org/009avj582,human_curated
 Clinical Toolbox for SPM,,https://ror.org/03rtgjq94,human_curated
 Clinical Trial Management Application,,https://ror.org/01an3r305,human_curated
 Clinical Trials Viewer,,https://ror.org/01pxwe438,human_curated
@@ -1092,7 +1088,7 @@ dwhieb/dwhieb,dwhieb/dwhieb,https://ror.org/0160cpw27,ner_text_extraction
 dwslab/jRDF2Vec,dwslab/jRDF2Vec,https://ror.org/031bsb921,url_matches
 dwslab/melt,dwslab/melt,https://ror.org/031bsb921,url_matches
 Dynamic Regulatory Events Miner,,https://ror.org/05x2bcf33,by_name
-DynaMut ,,https://ror.org/01ej9dk98,human_curated
+DynaMut,,https://ror.org/01ej9dk98,human_curated
 dyubicuoa/OpenRTM_aist_amqpcpp_interface,dyubicuoa/OpenRTM_aist_amqpcpp_interface,https://ror.org/01703db54,ner_text_extraction
 dzerbino/velvet,dzerbino/velvet,https://ror.org/04wt43v05,url_matches
 e-apostolidis/AC-SUM-GAN,e-apostolidis/AC-SUM-GAN,https://ror.org/0069akp70,url_matches
@@ -1460,6 +1456,7 @@ Genomic Annotation in Livestock for positional candidate LOci,,https://ror.org/0
 genomics Workbench,,https://ror.org/00hj8s172,human_curated
 genophenoenvo/JAGS-logistic-growth,genophenoenvo/JAGS-logistic-growth,https://ror.org/03m2x1q45,ner_text_extraction
 geNORM,,https://ror.org/00cv9y106,by_name
+Genotype-IBD Sharing Test,,https://ror.org/02vm5rt34,human_curated
 Genotyping,,https://bio.tools/ncbi_resources,human_curated
 Genovo,,https://ror.org/00f54p054,human_curated
 GenPipes,,https://ror.org/01pxwe438,human_curated
@@ -1500,6 +1497,7 @@ GLiMMPS,,https://ror.org/046rm7j60,human_curated
 GLIRT,,https://ror.org/0130frc33,by_name
 "GLMdenoise: a fast, automated technique for denoising task-based fMRI data",,https://ror.org/01yc7t268,human_curated
 GlobalFishingWatch/map-client,GlobalFishingWatch/map-client,https://ror.org/00wxex667,url_matches
+Globin Gene Server,,https://ror.org/04p491231,human_curated
 GLOM MAP is a toolbox written for the MATLAB development enviroment,,https://ror.org/04w7skc03,by_name
 GLYCAM-Web,,https://ror.org/00te3t702,human_curated
 GMAC: A Matlab toolbox for spectral Granger causality analysis of fMRI data,,https://ror.org/01nffqt88,human_curated
@@ -1607,7 +1605,7 @@ guido-s/netmeta,guido-s/netmeta,https://ror.org/03cba0s60,url_matches
 guido-s/netmeta,guido-s/netmeta,https://ror.org/03vzbgh69,url_matches
 gunshi/dl-ift6135-h19,gunshi/dl-ift6135-h19,https://ror.org/0161xgx34,ner_text_extraction
 GuPPy,LernerLab/GuPPy,https://ror.org/000e0be47,by_name
-GUSHR ,Gaius-Augustus/GUSHR,https://ror.org/00r1edq15,human_curated
+GUSHR,Gaius-Augustus/GUSHR,https://ror.org/00r1edq15,human_curated
 GUSSI,,https://ror.org/05byvp690,human_curated
 gustavosgarofalo/matplotlib_homework,gustavosgarofalo/matplotlib_homework,https://ror.org/036nfer12,ner_text_extraction
 gyyu/cmudebate,gyyu/cmudebate,https://ror.org/05x2bcf33,ner_text_extraction
@@ -2836,7 +2834,7 @@ mohansah/Movie_Recommended_systems,mohansah/Movie_Recommended_systems,https://ro
 Mohnishh26/Expense_Management_Application,Mohnishh26/Expense_Management_Application,https://ror.org/042nb2s44,ner_text_extraction
 mokha/corpona,mokha/corpona,https://ror.org/04f07ep24,ner_text_extraction
 mokshya-priyadarshee/Data-Structures,mokshya-priyadarshee/Data-Structures,https://ror.org/00k8zt527,ner_text_extraction
-Molecular Dynamics Workflow (BioKepler)  ,nbcrrolls/workflows/tree/master/Production/AmberGPUMDSimulation,https://ror.org/0168r3w48,by_name
+Molecular Dynamics Workflow (BioKepler),nbcrrolls/workflows/tree/master/Production/AmberGPUMDSimulation,https://ror.org/0168r3w48,by_name
 Molecular Toolkit,,https://ror.org/03k1gpj17,human_curated
 MolProbity,,https://ror.org/00py81415,by_name
 Monocle3,cole-trapnell-lab/monocle3,https://ror.org/00cvxb145,human_curated
@@ -3315,7 +3313,7 @@ Parametric Time Warping,,http://cran.r-project.org/mirrors.html,human_curated
 ParkanonTulikukko/movieDatabase,ParkanonTulikukko/movieDatabase,https://ror.org/040af2s02,ner_text_extraction
 Parseq,,https://ror.org/02en5vm52,by_name
 Pasarus/C-C-andEnvironments-C--Part,Pasarus/C-C-andEnvironments-C--Part,https://ror.org/015m2p889,ner_text_extraction
-PASC ,,https://bio.tools/ncbi_resources,human_curated
+PASC,,https://bio.tools/ncbi_resources,human_curated
 PASS,,https://ror.org/00240q980,by_name
 PASSion,,https://ror.org/01r0k6965,human_curated
 PASTA,,https://ror.org/02y3ad647,human_curated
@@ -3460,7 +3458,7 @@ Polysolver,,https://ror.org/05a0ya142,human_curated
 PolySTest,,https://ror.org/03yrrjy16,by_name
 PombeX,,https://ror.org/03taz7m60,human_curated
 Postgwas,,http://cran.r-project.org/mirrors.html,human_curated
-PottersWheel ,,https://ror.org/0245cg223,by_name
+PottersWheel,,https://ror.org/0245cg223,by_name
 potyoma/Tuchka,potyoma/Tuchka,https://ror.org/00njsd438,ner_text_extraction
 PoulinV/AxiCLASS,PoulinV/AxiCLASS,https://ror.org/00nrbzg90,url_matches
 Poulsen IDP/IUP random coil chemical shifts,,https://ror.org/035b05819,human_curated
@@ -3521,7 +3519,7 @@ pushnyakov/WWWMusicalGenreRecognitionChallenge,pushnyakov/WWWMusicalGenreRecogni
 PyMICE,abukaj/PyMICE,https://ror.org/04waf7p94,by_name
 pymzML,,https://ror.org/00pd74e08,by_name
 PyNIfTI,,https://ror.org/00ggpsq73,by_name
-PyPNS ,chlubba/PyPNS,https://ror.org/041kmwe10,by_name
+PyPNS,chlubba/PyPNS,https://ror.org/041kmwe10,by_name
 PyRosetta,,https://ror.org/00za53h95,by_name
 Q-Value Software,,https://ror.org/00f54p054,human_curated
 QC-Chain,,https://ror.org/034t30j35,human_curated
@@ -3572,7 +3570,7 @@ RAREMETAL,,https://ror.org/00jmfr291,by_name
 rassait/ITE220,rassait/ITE220,https://ror.org/02bvdvz71,ner_text_extraction
 RatMine,,https://ror.org/00qqv6244,by_name
 Raven,,https://ror.org/05bnh6r87,human_curated
-Rayburst Open-Source Code ,,https://ror.org/04a9tmd77,human_curated
+Rayburst Open-Source Code,,https://ror.org/04a9tmd77,human_curated
 RazerS,,https://ror.org/046ak2485,human_curated
 rbehal/CMED-Image-Analysis,rbehal/CMED-Image-Analysis,https://ror.org/01pxwe438,ner_text_extraction
 RCSB PDB Software Tools,,"http://www.rcsb.org, http://www.pdb.org",human_curated
@@ -3911,6 +3909,7 @@ SNAP - Effects of Single Amino Acid Substitutions on Protein Function,,https://r
 SNAP - SNP Annotation and Proxy Search,,https://ror.org/05a0ya142,human_curated
 SnowsShoes-FTD,,https://ror.org/03jp40720,human_curated
 SNPAAMapper,,https://ror.org/00jmfr291,by_name
+SNPHunter,,https://ror.org/03vek6s52,human_curated
 SNPiR,,https://ror.org/00f54p054,human_curated
 SNPMeta,,https://ror.org/017zqws13,by_name
 SNPper,,https://ror.org/02y3ad647,human_curated
@@ -3955,7 +3954,7 @@ spacetelescope/notebooks,spacetelescope/notebooks,https://ror.org/036f5mx38,url_
 spacetelescope/webbpsf,spacetelescope/webbpsf,https://ror.org/036f5mx38,url_matches
 SPAdes,,https://ror.org/05ne3s142,human_curated
 Spark,,https://ror.org/03sfybe47,human_curated
-Sparky ,,https://ror.org/043mz5j54,by_name
+Sparky,,https://ror.org/043mz5j54,by_name
 Sparse Learning with Efficient Projections,,https://ror.org/03efmqc40,by_name
 Spatial Analysis 3D,,https://ror.org/02t274463,human_curated
 Spatio- Spectro- Temporal Receptive Field,,https://ror.org/01an7q238,by_name
@@ -4196,7 +4195,7 @@ TriTrypDB,,http://ApiDB.org,human_curated
 tRNAscan-SE,,https://ror.org/03s65by71,human_curated
 TRON-Bioinformatics/covigator-ngs-pipeline,TRON-Bioinformatics/covigator-ngs-pipeline,https://ror.org/04sz26p89,url_matches
 Trontor/lookahead,Trontor/lookahead,https://ror.org/01ej9dk98,ner_text_extraction
-Tscratch ,cselab/TScratch,https://ror.org/05a28rw58,by_name
+Tscratch,cselab/TScratch,https://ror.org/05a28rw58,by_name
 TSDiffAna,,https://ror.org/02jx3x895,human_curated
 TSSer,,https://ror.org/02s6k3f65,by_name
 tsvm/information-retrieval-labs,tsvm/information-retrieval-labs,https://ror.org/02jv3k292,ner_text_extraction
@@ -4358,7 +4357,7 @@ vliuatenphasedotcom/vliuatenphasedotcom.github.io,vliuatenphasedotcom/vliuatenph
 Vmatch,,https://ror.org/00g30e956,by_name
 voidcycles/m3,voidcycles/m3,https://ror.org/01111rn36,ner_text_extraction
 Volume image object AnNOtation System,,https://ror.org/013sk6x84,by_name
-Volume Integration and Alignment System Source Code ,,https://ror.org/04a9tmd77,human_curated
+Volume Integration and Alignment System Source Code,,https://ror.org/04a9tmd77,human_curated
 Volume Integration and Alignment System,,https://ror.org/04a9tmd77,human_curated
 VolumeRover,,https://ror.org/00hj54h04,by_name
 Vopaaz/RolexBoost,Vopaaz/RolexBoost,https://ror.org/03cve4549,ner_text_extraction
@@ -4448,6 +4447,7 @@ XP-CLR,,https://ror.org/03wevmz92,human_curated
 XPN,,https://ror.org/0130frc33,human_curated
 XPP-Aut: X-Windows Phase Plane plus Auto,,https://ror.org/01an3r305,human_curated
 xqgex/CrazyFlie,xqgex/CrazyFlie,https://ror.org/029q31q54,ner_text_extraction
+XRNA,,https://ror.org/03s65by71,human_curated
 xudonghui/EdCoursesTimetable,xudonghui/EdCoursesTimetable,https://ror.org/01nrxwf90,ner_text_extraction
 xw-hu/DAF-Net,xw-hu/DAF-Net,https://ror.org/00t33hh48,ner_text_extraction
 Yabi,,https://ror.org/00r4sry34,human_curated
