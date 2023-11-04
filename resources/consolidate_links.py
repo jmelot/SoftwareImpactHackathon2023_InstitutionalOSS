@@ -190,8 +190,8 @@ if __name__ == "__main__":
     parser.add_argument("--czi_software_rors", default="czi_software_ror_mapped.csv")
     parser.add_argument("--joss_software_rors", default="joss_300_papers_openalex.csv")
     # add more arguments to ingest more data sources
-    parser.add_argument("--output_csv", default="software_to_ror.csv")
-    parser.add_argument("--output_json", default="software_to_ror.json")
+    parser.add_argument("--output_csv", default=os.path.join("..", "software_to_ror.csv"))
+    parser.add_argument("--output_json", default=os.path.join("..", "software_to_ror.json"))
     args = parser.parse_args()
 
     write_reformatted(args.orca_url_matches, args.orca_data, args.stack_readme_affiliations, args.working_curated,
