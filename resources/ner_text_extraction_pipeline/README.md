@@ -39,13 +39,13 @@ from thestack.readmes
 where (lower(content) like "%institute%") or (lower(content) like "%university%") or (lower(content) like "%school%")
 ```
 
-A sample of 5K READMEs is available [here](resources/ner_text_extraction_pipeline/stack_readmes/sample.jsonl).
+A sample of 5K READMEs is available [here](stack_readmes/sample.jsonl).
 
 ## Extracting and mapping organization names
 
 1. Download the NER model from [huggingface](https://huggingface.co/poodledude/ner-test-bert-base-uncased-finetuned-500K-AdamW-3-epoch-locations/tree/main).
 
-2. Run [pipeline.py](resources/ner_text_extraction_pipeline/pipeline.py) script to extract organisation names and map them to ROR IDs:
+2. Run [pipeline.py](pipeline.py) script to extract organisation names and map them to ROR IDs:
 
 ```
 python pipeline.py --input <stack READMEs dir> --model <NER model dir> --output <output file> [--threads <number of threads>] [--chunk <size of the imap chunk>]
