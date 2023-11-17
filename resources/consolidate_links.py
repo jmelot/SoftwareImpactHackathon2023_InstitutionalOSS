@@ -186,7 +186,7 @@ if __name__ == "__main__":
     parser.add_argument("--orca_data", default="orca_download.jsonl")
     parser.add_argument("--stack_readme_affiliations",
                         default=os.path.join("stack_institution_readmes", "repo_institution_ids.csv"))
-    parser.add_argument("--working_curated", default="working_file_minimal.csv")
+    parser.add_argument("--working_curated", default="scicrunch_working_file_minimal.csv")
     parser.add_argument("--czi_software_rors", default="czi_software_ror_mapped.csv")
     parser.add_argument("--joss_software_rors", default="joss_300_papers_openalex.csv")
     # add more arguments to ingest more data sources

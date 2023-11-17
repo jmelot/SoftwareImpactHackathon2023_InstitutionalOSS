@@ -33,7 +33,7 @@ The extraction/matching methods we currently use - all of which are imperfect - 
 * `joss_affiliation_links` - links from software described in a JOSS paper to the ROR ids of the author affiliations of that paper (see `get_dois_and_repos_from_joss.py`)
 * `ner_text_extraction` - links from github READMEs to ROR ids of affiliations extracted from those READMEs using NER (see `TheStackDataset.md`)
 * `url_matches` - links from github repo owner names, which may be individual user accounts or organization accounts, to ROR based on URL match, see `get_ror_from_gh_org_or_user.py`, `get_orca_org_rors.py`, and `get_stack_org_rors.py`
-* `by_name` - links from affiliation names, associated with software by a human (see `working file *.csv`) to ROR (see `ror_name_lookup.rb`) matched using the ROR API
+* `by_name` - links from affiliation names, associated with software by a human (see `scicrunch_working_file_*.csv`) to ROR (see `enrich_sci_crunch_csv.py`) matched using the ROR API
 * `human_curated` - ROR ids that a human identified as being affiliated with a piece of software (see `RRID to ROR Software Mapping Data` below)
 * `openaire_x_czi` - join doi-to-ROR-ids from OpenAIRE (based on string matching on the affiliation strings of the authors from Crossref) to CZI mentions dataset that provides doi-to-software relations (only Github repo URLs were used) -- code available under `openaire_x_czi` folder -- data available at `openaire_x_czi/openaire-doi-to-ror-ids/output-data/doi_to_rorid.csv.gz` (TODO: needs to be unified and merged with the data of other methods)
 
@@ -60,25 +60,13 @@ $ python3 get_ror_from_gh_org_or_user.py jmelot
 No url found for jmelot on github
 ```
 * [Dataset] 398 GitHub software repo owners extracted from [ORCA](https://orca.eto.tech/orca_download.jsonl) data and mapped to ROR ids based on their URLs (see `get_ror_from_gh_org.py`): `orca_org_rors.json`
-* Script to populate most likely organization and RORs for *working file software.csv*
+* Script to populate most likely organization and RORs for *scicrunch_working_file_software.csv* which is a user-donated list
+  based on SciCrunch and manual work and contributions by students and others.
 
 ```bash
-$ cd ruby
-$ bundle install # if you need to install dependencies
-$ ./ror_name_lookup.rb "/path/to/working file software.csv"
-# it should output working_file_with_rors_added_by_name.csv to same directory
-# the items without RORs for a name have proposed columns added at end columns to new
-# output file.
-```
-
-There is a further script to take the output of the above script and process down
-to a smaller set of items that have RORs and with a minimal set of columns. It produces
-a file `../working_file_minimal.csv` with fields `software_name`, `github_slug`,
-`ror_id`, `org_name`, `extraction_methods`.
-
-```bash
-$cd ruby
-./csv_ror_mnimal.rb
+$ python3 enrich_sci_crunch_csv.py --input=scicrunch_working_file_software.csv --format=minimal
+# This will output a file called "scicrunch_working_file_minimal.csv" that can be fed into the consolidate_links.py
+# script.  To produce an enriched version of the original csv, use --format=full and it outputs "scicrunch_working_file_enriched.csv"
 ```
 
 ## Ground truth
