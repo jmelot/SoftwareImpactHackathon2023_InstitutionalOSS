@@ -7,7 +7,6 @@ from urllib.parse import urlencode
 import csv
 import os
 import time
-import pdb
 import re
 
 
@@ -68,7 +67,6 @@ def github_slug(row):
     return github_s
 
 
-
 def proposed_ror_info(row, ror_cache):
     org_name = row['Parent Org Name']
     filled_ror = row['ROR and other mappings']
@@ -119,7 +117,6 @@ def minimal_info(args):
 
     with open(args.input, 'r') as csv_file:
         csv_reader = csv.DictReader(csv_file)
-        headers = csv_reader.fieldnames
 
         processed_rows = 0
         out_file = os.path.join(os.path.dirname(args.input), 'scicrunch_working_file_minimal.csv')
@@ -137,7 +134,7 @@ def minimal_info(args):
                     continue
 
                 ror_id = row['ROR and other mappings'] if ('ror.org' in row['ROR and other mappings']) else \
-                proposed_info['ror_id']
+                    proposed_info['ror_id']
                 org_name = row['Parent Org Name']
                 sfw_name = row['Resource_Name']
                 extraction_methods = 'human_curated' if ('ror.org' in row['ROR and other mappings']) else 'by_name'
@@ -159,4 +156,3 @@ elif args.format == 'minimal':
 else:
     parser.print_help()
     sys.exit(1)
-
