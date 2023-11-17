@@ -1,7 +1,0 @@
-source 'https://rubygems.org'
-
-gem 'activesupport'
-gem 'byebug'
-gem 'http'
-gem 'json'
-gem 'rubocop'
