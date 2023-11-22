@@ -3,7 +3,7 @@ from utils import extract_github_slug
 
 def get_doi_to_software(input_file):
 
-    df = pd.read_csv(input_file, sep="\t", dtype=str)
+    df = pd.read_csv(input_file, sep="\t", dtype=str, compression='gzip')
 
     selected_data = df[['doi', 'software', 'ID']]
 
