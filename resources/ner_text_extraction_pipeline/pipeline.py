@@ -68,17 +68,27 @@ def ner_inference(model, preprocessed_input):
     return predictions
 
 
-def postprocess_output(tokenizer, ner_input, token_predictions):
+def postprocess_output(ner_input, token_predictions):
     """
     Postprocess NER inference output
     Adapted from https://github.com/ror-community/affiliation-matching-experimental/tree/main/ner_tests/inference
 
-    :param tokenizer: NER tokenizer object
     :param ner_input: Preprocessed input object
     :param token_predictions: NER raw predictions
     :return: Token prediction labels or None if no organisation was detected
     """
 
+    # NER model assigns a label to every token in the input sequence. Possible labels are:
+    # B-ORG - the first token of an organisation name (B stands for begin)
+    # I-ORG - the subsequent token of an organisation name (I stands for inner)
+    # B-LOC - the first token of a location entity
+    # I-LOC - the subsequent token of a location entity
+    # O - other token (not part of any entity)
+    #
+    # An entity labelled correctly will start with one token labelled as B-*,
+    # followed by zero or more tokens labelled as I-*. Examples:
+    # O O O B-ORG O O
+    # O B-ORG I-ORG I-ORG O O B-LOC O
     ids_to_labels = {0: "B-ORG", 1: "I-ORG", 2: "O", 3: "B-LOC", 4: "I-LOC"}
     token_labels = [ids_to_labels[i] for i in token_predictions.cpu().numpy()]
     predictions = []
@@ -87,10 +97,10 @@ def postprocess_output(tokenizer, ner_input, token_predictions):
     ):
         if mapping[0] == 0 and mapping[1] != 0:
             predictions.append(token_label)
-    if (
-        all(label in ["I-ORG", "B-LOC", "I-LOC", "O"] for label in predictions)
-        and "B-ORG" not in predictions
-    ):
+
+    # If there is no B-ORG label in the sequence, it means that no organisation
+    # name was detected.
+    if "B-ORG" not in predictions:
         return None
     return predictions
 
@@ -118,16 +128,14 @@ def extract_organisation_names(tokenizer, model, text):
     # detected organisation names are then concatenated and returned.
     offset = 0
     while offset < len(tokens):
-        tokens_chunk = tokens[offset:]
+        tokens_chunk = tokens[offset : offset + MAX_NER_INPUT_LEN]
         preprocessed_input = preprocess_input(tokenizer, tokens_chunk)
         token_predictions = ner_inference(model, preprocessed_input)
-        predictions = postprocess_output(
-            tokenizer, preprocessed_input, token_predictions
-        )
+        predictions = postprocess_output(preprocessed_input, token_predictions)
 
         if predictions is not None:
             organization_name = " ".join(
-                w for p, w in zip(predictions, tokens_chunk) if p != "O"
+                w for p, w in zip(predictions, tokens_chunk) if p in ["B-ORG", "I-ORG"]
             )
             names.add(organization_name)
 
