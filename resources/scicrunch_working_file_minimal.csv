@@ -11,7 +11,7 @@ Integrative Genomics Viewer,,https://ror.org/05a0ya142,Broad Institute,human_cur
 MISO,yarden/MISO,https://ror.org/042nb2s44,Massachusetts Institute of Technology; Massachusetts; USA,human_curated
 eXpress,,https://ror.org/01an7q238,University of California; Berkeley; USA,by_name
 QIIME,,https://ror.org/02ttsq026,University of Colorado Boulder; Colorado; USA,human_curated
-Cumulus,klarman-cell-observatory/cumulus/blob/91336094646217564a4f8e7b31c03c3c6bf2e84b/docs/index.rst,https://ror.org/05a0ya142,Broad Institute,human_curated
+Cumulus,,https://ror.org/05a0ya142,Broad Institute,human_curated
 GuPPy,LernerLab/GuPPy,https://ror.org/000e0be47,Northwestern University Feinberg School of Medicine; Illinois; USA,by_name
 SIPEC,SIPEC-Animal-Data-Analysis/SIPEC,https://ror.org/05a28rw58,ETH Zurich; Zurich; Switzerland,by_name
 PanoramaWeb,,https://ror.org/00cvxb145,University of Washington; Seattle; USA,human_curated
@@ -110,6 +110,7 @@ Sequence Search and Alignment by Hashing Algorithm,,https://ror.org/05cy4wa09,We
 LINUCS,,https://ror.org/00rk1k743,glycosciences.de,by_name
 Lipsia,,https://ror.org/0387jng26,Max Planck Institute for Human Cognitive and Brain Sciences; Leipzig; Germany,by_name
 Nonlinear time series analysis in a nutshell,,https://ror.org/04n0g0b29,Pompeu Fabra University; Barcelona; Spain,human_curated
+TraDES,,https://ror.org/01tgyzw49,Christopher Hogues Research Lab at the National University of Singapore,by_name
 FMRISTAT - A general statistical analysis for fMRI data,,https://ror.org/01pxwe438,McGill University; Montreal; Canada,human_curated
 AAL,,https://ror.org/057qpr032,Bordeaux Segalen University; Bordeaux; France,by_name
 ARACHNE,,https://ror.org/05a0ya142,Broad Institute,human_curated
@@ -546,7 +547,7 @@ Mycobrowser,,https://ror.org/02s376052,Swiss Federal Institute of Technology Lau
 DINDEL,,https://ror.org/05cy4wa09,Wellcome Trust Sanger Institute; Hinxton; United Kingdom,human_curated
 Stampy,,https://ror.org/01rjnta51,Wellcome Trust Centre for Human Genetics,by_name
 Pplacer,,https://ror.org/007ps6h72,Fred Hutchinson Cancer Center,by_name
-MAVEN,eugenemel/maven/releases,https://ror.org/00hx57361,Princeton University; New Jersey; USA,by_name
+MAVEN,,https://ror.org/00hx57361,Princeton University; New Jersey; USA,by_name
 MACH 1.0,,https://ror.org/00jmfr291,University of Michigan; Ann Arbor; USA,by_name
 Mach2dat,,https://ror.org/00jmfr291,University of Michigan; Ann Arbor; USA,by_name
 MACH,,https://ror.org/00jmfr291,University of Michigan; Ann Arbor; USA,by_name
@@ -579,7 +580,7 @@ PiNGO,,https://ror.org/00cv9y106,Ghent University; Ghent; Belgium,by_name
 SHRiMP,,https://ror.org/03dbr7087,University of Toronto; Ontario; Canada,human_curated
 PHAST,,https://ror.org/05bnh6r87,Cornell University; New York; USA,human_curated
 RAIphy,,https://ror.org/043mer456,University of Nebraska; Nebraska; USA,human_curated
-PEER,PMBio/peer/wiki,https://ror.org/05cy4wa09,Wellcome Trust Sanger Institute; Hinxton; United Kingdom,human_curated
+PEER,,https://ror.org/05cy4wa09,Wellcome Trust Sanger Institute; Hinxton; United Kingdom,human_curated
 StRAnGER,,https://ror.org/033m02g29,National Hellenic Research Foundation,human_curated
 SINOMO,,https://ror.org/01kj2bm70,Newcastle University; Newcastle upon Tyne; United Kingdom,human_curated
 RSEG,,https://ror.org/03taz7m60,University of Southern California; Los Angeles; USA,human_curated
@@ -630,7 +631,7 @@ KOBAS,,https://ror.org/02v51f717,Peking University; Beijing; China,human_curated
 PSICQUIC Registry,,https://ror.org/01v676463,HUPO Proteomics Standards Initiative,by_name
 PSICQUIC Registry,,https://ror.org/02catss52,European Bioinformatics Institute,human_curated
 DOTS WM tract segmentation,,https://ror.org/00za53h95,Johns Hopkins University; Maryland; USA,by_name
-Simple Neurite Tracer,fiji/Simple_Neurite_Tracer/releases/tag/Simple_Neurite_Tracer-3.1.3,https://ror.org/01nrxwf90,University of Edinburgh; Scotland; United Kingdom,by_name
+Simple Neurite Tracer,,https://ror.org/01nrxwf90,University of Edinburgh; Scotland; United Kingdom,by_name
 Birdseed,,https://ror.org/05a0ya142,Broad Institute,human_curated
 phenomeNET,,https://ror.org/013meh722,University of Cambridge; Cambridge; United Kingdom,human_curated
 KNOSSOS,,https://ror.org/000bxzc63,Max Planck Institute for Medical Research; Heidelberg; Germany,by_name
@@ -749,7 +750,7 @@ BreakFusion,,https://ror.org/04twxam07,University of Texas MD Anderson Cancer Ce
 MultiPhen,,https://ror.org/022r5hc56,CRAN,by_name
 GeneCodis,,https://ror.org/02gfc7t72,Spanish National Research Council; Madrid; Spain,by_name
 iFad,,https://ror.org/01hpqfm28,Yale School of Medicine; Connecticut; USA,by_name
-Strelka,Illumina/strelka/,https://ror.org/05k34t975,Illumina,human_curated
+Strelka,,https://ror.org/05k34t975,Illumina,human_curated
 DONE: Detection of Outlier NEurons,,https://ror.org/01kj2bm70,Newcastle University; Newcastle upon Tyne; United Kingdom,human_curated
 UMD p53 Mutation Database,,https://ror.org/056d84691,Karolinska Institute; Stockholm; Sweden,by_name
 lapdftext,,https://ror.org/03taz7m60,University of Southern California; Los Angeles; USA,human_curated
@@ -771,7 +772,7 @@ DySC,,https://ror.org/00njsd438,Google Code,by_name
 Fiji,fiji/fiji,https://ror.org/05b8d3w18,Max Planck Institute of Molecular Cell Biology and Genetics; Dresden; Germany,human_curated
 icy,,https://ror.org/00akhwn95,Pasteur Institute,by_name
 nFuse,,https://ror.org/0213rcc28,Simon Fraser University; British Columbia; Canada,human_curated
-MuSiC,ding-lab/MuSiC2/blob/master/README.md,https://ror.org/01yc7t268,Washington University in St. Louis; Missouri; USA,human_curated
+MuSiC,,https://ror.org/01yc7t268,Washington University in St. Louis; Missouri; USA,human_curated
 NormaCurve,,https://ror.org/04t0gwh46,Curie Institute; Paris; France,by_name
 pFind Studio: pLink,,https://ror.org/034t30j35,Chinese Academy of Sciences; Beijing; China,human_curated
 CD-HIT-OTU,,https://ror.org/01yqg2h08,CD-HIT,by_name
@@ -799,7 +800,7 @@ TARGETgene,,https://ror.org/05b68f622,Biomedical Simulations Resource,by_name
 HighSSR,,https://ror.org/00njsd438,Google Code,by_name
 ADMIXTOOLS,DReichLab/AdmixTools,https://ror.org/03vek6s52,Harvard University; Cambridge; United States,human_curated
 Spark,,https://ror.org/03sfybe47,BC Cancer Agency,human_curated
-DELLY,dellytools/delly/,https://ror.org/010jaxs89,European Molecular Biology Laboratory,by_name
+DELLY,,https://ror.org/010jaxs89,European Molecular Biology Laboratory,by_name
 GeneStitch,,https://ror.org/02k40bc56,Indiana University; Indiana; USA,human_curated
 VICUNA,,https://ror.org/05a0ya142,Broad Institute,human_curated
 Scholarometer,,https://ror.org/01kg8sb98,Indiana University Bloomington; Indiana; USA,by_name
@@ -882,7 +883,7 @@ RNAstructure,,https://ror.org/022kthw22,University of Rochester; New York; USA,b
 Shimmer,nhansen/Shimmer,https://ror.org/00baak391,National Human Genome Research Institute,human_curated
 RNAsnp,,https://ror.org/035b05819,University of Copenhagen; Copenhagen; Denmark,human_curated
 IgBLAST,,https://ror.org/02meqm098,NCBI,by_name
-eQtlBma,timflutre/eqtlbma/wiki,https://ror.org/024mw5h28,University of Chicago; Illinois; USA,human_curated
+eQtlBma,,https://ror.org/024mw5h28,University of Chicago; Illinois; USA,human_curated
 KMC,,https://ror.org/02dyjk442,Silesian University of Technology; Silesia; Poland,by_name
 JiffyNet,,https://ror.org/01wjejq96,Yonsei University; Seoul; South Korea,human_curated
 mCarts,,https://ror.org/00hj8s172,Columbia University; New York; USA,human_curated
@@ -929,7 +930,7 @@ Squeezambler,,https://ror.org/01070mq45,Wayne State University; Michigan; USA,by
 GobyWeb,,https://ror.org/03dkvy735,Weill Cornell Medical College; New York; USA,by_name
 PhyloPhlAn,,https://ror.org/0300yd604,Harvard T.H. Chan School of Public Health,by_name
 isomiRID,,https://ror.org/041yk2d64,Federal University of Rio Grande do Sul; Rio Grande do Sul; Brazil,human_curated
-MATCHCLIP,yhwu/matchclips/,https://ror.org/041phzg73,University of Pennsylvania Perelman School of Medicine; Pennsylvania; USA,human_curated
+MATCHCLIP,,https://ror.org/041phzg73,University of Pennsylvania Perelman School of Medicine; Pennsylvania; USA,human_curated
 FoXS,,https://ror.org/043mz5j54,University of California at San Francisco; California; USA,by_name
 htseq-count,,https://ror.org/010jaxs89,European Molecular Biology Laboratory,by_name
 MCMC.qpcr,,https://ror.org/022r5hc56,CRAN,by_name
@@ -1038,7 +1039,7 @@ MOABS,,https://ror.org/00njsd438,Google Code,by_name
 DEMI,,https://ror.org/022r5hc56,CRAN,by_name
 Differential Methylation Analysis Package,,https://ror.org/01jmxt844,University of Otago; Dunedin; New Zealand,human_curated
 pRESTO,,https://ror.org/01hpqfm28,Yale School of Medicine; Connecticut; USA,by_name
-Sandwich Estimator Toolbox,NISOx-BDI/SwE-toolbox/releases,https://ror.org/01a77tt86,University of Warwick; Coventry; United Kingdom,human_curated
+Sandwich Estimator Toolbox,,https://ror.org/01a77tt86,University of Warwick; Coventry; United Kingdom,human_curated
 Monocle3,cole-trapnell-lab/monocle3,https://ror.org/00cvxb145,University of Washington; Seattle; USA,human_curated
 jmzTab,,https://ror.org/00njsd438,Google Code,by_name
 YuGene,,https://ror.org/022r5hc56,CRAN,by_name
@@ -1063,10 +1064,10 @@ ALDEx2,ggloor/ALDEx2,https://ror.org/02grkyz14,Western University; Ontario; Cana
 MetAssign,,https://ror.org/00vtgdb53,University of Glasgow; Glasgow; United Kingdom,by_name
 circlize,jokergoo/circlize,https://ror.org/022r5hc56,CRAN,by_name
 electronic Data Archive Library,,https://ror.org/02skbsp27,Leibniz Institute of Plant Genetics and Crop Plant Research; Saxony-Anhalt; Germany,by_name
-LUMPY,arq5x/lumpy-sv/,https://ror.org/0153tk833,University of Virginia; Virginia; USA,human_curated
+LUMPY,,https://ror.org/0153tk833,University of Virginia; Virginia; USA,human_curated
 RepEnrich,nskvir/RepEnrich,https://ror.org/05gq02987,Brown University; Rhode Island; USA,human_curated
 FisHiCal,,https://ror.org/022r5hc56,CRAN,by_name
-Circleator,jonathancrabtree/Circleator/,https://ror.org/047s2c258,University of Maryland School of Medicine; Maryland; USA,by_name
+Circleator,,https://ror.org/047s2c258,University of Maryland School of Medicine; Maryland; USA,by_name
 ChiBE,,https://ror.org/00njsd438,Google Code,by_name
 PASC ,,https://ror.org/02meqm098,NCBI,by_name
 msbwt,,https://ror.org/00njsd438,Google Code,by_name
@@ -1153,8 +1154,8 @@ Seg3D,,https://ror.org/03r0ha626,University of Utah; Utah; USA,human_curated
 ChemRICH,barupal/chemrich,https://ror.org/05rrcem69,University of California at Davis; California; USA,by_name
 biobakery,,https://ror.org/03vek6s52,Harvard University; Cambridge; United States,human_curated
 QuPath,,https://ror.org/00hswnk62,Queens University Belfast; Ireland; United Kingdom,human_curated
-SPRING,AllonKleinLab/SPRING/,https://ror.org/03vek6s52,Harvard University; Cambridge; United States,human_curated
-LeafCutter,davidaknowles/leafcutter/,https://ror.org/00f54p054,Stanford University; Stanford; California,human_curated
+SPRING,,https://ror.org/03vek6s52,Harvard University; Cambridge; United States,human_curated
+LeafCutter,,https://ror.org/00f54p054,Stanford University; Stanford; California,human_curated
 MAJIQ,,https://ror.org/00b30xv10,University of Pennsylvania; Philadelphia; USA,human_curated
 L1000 Fireworks Display,,https://ror.org/04a9tmd77,Icahn School of Medicine at Mount Sinai; New York; USA,human_curated
 imctools,BodenmillerGroup/imctools,https://ror.org/02crff812,University of Zurich; Zurich; Switzerland,by_name
@@ -1168,7 +1169,7 @@ ResearchMaps,,https://ror.org/046rm7j60,University of California at Los Angeles;
 Fitness Browser,,https://ror.org/01an7q238,University of California; Berkeley; USA,by_name
 X2K Web,MaayanLab/x2k_web,https://ror.org/04a9tmd77,Icahn School of Medicine at Mount Sinai; New York; USA,human_curated
 ITK-SNAP,,https://ror.org/00b30xv10,University of Pennsylvania; Philadelphia; USA,human_curated
-Hierarchical Unsupervised Generative Embedding toolbox,translationalneuromodeling/tapas/tree/master/huge,https://ror.org/02crff812,University of Zurich; Zurich; Switzerland,by_name
+Hierarchical Unsupervised Generative Embedding toolbox,,https://ror.org/02crff812,University of Zurich; Zurich; Switzerland,by_name
 ZebEyeTrack,,https://ror.org/03a1kwz48,University of Tubingen; Tubingen; Germany,by_name
 ReBATE,EpistasisLab/ReBATE,https://ror.org/00b30xv10,University of Pennsylvania; Philadelphia; USA,human_curated
 Fly EM,,https://ror.org/013sk6x84,Janelia Research,by_name
@@ -1189,7 +1190,7 @@ GraphClust2,BackofenLab/GraphClust-2,https://ror.org/0245cg223,University of Fre
 ShinyGO,,https://ror.org/015jmes13,South Dakota State University; South Dakota; USA,by_name
 single cell RNA-seq Data Visualization and Analysis,liziyie/scDVA,https://ror.org/02v51f717,Peking University; Beijing; China,human_curated
 CytoMAP,,https://ror.org/01yc7t268,Washington University School of Medicine in St. Louis; Missouri; USA,by_name
-CiteFuse,SydneyBioX/CiteFuse/,https://ror.org/0384j8v12,University of Sydney; Sydney; Australia,human_curated
+CiteFuse,,https://ror.org/0384j8v12,University of Sydney; Sydney; Australia,human_curated
 MutaRNA,,https://ror.org/0245cg223,University of Freiburg; Baden-Wurttemberg; Germany,by_name
 DeepNeuro,QTIM-Lab/DeepNeuro,https://ror.org/03vek6s52,Harvard University; Cambridge; United States,human_curated
 Planet Microbe,hurwitzlab/planet-microbe-app,https://ror.org/03m2x1q45,University of Arizona; Arizona; USA,human_curated
@@ -1416,7 +1417,7 @@ Savant,,https://ror.org/03dbr7087,University of Toronto; Ontario; Canada,human_c
 Fusion ICA Toolbox,,https://ror.org/05fs6jp91,University of New Mexico; New Mexico; USA,human_curated
 MINC Brain Imaging Toolbox,,https://ror.org/01pxwe438,McGill University; Montreal; Canada,human_curated
 Donders Machine Learning Toolbox,distrep/DMLT,https://ror.org/016xsfp80,Radboud University; Nijmegen; The Netherlands,human_curated
-nornir-buildmanager,jamesra/nornir-buildmanager/wiki,https://ror.org/05ew68y43,Nornir,by_name
+nornir-buildmanager,,https://ror.org/05ew68y43,Nornir,by_name
 Nornir,,https://ror.org/03r0ha626,University of Utah; Utah; USA,human_curated
 Datavyu,,https://ror.org/0190ak572,New York University; New York; USA,human_curated
 DTU Center for Biological Sequence Analysis,,https://ror.org/04qtj9h94,Technical University of Denmark; Lyngby; Denmark,by_name
@@ -1564,7 +1565,7 @@ ConceptMapper,,https://ror.org/00dsy9f04,Neuroscience Information Framework,by_n
 NiftySim,,https://ror.org/02jx3x895,University College London; London; United Kingdom,human_curated
 NiftyReg,,https://ror.org/02jx3x895,University College London; London; United Kingdom,human_curated
 Neurobiological Image Management System,cni/nims,https://ror.org/00f54p054,Stanford University; Stanford; California,human_curated
-BRAINSTools,BRAINSia/BRAINSTools https://github.com/BRAINSia/BRAINSTools/wiki,https://ror.org/036jqmy94,University of Iowa; Iowa; USA,human_curated
+BRAINSTools,,https://ror.org/036jqmy94,University of Iowa; Iowa; USA,human_curated
 APOLLOH,,https://ror.org/03sfybe47,BC Cancer Agency,human_curated
 SoftSearch,,https://ror.org/00njsd438,Google Code,by_name
 Berkeley Bioinformatics Open-Source Projects,,https://ror.org/02jbv0t02,Lawrence Berkeley National Laboratory,by_name
@@ -1754,7 +1755,7 @@ MASI Label Fusion,,https://ror.org/02vm5rt34,Vanderbilt University; Tennessee; U
 MASIMatlab,,https://ror.org/02vm5rt34,Vanderbilt University; Tennessee; USA,human_curated
 Multi-fiber Reconstruction from DW-MRI,,https://ror.org/02y3ad647,University of Florida; Florida; USA,human_curated
 Non-rigid groupwise registration method,,https://ror.org/042nb2s44,Massachusetts Institute of Technology; Massachusetts; USA,human_curated
-BRAINSDemonWarp,BRAINSia/BRAINSTools/tree/master/BRAINSDemonWarp,https://ror.org/036jqmy94,University of Iowa; Iowa; USA,human_curated
+BRAINSDemonWarp,,https://ror.org/036jqmy94,University of Iowa; Iowa; USA,human_curated
 Age Related Atrophy Dataset,,https://ror.org/02smfhw86,Virginia Polytechnic Institute and State University; Virginia; USA,by_name
 B0 and eddy current correction for DTI,,https://ror.org/02y3cnq68,Biomedical Informatics Research Network,by_name
 BrainGraph Editor,,https://ror.org/0561waf62,Laboratory of Neuro Imaging,by_name
@@ -1982,7 +1983,7 @@ minc-toolkit,BIC-MNI/minc-toolkit,https://ror.org/01pxwe438,McGill University; M
 MISST - Microstructure Imaging Sequence Simulation ToolBox,,https://ror.org/02jx3x895,University College London; London; United Kingdom,human_curated
 MRIcroS,,https://ror.org/012jban78,Medical University of South Carolina; South Carolina; USA,by_name
 Multivariate General Linear Models (MGLM) on Riemannian Manifolds,,https://ror.org/01y2jtd41,University of Wisconsin-Madison; Wisconsin; USA,human_curated
-Neoseg,NIRALUser/neoseg/tree/master,https://ror.org/03r0ha626,University of Utah; Utah; USA,human_curated
+Neoseg,,https://ror.org/03r0ha626,University of Utah; Utah; USA,human_curated
 Neuron-C,,https://ror.org/00b30xv10,University of Pennsylvania; Philadelphia; USA,human_curated
 NiiStat,,https://ror.org/012jban78,Medical University of South Carolina; South Carolina; USA,by_name
 Orientation Distribution Function in Constant Solid Angle (CSA-ODF),,https://ror.org/017zqws13,University of Minnesota Twin Cities; Minnesota; USA,by_name
@@ -2003,7 +2004,7 @@ AcqKnowledge Software,,https://ror.org/00wfb0t96,Biopac Systems Inc,by_name
 FluoRender,,https://ror.org/03r0ha626,University of Utah; Utah; USA,human_curated
 ImageScope,,https://ror.org/024mw5h28,University of Chicago; Illinois; USA,human_curated
 Rexplore,,https://ror.org/05mzfcs16,Open University; Milton Keynes; United Kingdom,human_curated
-Molecular Dynamics Workflow (BioKepler)  ,nbcrrolls/workflows/tree/master/Production/AmberGPUMDSimulation,https://ror.org/0168r3w48,University of California at San Diego; California; USA,by_name
+Molecular Dynamics Workflow (BioKepler)  ,,https://ror.org/0168r3w48,University of California at San Diego; California; USA,by_name
 Seahorse Wave,,https://ror.org/012bn4v93,Agilent Technologies,by_name
 NIRStar,,https://ror.org/05kgbsy64,NIRx NIRS Neuroimaging,by_name
 NIRSPORT,,https://ror.org/05kgbsy64,NIRx NIRS Neuroimaging,by_name
@@ -2015,7 +2016,7 @@ Odyssey CLx,,https://ror.org/017shr829,LI-COR Biosciences,human_curated
 BioSigRP,,https://ror.org/0014wkh93,Tucker-Davis Technologies,human_curated
 ggplot2,tidyverse/ggplot2,https://ror.org/022r5hc56,CRAN,by_name
 FactoMineR,,https://ror.org/022r5hc56,CRAN,by_name
-Stanford CoreNLP,stanfordnlp/CoreNLP http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22stanford-corenlp%22,https://ror.org/00f54p054,Stanford University; Stanford; California,human_curated
+Stanford CoreNLP,,https://ror.org/00f54p054,Stanford University; Stanford; California,human_curated
 MultiXplore,,https://ror.org/02grkyz14,Western University; Ontario; Canada,human_curated
 Automatic Tractography-based Parcellation Pipeline,haililihai/ATPP_CLI,https://ror.org/034t30j35,Chinese Academy of Sciences; Beijing; China,human_curated
 BioSigRZ,,https://ror.org/0014wkh93,Tucker-Davis Technologies,human_curated
@@ -2055,7 +2056,7 @@ CMap,,https://ror.org/05a0ya142,Broad Institute,human_curated
 UTHSCSA ImageTool,,https://ror.org/02f6dcw23,University of Texas Health Science Center at San Antonio; Texas; USA,human_curated
 OpenEx,,https://ror.org/0014wkh93,Tucker-Davis Technologies,human_curated
 MediBeacon Studio Software,,https://ror.org/0096ngc39,MediBeacon,by_name
-Research Data Management Platform,HicServices/RDMP/wiki,https://ror.org/03h2bxq36,University of Dundee; Scotland; United Kingdom,human_curated
+Research Data Management Platform,,https://ror.org/03h2bxq36,University of Dundee; Scotland; United Kingdom,human_curated
 CEDAR Workbench,,https://ror.org/013z99a51,Center for Expanded Data Annotation and Retrieval,by_name
 The Bergen fMRI Toolbox Plugin for EEGLab,,https://ror.org/03zga2b32,University of Bergen; Bergen; Norway,by_name
 GenPipes,,https://ror.org/01pxwe438,McGill University; Montreal; Canada,human_curated
@@ -2064,7 +2065,7 @@ Suite2P,cortex-lab/Suite2P,https://ror.org/02jx3x895,University College London; 
 1000 Fungal Genome Project,,https://ror.org/04xm1d337,DOE Joint Genome Institute,by_name
 VoxBlast,,https://ror.org/036jqmy94,University of Iowa Labs and Facilities,by_name
 DIANA microT-CDS,,https://ror.org/04v4g9h31,University of Thessaly; Thessaly; Greece,by_name
-MrDiffusion,vistalab/vistasoft/tree/master/mrDiffusion,https://ror.org/00f54p054,Stanford University; Stanford; California,human_curated
+MrDiffusion,,https://ror.org/00f54p054,Stanford University; Stanford; California,human_curated
 Sequin,,https://ror.org/02meqm098,NCBI,by_name
 NetCirChro,,https://ror.org/043z4tv69,NIAID,by_name
 Simmune,,https://ror.org/00g30e956,University of Hamburg; Hamburg; Germany,by_name
@@ -2078,7 +2079,7 @@ Open Reading Frame Finder,,https://ror.org/02meqm098,NCBI,by_name
 Genotyping,,https://ror.org/02meqm098,NCBI,by_name
 TSDiffAna,,https://ror.org/02jx3x895,University College London; London; United Kingdom,human_curated
 Agilent MassHunter WorkStation - Qualitative Analysis for GC/MS,,https://ror.org/012bn4v93,Agilent Technologies,by_name
-IndelGenotyper,broadinstitute/gatk/,https://ror.org/05a0ya142,Broad Institute,human_curated
+IndelGenotyper,,https://ror.org/05a0ya142,Broad Institute,human_curated
 MouseLight Project,,https://ror.org/013sk6x84,Janelia Research,by_name
 MouseLight Neuron Browser,,https://ror.org/013sk6x84,Janelia Research,by_name
 microC,,https://ror.org/052gg0110,University of Oxford; Oxford; United Kingdom,human_curated
@@ -2110,13 +2111,13 @@ Centre for Genome Regulation Bioinformatics Core Facility,,https://ror.org/03wyz
 Max Planck Institiute of Immunobiology and Epigenetics Bioinformatics Core Facility,,https://ror.org/058xzat49,Max Planck Institiute of Immunobiology and Epigenetics; Freiburg; Germany,by_name
 University of Arkansas at Little Rock MidSouth Bioinformatics Center Core Facility,,https://ror.org/05jbt9m15,University of Arkansas; Arkansas; USA,human_curated
 University of Illinois Urbana-Champaign High Performance Biological Computing Core Facility,,https://ror.org/047426m28,University of Illinois at Urbana-Champaign; Illinois; USA,human_curated
-ReproIn: The ReproNim image input management system (featuring DataLad),ReproNim/reproin/graphs/contributors,https://ror.org/026ejyb70,ReproNim: A Center for Reproducible Neuroimaging Computation,by_name
+ReproIn: The ReproNim image input management system (featuring DataLad),,https://ror.org/026ejyb70,ReproNim: A Center for Reproducible Neuroimaging Computation,by_name
 University of Edinburgh College of Medicine and Veterinary Medicine MRC Institute of Genetics and Molecular Medicine Bioinformatics Analysis Core Facility,,https://ror.org/01nrxwf90,University of Edinburgh; Scotland; United Kingdom,by_name
 FastqSifter,josephryan/FastqSifter,https://ror.org/02y3ad647,University of Florida; Florida; USA,human_curated
 PennAI,EpistasisLab/pennai,https://ror.org/00b30xv10,University of Pennsylvania; Philadelphia; USA,human_curated
 NeuroAnatomy Toolbox,jefferis/nat,https://ror.org/00tw3jy02,MRC Laboratory of Molecular Biology,human_curated
 MRspa,,https://ror.org/017zqws13,University of Minnesota Twin Cities; Minnesota; USA,by_name
-R package inTrees,softwaredeng/inTrees/issues,https://ror.org/022r5hc56,CRAN,by_name
+R package inTrees,,https://ror.org/022r5hc56,CRAN,by_name
 OntoSoft,,https://ror.org/03taz7m60,University of Southern California; Los Angeles; USA,human_curated
 Scfind,hemberg-lab/scfind,https://ror.org/05cy4wa09,Wellcome Trust Sanger Institute; Hinxton; United Kingdom,human_curated
 Diffusion Toolkit,,https://ror.org/03vek6s52,Harvard University; Cambridge; United States,human_curated
@@ -2158,7 +2159,7 @@ WEBMAXC EXTENDED,,https://ror.org/00f54p054,Stanford University; Stanford; Calif
 Muscle X,biocatiit/musclex,https://ror.org/037t3ry66,Illinois Institute of Technology; Illinois; USA,by_name
 Systematic Review Facility,,https://ror.org/01nrxwf90,University of Edinburgh; Scotland; United Kingdom,by_name
 CopyDetective,sandmanns/CopyDetective,https://ror.org/00pd74e08,University of Munster; North Rhine-Westphalia; Germany,by_name
-scATAC Pipeline,broadinstitute/warp/tree/master/pipelines/skylab/scATAC,https://ror.org/05a0ya142,Broad Institute,human_curated
+scATAC Pipeline,,https://ror.org/05a0ya142,Broad Institute,human_curated
 Hetindel,najasplus/hetindel_shinyapp,https://ror.org/022jc0g24,Max Planck Institute for Developmental Biology; Tubingen; Germany,human_curated
 UCSC Xena,,https://ror.org/03s65by71,University of California at Santa Cruz; California; USA,human_curated
 Vmatch,,https://ror.org/00g30e956,University of Hamburg; Hamburg; Germany,by_name
@@ -2178,7 +2179,7 @@ Genomic Annotation in Livestock for positional candidate LOci,,https://ror.org/0
 ConPlot,,https://ror.org/04xs57h96,University of Liverpool; Liverpool; United Kingdom,human_curated
 Clinical Trials Viewer,,https://ror.org/01pxwe438,McGill University; Montreal; Canada,human_curated
 Deep Collaborative Learning,,https://ror.org/04vmvtb21,Tulane University; Louisiana; USA,by_name
-CellLocator,BICCN/cell-locator/,https://ror.org/03cpe7c52,Allen Institute,human_curated
+CellLocator,,https://ror.org/03cpe7c52,Allen Institute,human_curated
 Program MARK,,https://ror.org/03k1gpj17,Colorado State University; Colorado; USA,human_curated
 1KA,,https://ror.org/05njb9z20,University of Ljubljana; Ljubljana; Slovenia,by_name
 syndRomics,ucsf-ferguson-lab/syndRomics,https://ror.org/043mz5j54,University of California at San Francisco; California; USA,by_name
@@ -2188,13 +2189,13 @@ GBRS,,https://ror.org/021sy4w91,Jackson Laboratory,human_curated
 PottersWheel ,,https://ror.org/0245cg223,University of Freiburg; Baden-Wurttemberg; Germany,by_name
 GUSHR ,Gaius-Augustus/GUSHR,https://ror.org/00r1edq15,University of Greifswald; Mecklenburg-Vorpommern; Germany,human_curated
 ProtHint,gatech-genemark/ProtHint,https://ror.org/01zkghx44,Georgia Institute of Technology; Georgia; USA,human_curated
-Smart-seq2 Single Sample Pipeline,broadinstitute/warp/blob/master/pipelines/skylab/smartseq2_single_sample/SmartSeq2SingleSample.wdl,https://ror.org/05a0ya142,Broad Institute,human_curated
+Smart-seq2 Single Sample Pipeline,,https://ror.org/05a0ya142,Broad Institute,human_curated
 ENVRI-KMS,,https://ror.org/04dkp9463,University of Amsterdam; Amsterdam; Netherlands,by_name
 Linear Analysis of Midgut,hietakangas-laboratory/LAM,https://ror.org/040af2s02,University of Helsinki; Helsinki; Finland,by_name
 MotionMapper,gordonberman/MotionMapper,https://ror.org/00hx57361,Princeton University; New Jersey; USA,by_name
 Camera Control project,,https://ror.org/03vek6s52,Harvard University; Cambridge; United States,human_curated
 Pegasus,,https://ror.org/05a0ya142,Broad Institute,human_curated
-Cirrocumulus,klarman-cell-observatory/cirrocumulus/blob/413898061f1c48350071d200f043cc43104dd04f/docs/index.rst,https://ror.org/05a0ya142,Broad Institute,human_curated
+Cirrocumulus,,https://ror.org/05a0ya142,Broad Institute,human_curated
 Terra,,https://ror.org/05a0ya142,Broad Institute,human_curated
 epiR,,https://ror.org/01ej9dk98,University of Melbourne; Victoria; Australia,human_curated
 ELAN,,https://ror.org/00671me87,Max Planck Institute for Psycholinguistics; Nijmegen; Netherlands,by_name
@@ -2209,7 +2210,7 @@ ChrOrthLink,chulbioinfo/chrorthlink,https://ror.org/04h9pn542,Seoul National Uni
 LMAS,B-UMMI/LMAS,https://ror.org/05tkyf982,Ben-Gurion University of the Negev; Beer-Sheva; Israel,by_name
 BioKB,,https://ror.org/036x5ad56,University of Luxembourg; Luxembourg; Luxembourg,human_curated
 CORAL,jmchandonia/CORAL,https://ror.org/01an7q238,University of California; Berkeley; USA,by_name
-GDSC Single Molecule Localisation Microscopy,aherbert/gdsc-smlm/,https://ror.org/00ayhx656,University of Sussex; Brighton; United Kingdom,by_name
+GDSC Single Molecule Localisation Microscopy,,https://ror.org/00ayhx656,University of Sussex; Brighton; United Kingdom,by_name
 OpenSync,TAMUCogLab/OpenSync,https://ror.org/01f5ytq51,Texas A and M University; Texas; USA,by_name
 RDP Classifier,rdpstaff/classifier,https://ror.org/05hs6h993,Michigan State University; Michigan; USA,by_name
 xAtlas,jfarek/xatlas,https://ror.org/02pttbw34,Baylor College of Medicine Human Genome Sequencing Center,by_name

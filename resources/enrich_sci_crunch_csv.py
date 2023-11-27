@@ -41,7 +41,7 @@ def best_ror(org_name):
 
 
 def empty_cell(cell_contents):
-    return cell_contents is None or cell_contents == '' or cell_contents == '#N/A' or str(cell_contents) == '0'
+    return cell_contents == '#N/A' or not cell_contents
 
 
 def github_slug(row):
@@ -60,7 +60,7 @@ def github_slug(row):
     github_url = github_url_list[0] if github_url_list else ''
 
     if github_url:
-        m = re.match(r'^https://github.com/(.+/.+)$', github_url)
+        m = re.match(r'^https://github.com/([^/]+/[^/]+)$', github_url)
         if m:
             github_s = m.group(1)
 
@@ -80,7 +80,7 @@ def proposed_ror_info(row, ror_cache):
             if ror_info:
                 org_info = ror_info
             ror_cache[org_name] = org_info
-            time.sleep(0.05)
+            time.sleep(0.2) # limit hitting their API too fast and getting blocked or throttled
 
     return org_info
 
@@ -89,18 +89,19 @@ def full_enhance(args):
     ror_cache = {}
     out_file = os.path.join(os.path.dirname(args.input), 'scicrunch_working_file_enriched.csv')
 
-    with open(args.input, 'r') as csv_file:
+    with (open(args.input, 'r') as csv_file):
         csv_reader = csv.DictReader(csv_file)
         headers = csv_reader.fieldnames
 
         last_column = 39
         fixed_headers = headers[:last_column + 1]
         new_headers = ['proposed_name', 'proposed_ror_id']
+        all_headers = fixed_headers + new_headers
         processed_rows = 0
 
         with open(out_file, 'w', newline='') as csv_out:
-            csv_writer = csv.writer(csv_out)
-            csv_writer.writerow(fixed_headers + new_headers)
+            dict_writer = csv.DictWriter(csv_out, all_headers)
+            dict_writer.writeheader()
 
             for row in csv_reader:
                 processed_rows += 1
@@ -108,8 +109,9 @@ def full_enhance(args):
                     print(f"processed {processed_rows} rows")
 
                 org_info = proposed_ror_info(row, ror_cache)
-                new_row = [row[key] for key in headers[:last_column + 1]] + [org_info['proposed'], org_info['ror_id']]
-                csv_writer.writerow(new_row)
+                new_row = {key: row[key] for key in fixed_headers} | \
+                          {'proposed_name': org_info['proposed'], 'proposed_ror_id': org_info['ror_id']}
+                dict_writer.writerow(new_row)
 
 
 def minimal_info(args):
@@ -142,17 +144,18 @@ def minimal_info(args):
                 csv_writer.writerow(new_row)
 
 
-parser = argparse.ArgumentParser()
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
 
-parser.add_argument("--input", help="The path to the input file")
-parser.add_argument("--format", help="one of 'full' or 'minimal'.  Full enriches the original CSV with RORs, "
-                                     "minimal creates csv output for combining with other processors")
-args = parser.parse_args()
+    parser.add_argument("--input", help="The path to the input file")
+    parser.add_argument("--format", help="one of 'full' or 'minimal'.  Full enriches the original CSV with RORs, "
+                                         "minimal creates csv output for combining with other processors")
+    args = parser.parse_args()
 
-if args.format == 'full':
-    full_enhance(args)
-elif args.format == 'minimal':
-    minimal_info(args)
-else:
-    parser.print_help()
-    sys.exit(1)
+    if args.format == 'full':
+        full_enhance(args)
+    elif args.format == 'minimal':
+        minimal_info(args)
+    else:
+        parser.print_help()
+        sys.exit(1)
