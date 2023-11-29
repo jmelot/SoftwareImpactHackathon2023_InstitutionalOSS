@@ -71,8 +71,11 @@ def get_source_pmc_metadata(mention):
 
     pmcid = mention["pmcid"]
     key = f"oa_comm/xml/all/PMC{pmcid}.xml"
-    body = s3_client.get_object(Bucket=PMC_BUCKET, Key=key)["Body"].read()
-    return ET.fromstring(body)
+    try:
+        body = s3_client.get_object(Bucket=PMC_BUCKET, Key=key)["Body"].read()
+        return ET.fromstring(body)
+    except s3_client.exceptions.NoSuchKey:
+        return None
 
 
 def extract_reference(citation_number, jats_metadata):
@@ -85,6 +88,8 @@ def extract_reference(citation_number, jats_metadata):
     :return: Bibliographic reference or None (XML JATS)
     """
 
+    if jats_metadata is None:
+        return None
     for ref_list in jats_metadata.findall(".//ref-list"):
         for reference in ref_list:
             if "ref" != reference.tag:
@@ -93,7 +98,10 @@ def extract_reference(citation_number, jats_metadata):
             # a number with a prefix, for example "CR12". To locate the right
             # reference, we ignore the prefix and compare the number with the
             # citation number from the software mention.
-            reference_id = re.search("[1-9]\d*", reference.attrib["id"]).group()
+            reference_id = re.search("[1-9]\d*", reference.attrib["id"])
+            if reference_id is None:
+                continue
+            reference_id = reference_id.group()
             if citation_number == reference_id:
                 return reference
     return None
