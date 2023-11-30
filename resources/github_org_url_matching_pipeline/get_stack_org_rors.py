@@ -1,7 +1,7 @@
 import argparse
 import json
 import os
-from get_ror_from_gh_org_or_user import check_for_ror_url
+from gh_owner_to_ror import get_ror_from_url
 
 
 def get_stack_org_rors(stack_path: str, output_file: str) -> None:
@@ -30,7 +30,7 @@ def get_stack_org_rors(stack_path: str, output_file: str) -> None:
                             }))
                         continue
                     checked.add(owner)
-                    ror = check_for_ror_url(owner)
+                    ror = get_ror_from_url(owner)
                     if ror:
                         out.write(json.dumps({
                             "owner": owner,
