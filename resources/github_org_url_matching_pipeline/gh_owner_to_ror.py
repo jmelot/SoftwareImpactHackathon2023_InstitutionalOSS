@@ -28,19 +28,21 @@ def get_ror_from_url(owner_name: str, ror_domain_json: str = "ror_domain_to_ids.
         return full_ror_json[cleaned_gh_url]["ror_ids"]
     with open(ror_domain_json) as f:
         domain_json = json.loads(f.read())
-    print(gh_url)
-    print(cleaned_gh_url)
     gh_url_domain = cleaned_gh_url.split("/")[0]
     if gh_url_domain in domain_json:
         return domain_json[gh_url_domain]["ror_ids"]
+    # handle cases like nlp.standford.edu
+    stripped_domain = ".".join(gh_url_domain.split(".")[-2:])
+    if stripped_domain in domain_json:
+        return domain_json[stripped_domain]["ror_ids"]
     print(f"No ROR id found for url {gh_url} from {owner_name} on github")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("owner_name")
-    parser.add_argument("--ror_domain_json", default="ror_url_to_ids_domain.json")
-    parser.add_argument("--ror_full_url_json", default="ror_url_to_ids_full.json")
+    parser.add_argument("--ror_domain_json", default="ror_domain_to_ids.json")
+    parser.add_argument("--ror_full_url_json", default="ror_url_to_ids.json")
     args = parser.parse_args()
 
     ror_ids = get_ror_from_url(args.owner_name, args.ror_domain_json, args.ror_full_url_json)
