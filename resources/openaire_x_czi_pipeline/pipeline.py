@@ -37,13 +37,19 @@ if __name__ == "__main__":
     doi_to_repo_data = prepare_czi_data(czi_raw_mentions_file, czi_normalized_github_repos_file)
     # print(doi_to_repo_data)
           
+    print("Joining OpenAIRE and CZI mentions data")
+         
     result_df = pd.merge(doi_to_repo_data, doi_to_ror_data, on='doi')
     result_df = result_df.drop('doi', axis=1)
     # print(result_df)
 
     output_file = f"{configs.get('OUTPUT_FOLDER').data}/{configs.get('OUTPUT_FILE').data}"
 
+    print("Write retult to '{output_file}'")
+
     result_df.to_csv(output_file, index=False, sep='\t', header=True)
+
+    print("Ready!")
 
 
 

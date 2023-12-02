@@ -3,6 +3,16 @@ import json
 import gzip 
 
 def prepare_openaire_data(input_file, output_file):
+    """
+    Prepare OpenAIRE data from a JSON file by flattening and selecting specific columns.
+
+    Parameters:
+    - input_file (str): Path to the input GZIP-compressed JSON file.
+    - output_file (str): Path to the output CSV file.
+
+    Returns:
+    - pd.DataFrame: A DataFrame containing selected columns ('doi', 'RORid').
+    """
 
     # Read the JSON file into a list of dictionaries
     data = []

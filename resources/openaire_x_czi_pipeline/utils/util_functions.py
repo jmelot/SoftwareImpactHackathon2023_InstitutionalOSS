@@ -3,6 +3,17 @@ import os
 from urllib.parse import urlparse
 
 def download_file(url, local_path):
+    """
+    Download a file from a given URL and save it locally.
+
+    Parameters:
+    - url (str): The URL of the file to be downloaded.
+    - local_path (str): The local path where the file should be saved.
+
+    Returns:
+    - None
+    """
+    
     response = requests.get(url)
     
     if response.status_code == 200:
@@ -13,6 +24,15 @@ def download_file(url, local_path):
         print(f"Failed to download. Status code: {response.status_code}")
 
 def create_folder(folder_path):
+    """
+    Create a folder at the specified path if it does not already exist.
+
+    Parameters:
+    - folder_path (str): The path of the folder to be created.
+
+    Returns:
+    - None
+    """
 
     # Check if the folder exists
     if not os.path.exists(folder_path):
@@ -24,7 +44,16 @@ def create_folder(folder_path):
 
 
 def extract_github_slug(github_url):
+    """
+    Extract the GitHub repository slug from a given GitHub URL.
 
+    Parameters:
+    - github_url (str): The GitHub URL from which to extract the repository slug.
+
+    Returns:
+    - str or None: The GitHub repository slug in the format 'username/repository', or None if the URL is invalid.
+    """
+    
     # Parse the GitHub URL
     parsed_url = urlparse(github_url)
     # print(parsed_url)
