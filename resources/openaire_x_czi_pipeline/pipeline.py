@@ -1,27 +1,26 @@
 from jproperties import Properties
-from utils import download_file, create_folder
 from utils import prepare_openaire_data
-from utils import prepare_czi_data, extract_github_slug
+from utils import prepare_czi_data
 import pandas as pd
 
 if __name__ == "__main__":
 
-    # load properties file
+    # # load properties file
     configs = Properties()
     with open('config.properties', 'rb') as read_prop:
         configs.load(read_prop)
 
-    # prepare input and output folders
-    create_folder(configs.get("INPUT_FOLDER").data)
-    create_folder(configs.get("OUTPUT_FOLDER").data)
+    # # prepare input and output folders
+    # create_folder(configs.get("INPUT_FOLDER").data)
+    # create_folder(configs.get("OUTPUT_FOLDER").data)
 
-    # download input DOI to ROR id file from OpenAIRE
+    # # download input DOI to ROR id file from OpenAIRE
     openaire_input_file = f"{configs.get('INPUT_FOLDER').data}/{configs.get('OPENAIRE_INPUT_FILENAME').data}"
 
-    download_file(
-        configs.get("OPENAIRE_DOI_TO_RORID_INPUT_FILE").data, \
-        openaire_input_file \
-    )
+    # download_file(
+    #     configs.get("OPENAIRE_DOI_TO_RORID_INPUT_FILE").data, \
+    #     openaire_input_file \
+    # )
 
     # prepare DOI to RORid relations from OpenAIRE
     openaire_parsed_file = f"{configs.get('INPUT_FOLDER').data}/{configs.get('OPENAIRE_PARSED_FILENAME').data}"
@@ -45,7 +44,7 @@ if __name__ == "__main__":
 
     output_file = f"{configs.get('OUTPUT_FOLDER').data}/{configs.get('OUTPUT_FILE').data}"
 
-    print("Write retult to '{output_file}'")
+    print("Write retult to {output_file}")
 
     result_df.to_csv(output_file, index=False, sep='\t', header=True)
 
