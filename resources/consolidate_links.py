@@ -2,7 +2,7 @@ import argparse
 import csv
 import json
 import os
-
+import pandas as pd
 
 def reformat_orca_url_matches(url_matches: str, full_data: str) -> list:
     """
@@ -129,9 +129,21 @@ def merge_rows(datasets: list) -> list:
     merged.sort(key=lambda row: f"{row['software_name']}/{row['ror_id']}".lower())
     return merged
 
+def reformat_openaire_czi_matches(openaire_czi_matches_file: str):
+    """
+    Reformat csv.gz from OpenAIRE and CZI mentions merged data
+    :param openaire_czi_matches_file: Name of file containing software to ror id relations
+    :return: List of reformatted records
+    """
+    df = pd.read_csv(openaire_czi_matches_file, compression='gzip', delimiter='\t', encoding='utf-8')
+    df = df.rename(columns={'github_repo': 'github_slug', 'software': 'software_name', 'RORid': 'ror_id'})
+    df = df.drop_duplicates()
+    df['extraction_method'] = 'openaire_czi'
+
+    return df.to_dict(orient='records')
 
 def write_reformatted(orca_url_matches: str, orca_data: str, stack_readme_matches: str, working_curated: str,
-                      czi_software_rors: str, joss_software_rors: str, output_csv: str, output_json: str):
+                      czi_software_rors: str, joss_software_rors: str, openaire_czi_matches: str, output_csv: str, output_json: str):
     """
     Merge data from disparate sources and write out in a single CSV
     :param orca_url_matches: matches from repo owner urls to ROR urls
@@ -140,6 +152,7 @@ def write_reformatted(orca_url_matches: str, orca_data: str, stack_readme_matche
     :param working_curated: Curated data, augmented with matches based on ROR API
     :param czi_software_rors: RORs pulled from author affiliations from CZI software-repo links
     :param joss_software_rors: RORS pulled from author affiliations in JOSS software-repo links
+    :param openaire_czi_affiliations: ROR id to repository URLs by joining OpenAIRE ROR-to-DOI affiliations and CZI DOI-to-software mentions
     :param output_csv: File where output csv should be written
     :param output_json: File where output json should be written
     :return: None
@@ -149,9 +162,10 @@ def write_reformatted(orca_url_matches: str, orca_data: str, stack_readme_matche
     working = reformat_working_curated(working_curated)
     czi_affiliations = reformat_affiliation_rors(czi_software_rors, "czi_affiliation_links")
     joss_affiliations = reformat_affiliation_rors(joss_software_rors, "joss_affiliation_links")
+    openaire_czi_matches = reformat_openaire_czi_matches(openaire_czi_matches)
     # To add another dataset, write a reformat_<your data> function to put data in the format shown in
     # `reformat_orca_url_matches`, then put the output in the array below
-    merged_rows = merge_rows([orca, stack_readme, working, czi_affiliations, joss_affiliations])
+    merged_rows = merge_rows([orca, stack_readme, working, czi_affiliations, joss_affiliations, openaire_czi_matches])
 
     rors = set()
     with open(output_csv, mode="w") as f:
@@ -189,10 +203,12 @@ if __name__ == "__main__":
     parser.add_argument("--working_curated", default="scicrunch_working_file_minimal.csv")
     parser.add_argument("--czi_software_rors", default="czi_software_ror_mapped.csv")
     parser.add_argument("--joss_software_rors", default="joss_300_papers_openalex.csv")
+    parser.add_argument("--openaire_czi_matches", default=os.path.join("openaire_x_czi_pipeline", "output", "openaire_x_czi_out.csv.gz"))
+
     # add more arguments to ingest more data sources
     parser.add_argument("--output_csv", default=os.path.join("..", "software_to_ror.csv"))
     parser.add_argument("--output_json", default=os.path.join("..", "software_to_ror.json"))
     args = parser.parse_args()
 
     write_reformatted(args.orca_url_matches, args.orca_data, args.stack_readme_affiliations, args.working_curated,
-                      args.czi_software_rors, args.joss_software_rors, args.output_csv, args.output_json)
+                      args.czi_software_rors, args.joss_software_rors, args.openaire_czi_matches, args.output_csv, args.output_json)
