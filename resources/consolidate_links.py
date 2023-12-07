@@ -161,7 +161,8 @@ def merge_rows(datasets: list) -> list:
                 id_to_record[id] = row
     merged = []
     # Not casting aspersions, just noting that some methods return less ambiguous matches than others!
-    high_quality_methods = ["czi_affiliation_links", "joss_affiliation_links", "by_name", "human_curated"]
+    high_quality_methods = ["czi_affiliation_links", "joss_affiliation_links", "by_name", "human_curated",
+                            "ner_text_extraction"]
     for _, record in id_to_record.items():
         methods = record["extraction_methods"]
         is_high_quality = len(methods) > 1 or any([m in high_quality_methods for m in methods])
