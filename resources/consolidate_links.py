@@ -4,6 +4,7 @@ import json
 import os
 import pandas as pd
 
+
 def reformat_orca_url_matches(url_matches: str, full_data: str) -> list:
     """
     Reformat url matches over the ORCA data into the standard format
@@ -39,9 +40,8 @@ def reformat_orca_url_matches(url_matches: str, full_data: str) -> list:
 
 def reformat_stack_readme_matches(stack_matches: str) -> list:
     """
-    Reformat url matches over the ORCA data into the standard format
-    :param url_matches: Name of file containing owner <-> ROR matches found from URL match over ORCA data
-    :param full_data: Full ORCA data download
+    Reformat NER matches over the Stack README data into the standard format
+    :param url_matches: Name of file containing software-ROR affiliations extracted from The Stack
     :return: List of reformatted records
     """
     reformatted = []
@@ -78,27 +78,47 @@ def reformat_working_curated(working_curated: str) -> list:
     return reformatted
 
 
-def reformat_affiliation_rors(software_to_rors: str, extraction_method: str) -> list:
+def reformat_czi_affiliation_rors(software_to_rors: str) -> list:
     """
     Reformat csvs mapping affiliation software to ror ids into the standard format
     :param software_to_rors: Name of file containing software to author affiliation rors
-    :param extraction_method: Tag that should be applied to rows from this method in the output csv
     :return: List of reformatted records
     """
     reformatted = []
     with open(software_to_rors) as f:
         reader = csv.DictReader(f)
         for row in reader:
-            ror = row["institution_ror"]
-            repo = row["gh_repo"]
+            ror = row["ROR_ID"]
+            repo = row["github_slug"]
             repo = "/".join(repo.split("/")[-2:])
             if not ror or ror == "NA":
                 continue
             reformatted.append({
+                "software_name": row["mention"],
+                "github_slug": repo,
+                "ror_id": ror,
+                "extraction_method": "czi_affiliation_links"
+            })
+        return reformatted
+
+
+def reformat_joss_affiliation_rors(software_to_rors: str) -> list:
+    """
+    Reformat jsonl mapping affiliation software to ror ids into the standard format
+    :param software_to_rors: Name of file containing software to author affiliation rors
+    :return: List of reformatted records
+    """
+    reformatted = []
+    with open(software_to_rors) as f:
+        for line in f:
+            row = json.loads(line)
+            ror = row["ror_id"]
+            repo = row["github_slug"]
+            reformatted.append({
                 "software_name": row["software_name"],
                 "github_slug": repo,
                 "ror_id": ror,
-                "extraction_method": extraction_method
+                "extraction_method": "joss_affiliation_links"
             })
         return reformatted
 
@@ -160,8 +180,8 @@ def write_reformatted(orca_url_matches: str, orca_data: str, stack_readme_matche
     orca = reformat_orca_url_matches(orca_url_matches, orca_data)
     stack_readme = reformat_stack_readme_matches(stack_readme_matches)
     working = reformat_working_curated(working_curated)
-    czi_affiliations = reformat_affiliation_rors(czi_software_rors, "czi_affiliation_links")
-    joss_affiliations = reformat_affiliation_rors(joss_software_rors, "joss_affiliation_links")
+    czi_affiliations = reformat_czi_affiliation_rors(czi_software_rors)
+    joss_affiliations = reformat_joss_affiliation_rors(joss_software_rors)
     openaire_czi_matches = reformat_openaire_czi_matches(openaire_czi_matches)
     # To add another dataset, write a reformat_<your data> function to put data in the format shown in
     # `reformat_orca_url_matches`, then put the output in the array below
@@ -196,14 +216,17 @@ def write_reformatted(orca_url_matches: str, orca_data: str, stack_readme_matche
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--orca_url_matches", default="orca_org_rors.json")
-    parser.add_argument("--orca_data", default="orca_download.jsonl")
+    parser.add_argument("--orca_url_matches",
+                        default=os.path.join("github_org_url_matching_pipeline", "orca_org_rors.json"))
+    parser.add_argument("--orca_data", default=os.path.join("github_org_url_matching_pipeline", "orca_download.jsonl"))
     parser.add_argument("--stack_readme_affiliations",
-                        default=os.path.join("stack_institution_readmes", "repo_institution_ids.csv"))
-    parser.add_argument("--working_curated", default="scicrunch_working_file_minimal.csv")
-    parser.add_argument("--czi_software_rors", default="czi_software_ror_mapped.csv")
-    parser.add_argument("--joss_software_rors", default="joss_300_papers_openalex.csv")
-    parser.add_argument("--openaire_czi_matches", default=os.path.join("openaire_x_czi_pipeline", "output", "openaire_x_czi_out.csv.gz"))
+                        default=os.path.join("ner_text_extraction_pipeline", "links.csv"))
+    parser.add_argument("--working_curated", default=os.path.join("scicrunch", "scicrunch_working_file_minimal.csv"))
+    parser.add_argument("--czi_software_rors",
+                        default=os.path.join("czi_affiliation_links_pipeline", "links_with_slugs.csv"))
+    parser.add_argument("--joss_software_rors", default=os.path.join("joss_affiliations", "joss_rors.jsonl"))
+    parser.add_argument("--openaire_czi_matches",
+                        default=os.path.join("openaire_x_czi_pipeline", "output", "openaire_x_czi_out.csv.gz"))
 
     # add more arguments to ingest more data sources
     parser.add_argument("--output_csv", default=os.path.join("..", "software_to_ror.csv"))
