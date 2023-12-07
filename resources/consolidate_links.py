@@ -196,14 +196,16 @@ def write_reformatted(orca_url_matches: str, orca_data: str, stack_readme_matche
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--orca_url_matches", default="orca_org_rors.json")
-    parser.add_argument("--orca_data", default="orca_download.jsonl")
+    parser.add_argument("--orca_url_matches",
+                        default=os.path.join("github_org_url_matching_pipeline", "orca_org_rors.json"))
+    parser.add_argument("--orca_data", os.path.join("github_org_url_matching_pipeline", "orca_download.jsonl"))
     parser.add_argument("--stack_readme_affiliations",
-                        default=os.path.join("stack_institution_readmes", "repo_institution_ids.csv"))
-    parser.add_argument("--working_curated", default="scicrunch_working_file_minimal.csv")
-    parser.add_argument("--czi_software_rors", default="czi_software_ror_mapped.csv")
-    parser.add_argument("--joss_software_rors", default="joss_300_papers_openalex.csv")
-    parser.add_argument("--openaire_czi_matches", default=os.path.join("openaire_x_czi_pipeline", "output", "openaire_x_czi_out.csv.gz"))
+                        default=os.path.join("ner_text_extraction_pipeline", "links.csv"))
+    parser.add_argument("--working_curated", default=os.path.join("scicrunch", "scicrunch_working_file_minimal.csv"))
+    parser.add_argument("--czi_software_rors", default=os.path.join("czi_affiliation_links_pipeline", "links.csv"))
+    parser.add_argument("--joss_software_rors", default=os.path.join("joss_affiliations", "joss_rors.jsonl"))
+    parser.add_argument("--openaire_czi_matches",
+                        default=os.path.join("openaire_x_czi_pipeline", "output", "openaire_x_czi_out.csv.gz"))
 
     # add more arguments to ingest more data sources
     parser.add_argument("--output_csv", default=os.path.join("..", "software_to_ror.csv"))
