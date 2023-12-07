@@ -29,93 +29,13 @@ information, structured like this:
 
 The extraction/matching methods we currently use - all of which are imperfect - are:
 
-* `czi_affiliation_links` - links from software mentioned in a paper to the ROR ids of author affiliations of that paper, for the CZI software mentions dataset (see `czi_dataset_mapped_to_openalex.R`)
-* `joss_affiliation_links` - links from software described in a JOSS paper to the ROR ids of the author affiliations of that paper (see `get_joss_repo_affiliations.py`)
-* `ner_text_extraction` - links from github READMEs to ROR ids of affiliations extracted from those READMEs using NER (see `TheStackDataset.md`)
-* `url_matches` - links from github repo owner names, which may be individual user accounts or organization accounts, to ROR based on URL match, see `get_ror_from_gh_org_or_user.py`, `get_orca_org_rors.py`, and `get_stack_org_rors.py`
-* `by_name` - links from affiliation names, associated with software by a human (see `scicrunch_working_file_*.csv`) to ROR (see `enrich_sci_crunch_csv.py`) matched using the ROR API
-* `human_curated` - ROR ids that a human identified as being affiliated with a piece of software (see `RRID to ROR Software Mapping Data` below)
-* `openaire_x_czi` - join doi-to-ROR-ids from OpenAIRE (based on string matching on the affiliation strings of the authors from Crossref) to CZI mentions dataset that provides doi-to-software relations (only Github repo URLs were used) -- code available under `openaire_x_czi` folder -- data available at `openaire_x_czi/openaire-doi-to-ror-ids/output-data/doi_to_rorid.csv.gz` (TODO: needs to be unified and merged with the data of other methods)
-
-## Resources
-
-All paths are relative to the `resources` directory.
-
-* Regex for grabbing GitHub repos from freetext: `(?i)github.com/([A-Za-z0-9-_.]+/[A-Za-z0-9-_.]*[A-Za-z0-9-_])`
-* Script for extracting urls of Github orgs/users: `get_github_org_url.py` - part of ROR url to GitHub org/user url linking
-* Script for mapping urls to ROR ids: `get_urls_from_bulk_ror.py`
-    * Resulting data in `ror_url_to_ids_domain.json` (domain names to ror ids) and `ror_url_to_ids_full.json` (cleaned full urls to ror ids)
-* Script for extracting github urls from the Journal of Open-Source software and mapping them to DOIs and paper titles: `get_joss_repo_affiliations.py`
-    * Resulting data in `repo_to_doi_and_title.json`
-* Script for searching openalex API using dois/pmids from RRID dataset (`working file software.csv`) and pulling in metadata, including RORs and author information `rrid_dataset_mapped_to_openalex.R`
-* [Dataset] [Queries](./TheStackDataset.md) to retrieve READMEs from [The Stack](https://huggingface.co/datasets/bigcode/the-stack) that contain possible institutions, and [sample data](./stack_institution_readmes/sample.jsonl) 
-* Script for retrieving ROR IDs from github users or org names, if available: `get_ror_from_gh_org.py`. Sample usage:
-
-```bash
-$ python3 get_ror_from_gh_org_or_user.py MITHaystack
-ROR ids found for MITHaystack: ['https://ror.org/03db3by08']
-$ python3 get_ror_from_gh_org_or_user.py foo
-No ROR id found for url https://maciej.pacut.pl from foo on github
-$ python3 get_ror_from_gh_org_or_user.py jmelot
-No url found for jmelot on github
-```
-* [Dataset] 398 GitHub software repo owners extracted from [ORCA](https://orca.eto.tech/orca_download.jsonl) data and mapped to ROR ids based on their URLs (see `get_ror_from_gh_org.py`): `orca_org_rors.json`
-* Script to populate most likely organization and RORs for *scicrunch_working_file_software.csv* which is a user-donated list
-  based on SciCrunch and manual work and contributions by students and others.
-
-```bash
-$ python3 enrich_sci_crunch_csv.py --input=scicrunch_working_file_software.csv --format=minimal
-# This will output a file called "scicrunch_working_file_minimal.csv" that can be fed into the consolidate_links.py
-# script.  To produce an enriched version of the original csv, use --format=full and it outputs "scicrunch_working_file_enriched.csv"
-```
-
-## Ground truth
-
-### RRID to ROR Software Mapping Data, Please cite as Bandrowski 2023 Zenodo DOI:10.5281/zenodo.10048228
-
-`working file software.csv` is a file that has been extracted from the SciCrunch Registry, accessible on the web: [https://scicrunch.org/resources](https://scicrunch.org/resources/data/source/nlx_144509-1/search)
-
-The data is human curated and filtered by "Software" additional resource type. 
-These data are openly available and any resource can be freely accessed by using the scicrunch or another resolving service without an API key (be kind with the number of times you access this or be banned). Example: 
-https://scicrunch.org/resolver/[RRID] for bots add .json at the end
-
-The data contains the columns described below:
-
-| Field name |	description	| field type |
-|--- |---|---|
-|	scr_id	|	scicrunch registry identifier can be used to pull metadata via n2t.net/RRID:SCR_$###	|	text	|
-|	original_id	|	original identifier	|	text	|
-|	type	|	organization or resource	|	text	|
-|	parent_organization_id	|	typically only parents come from ROR entities (e.g., University not a program)	|	text	|
-|	Resource_Name	|	unique across the registry for all curated items; resource names that are the same follow rules specifying how to augment the name, usually the university name or vendor name goes first (e.g., Graphpad Prism)	|	longtext	|
-|	Defining_Citation	|	a manuscript written about the resource	|	longtext	|
-|	Supercategory	|	Resource for all of these data	|	longtext	|
-|	Species	|	not usually used for software, but the main species that is covered by the resource	|	longtext	|
-|	Related_Disease	|	not usually used for software, but the main disease that is covered by the resource	|	longtext	|
-|	Additional_Resource_Types	|	type hirearchy: https://bioportal.bioontology.org/ontologies/NIFSTD?p=classes&conceptid=http%3A%2F%2Furi.neuinfo.org%2Fnif%2Fnifstd%2Fnlx_res_20090101	|	longtext	|
-|	Synonyms	|	comma delimited list	|	longtext	|
-|	Abbreviation	|	comma delimited list	|	longtext	|
-|	Keywords	|	comma delimited list	|	longtext	|
-|	Resource_URL	|	current URL	|	longtext	|
-|	Availability	|	license information if explicit license not available, also may not be in service	|	longtext	|
-|	Related_Application	|	typically for biological applications	|	longtext	|
-|	Funding_Information	|	ignore, there probably are not enough of these in software to worry about	|	longtext	|
-|	Publication_Link	|	link to defining citation field	|	longtext	|
-|	Twitter_Handle	|	twitter handle without the at sign	|	longtext	|
-|	Alternate_URLs	|	other URLs that may be documentation, or other instances of the tool	|	longtext	|
-|	Terms_Of_Use_URLs	|	URL to the terms of use	|	longtext	|
-|	Old_URLs	|	URLs that are no longer used	|	longtext	|
-|	Alternate_IDs	|	Any Identifiers that are not RRIDs, can be resolved by RRID resolver, comma delimeted	|	longtext	|
-|	Comment	|	curation comment	|	longtext	|
-|	Social_URLs	|	social media URLs	|	longtext	|
-|	Supporting_Agency	|	the funding agency that supports the resource	|	longtext	|
-|	Editorial_Note	|	ignore	|	longtext	|
-|	Canonical_ID	|	the RRID in curie syntax	|	longtext	|
-|	License	|	Explicit license	|	longtext	|
-|	relationship_strings	|	bar delimited list of relationship labels with resources_scr_ids	|	mediumtext	|
-|	resources_scr_ids	|	bar delimited list of other resources that are related to this RRID via the relationship listed in the relationship_strings field	|	text	|
-
-***
+* `czi_affiliation_links` - links from software mentioned in a paper to the ROR ids of author affiliations of that paper, for the CZI software mentions dataset. Code available in [resources/czi_affiliation_links_pipeline](resources/czi_affiliation_links_pipeline).
+* `joss_affiliation_links` - links from software described in a JOSS paper to the ROR ids of the author affiliations of that paper. Code available in [resources/joss_affiliations](resources/joss_affiliations).
+* `ner_text_extraction` - links from github READMEs to ROR ids of affiliations extracted from those READMEs using NER. Code available in [resources/ner_text_extraction_pipeline](resources/ner_text_extraction_pipeline).
+* `url_matches` - links from github repo owner names, which may be individual user accounts or organization accounts, to ROR based on URL match. Code available in [resources/github_org_url_matching_pipeline](resources/github_org_url_matching_pipeline).
+* `by_name` - links from affiliation names, associated with software by a human (see `scicrunch_working_file_*.csv`) to ROR matched using the ROR API. Code available in [resources/scicrunch](resources/scicrunch).
+* `human_curated` - ROR ids that a human identified as being affiliated with a piece of software. Data available in [resources/scicrunch](resources/scicrunch).
+* `openaire_czi` - join doi-to-ROR-ids from OpenAIRE (based on string matching on the affiliation strings of the authors from Crossref) to CZI mentions dataset that provides doi-to-software relations (only Github repo URLs were used). Code available in [resources/openaire_x_czi_pipeline](resources/openaire_x_czi_pipeline).
 
 ## About this project
 
