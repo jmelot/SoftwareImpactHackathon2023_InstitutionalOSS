@@ -29,13 +29,13 @@ information, structured like this:
 
 The extraction/matching methods we currently use - all of which are imperfect - are:
 
-* `czi_affiliation_links` - links from software mentioned in a paper to the ROR ids of author affiliations of that paper, for the CZI software mentions dataset (see `czi_dataset_mapped_to_openalex.R`). Code available in [resources/czi_affiliation_links_pipeline](resources/czi_affiliation_links_pipeline).
-* `joss_affiliation_links` - links from software described in a JOSS paper to the ROR ids of the author affiliations of that paper (see `get_joss_repo_affiliations.py`)
-* `ner_text_extraction` - links from github READMEs to ROR ids of affiliations extracted from those READMEs using NER (see `TheStackDataset.md`)
-* `url_matches` - links from github repo owner names, which may be individual user accounts or organization accounts, to ROR based on URL match, see `get_ror_from_gh_org_or_user.py`, `get_orca_org_rors.py`, and `get_stack_org_rors.py`
-* `by_name` - links from affiliation names, associated with software by a human (see `scicrunch_working_file_*.csv`) to ROR (see `enrich_sci_crunch_csv.py`) matched using the ROR API
-* `human_curated` - ROR ids that a human identified as being affiliated with a piece of software (see `RRID to ROR Software Mapping Data` below)
-* `openaire_x_czi` - join doi-to-ROR-ids from OpenAIRE (based on string matching on the affiliation strings of the authors from Crossref) to CZI mentions dataset that provides doi-to-software relations (only Github repo URLs were used) -- code available under `openaire_x_czi` folder -- data available at `openaire_x_czi/openaire-doi-to-ror-ids/output-data/doi_to_rorid.csv.gz` (TODO: needs to be unified and merged with the data of other methods)
+* `czi_affiliation_links` - links from software mentioned in a paper to the ROR ids of author affiliations of that paper, for the CZI software mentions dataset. Code available in [resources/czi_affiliation_links_pipeline](resources/czi_affiliation_links_pipeline).
+* `joss_affiliation_links` - links from software described in a JOSS paper to the ROR ids of the author affiliations of that paper. Code available in [resources/joss_affiliations](resources/joss_affiliations).
+* `ner_text_extraction` - links from github READMEs to ROR ids of affiliations extracted from those READMEs using NER. Code available in [resources/ner_text_extraction_pipeline](resources/ner_text_extraction_pipeline).
+* `url_matches` - links from github repo owner names, which may be individual user accounts or organization accounts, to ROR based on URL match. Code available in [resources/github_org_url_matching_pipeline](resources/github_org_url_matching_pipeline).
+* `by_name` - links from affiliation names, associated with software by a human (see `scicrunch_working_file_*.csv`) to ROR matched using the ROR API. Code available in [resources/scicrunch](resources/scicrunch).
+* `human_curated` - ROR ids that a human identified as being affiliated with a piece of software. Data available in [resources/scicrunch](resources/scicrunch).
+* `openaire_czi` - join doi-to-ROR-ids from OpenAIRE (based on string matching on the affiliation strings of the authors from Crossref) to CZI mentions dataset that provides doi-to-software relations (only Github repo URLs were used). Code available in [resources/openaire_x_czi_pipeline](resources/openaire_x_czi_pipeline).
 
 ## About this project
 

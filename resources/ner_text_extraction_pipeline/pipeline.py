@@ -234,6 +234,7 @@ if __name__ == "__main__":
 
     with open(args.output, "w") as f:
         writer = csv.writer(f)
+        writer.writerow(["repo_name", "org_name", "ror_id"])
         with Pool(args.threads) as p:
             args_generator = map(
                 lambda r: (r[0], r[1], tokenizer, model), enumerate(readme_generator)
