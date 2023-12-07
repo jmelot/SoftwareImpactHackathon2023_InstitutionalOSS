@@ -1,3 +1,3 @@
 [submodule "joss-papers"]
-	path = joss-papers
+	path = resources/joss_affiliations/joss-papers
 	url = https://github.com/openjournals/joss-papers.git

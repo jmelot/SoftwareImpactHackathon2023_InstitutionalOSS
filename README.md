@@ -30,7 +30,7 @@ information, structured like this:
 The extraction/matching methods we currently use - all of which are imperfect - are:
 
 * `czi_affiliation_links` - links from software mentioned in a paper to the ROR ids of author affiliations of that paper, for the CZI software mentions dataset (see `czi_dataset_mapped_to_openalex.R`)
-* `joss_affiliation_links` - links from software described in a JOSS paper to the ROR ids of the author affiliations of that paper (see `get_dois_and_repos_from_joss.py`)
+* `joss_affiliation_links` - links from software described in a JOSS paper to the ROR ids of the author affiliations of that paper (see `get_joss_repo_affiliations.py`)
 * `ner_text_extraction` - links from github READMEs to ROR ids of affiliations extracted from those READMEs using NER (see `TheStackDataset.md`)
 * `url_matches` - links from github repo owner names, which may be individual user accounts or organization accounts, to ROR based on URL match, see `get_ror_from_gh_org_or_user.py`, `get_orca_org_rors.py`, and `get_stack_org_rors.py`
 * `by_name` - links from affiliation names, associated with software by a human (see `scicrunch_working_file_*.csv`) to ROR (see `enrich_sci_crunch_csv.py`) matched using the ROR API
@@ -45,7 +45,7 @@ All paths are relative to the `resources` directory.
 * Script for extracting urls of Github orgs/users: `get_github_org_url.py` - part of ROR url to GitHub org/user url linking
 * Script for mapping urls to ROR ids: `get_urls_from_bulk_ror.py`
     * Resulting data in `ror_url_to_ids_domain.json` (domain names to ror ids) and `ror_url_to_ids_full.json` (cleaned full urls to ror ids)
-* Script for extracting github urls from the Journal of Open-Source software and mapping them to DOIs and paper titles: `get_dois_and_repos_from_joss.py`
+* Script for extracting github urls from the Journal of Open-Source software and mapping them to DOIs and paper titles: `get_joss_repo_affiliations.py`
     * Resulting data in `repo_to_doi_and_title.json`
 * Script for searching openalex API using dois/pmids from RRID dataset (`working file software.csv`) and pulling in metadata, including RORs and author information `rrid_dataset_mapped_to_openalex.R`
 * [Dataset] [Queries](./TheStackDataset.md) to retrieve READMEs from [The Stack](https://huggingface.co/datasets/bigcode/the-stack) that contain possible institutions, and [sample data](./stack_institution_readmes/sample.jsonl) 
