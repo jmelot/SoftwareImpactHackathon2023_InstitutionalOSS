@@ -3,16 +3,21 @@ import json
 import re
 
 
-def clean_url(link: str):
-    cleaned_url_match = re.search("(?i)https?:\/\/(www\.)?(.+)", link)
+def clean_url(url: str) -> str:
+    """
+    Normalize format of url
+    :param url: Raw url
+    :return: Cleaned url
+    """
+    cleaned_url_match = re.search("(?i)https?:\/\/(www\.)?(.+)", url)
     if cleaned_url_match:
         return cleaned_url_match.group(2).strip("/")
-    return link
+    return url
 
 
 def reformat_bulk_ror(bulk_ror_json: str, output_file_prefix: str):
     """
-    Take bulk ROR JSON, create dicts mapping cleaned url (domain name or full url, minus https?://(www)?
+    Given bulk ROR JSON, create dicts mapping cleaned url (domain name or full url, minus https?://(www)?
     of each ror record to:
       - ROR ids with the cleaned url
       - full urls that share the cleaned url

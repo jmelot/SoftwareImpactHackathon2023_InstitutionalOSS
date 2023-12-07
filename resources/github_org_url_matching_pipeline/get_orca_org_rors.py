@@ -1,6 +1,6 @@
 import argparse
 import json
-from get_ror_from_gh_org_or_user import check_for_ror_url
+from gh_owner_to_ror import get_ror_from_url
 
 
 def get_orca_org_rors(orca_data: str, output_file: str) -> None:
@@ -20,7 +20,7 @@ def get_orca_org_rors(orca_data: str, output_file: str) -> None:
             if owner in checked:
                 continue
             checked.add(owner)
-            ror = check_for_ror_url(owner)
+            ror = get_ror_from_url(owner)
             if ror:
                 owner_to_ror[owner] = ror
     with open(output_file, mode="w") as f:
