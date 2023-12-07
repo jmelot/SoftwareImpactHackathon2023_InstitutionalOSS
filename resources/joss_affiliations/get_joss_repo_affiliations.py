@@ -36,7 +36,7 @@ def get_repo_metadata(joss_entry: str) -> list:
             if rors:
                 return [{
                     "software_name": title,
-                    "github_slug": repo,
+                    "github_slug": repo.replace("https://github.com/", ""),
                     "ror_id": ror,
                 } for ror in rors]
     return []
