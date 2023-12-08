@@ -123,6 +123,20 @@ def reformat_joss_affiliation_rors(software_to_rors: str) -> list:
         return reformatted
 
 
+def reformat_openaire_czi_matches(openaire_czi_matches_file: str):
+    """
+    Reformat csv.gz from OpenAIRE and CZI mentions merged data
+    :param openaire_czi_matches_file: Name of file containing software to ror id relations
+    :return: List of reformatted records
+    """
+    df = pd.read_csv(openaire_czi_matches_file, compression='gzip', delimiter='\t', encoding='utf-8')
+    df = df.rename(columns={'github_repo': 'github_slug', 'software': 'software_name', 'RORid': 'ror_id'})
+    df = df.drop_duplicates()
+    df['extraction_method'] = 'openaire_czi'
+
+    return df.to_dict(orient='records')
+
+
 def merge_rows(datasets: list) -> list:
     """
     Merge data across disparate sources, with one row per software-ROR pair
@@ -145,25 +159,22 @@ def merge_rows(datasets: list) -> list:
             else:
                 row["extraction_methods"] = [row.pop("extraction_method")]
                 id_to_record[id] = row
-    merged = [record for _, record in id_to_record.items()]
+    merged = []
+    # Not casting aspersions, just noting that some methods return less ambiguous matches than others!
+    high_quality_methods = ["czi_affiliation_links", "joss_affiliation_links", "by_name", "human_curated",
+                            "ner_text_extraction"]
+    for _, record in id_to_record.items():
+        methods = record["extraction_methods"]
+        is_high_quality = len(methods) > 1 or any([m in high_quality_methods for m in methods])
+        record["high_quality"] = is_high_quality
+        merged.append(record)
     merged.sort(key=lambda row: f"{row['software_name']}/{row['ror_id']}".lower())
     return merged
 
-def reformat_openaire_czi_matches(openaire_czi_matches_file: str):
-    """
-    Reformat csv.gz from OpenAIRE and CZI mentions merged data
-    :param openaire_czi_matches_file: Name of file containing software to ror id relations
-    :return: List of reformatted records
-    """
-    df = pd.read_csv(openaire_czi_matches_file, compression='gzip', delimiter='\t', encoding='utf-8')
-    df = df.rename(columns={'github_repo': 'github_slug', 'software': 'software_name', 'RORid': 'ror_id'})
-    df = df.drop_duplicates()
-    df['extraction_method'] = 'openaire_czi'
-
-    return df.to_dict(orient='records')
 
 def write_reformatted(orca_url_matches: str, orca_data: str, stack_readme_matches: str, working_curated: str,
-                      czi_software_rors: str, joss_software_rors: str, openaire_czi_matches: str, output_csv: str, output_json: str):
+                      czi_software_rors: str, joss_software_rors: str, openaire_czi_matches: str, output_csv: str,
+                      output_json: str):
     """
     Merge data from disparate sources and write out in a single CSV
     :param orca_url_matches: matches from repo owner urls to ROR urls
@@ -172,7 +183,8 @@ def write_reformatted(orca_url_matches: str, orca_data: str, stack_readme_matche
     :param working_curated: Curated data, augmented with matches based on ROR API
     :param czi_software_rors: RORs pulled from author affiliations from CZI software-repo links
     :param joss_software_rors: RORS pulled from author affiliations in JOSS software-repo links
-    :param openaire_czi_affiliations: ROR id to repository URLs by joining OpenAIRE ROR-to-DOI affiliations and CZI DOI-to-software mentions
+    :param openaire_czi_affiliations: ROR id to repository URLs by joining OpenAIRE ROR-to-DOI affiliations
+           and CZI DOI-to-software mentions
     :param output_csv: File where output csv should be written
     :param output_json: File where output json should be written
     :return: None
@@ -188,18 +200,19 @@ def write_reformatted(orca_url_matches: str, orca_data: str, stack_readme_matche
     merged_rows = merge_rows([orca, stack_readme, working, czi_affiliations, joss_affiliations, openaire_czi_matches])
 
     rors = set()
+    software = set()
     with open(output_csv, mode="w") as f:
-        writer = csv.DictWriter(f, fieldnames=["software_name", "github_slug", "ror_id", "extraction_methods"])
+        writer = csv.DictWriter(f, fieldnames=["software_name", "github_slug", "ror_id", "extraction_methods",
+                                               "high_quality"])
         writer.writeheader()
         for row in merged_rows:
             rors.add(row["ror_id"])
-            writer.writerow({
-                "software_name": row["software_name"],
-                "github_slug": row["github_slug"],
-                "ror_id": row["ror_id"],
-                "extraction_methods": ";".join(row["extraction_methods"])
-            })
-    print(f"Wrote {len(merged_rows)} software-ror links containing {len(rors)} distinct ROR ids")
+            if row["github_slug"]:
+                software.add(row["github_slug"])
+            row["extraction_methods"] = ";".join(row["extraction_methods"])
+            writer.writerow(row)
+    print(f"Wrote {len(merged_rows)} software-ror links containing {len(rors)} distinct ROR ids and "
+          f"{len(software)} distinct GitHub repositories")
 
     ror_to_software = {}
     for row in merged_rows:
@@ -208,7 +221,8 @@ def write_reformatted(orca_url_matches: str, orca_data: str, stack_readme_matche
             ror_to_software[ror] = {}
         ror_to_software[ror][row["software_name"]] = {
             "github_slug": row["github_slug"],
-            "extraction_methods": row["extraction_methods"]
+            "extraction_methods": row["extraction_methods"],
+            "high_quality": row["high_quality"]
         }
     with open(output_json, mode="w") as f:
         f.write(json.dumps(ror_to_software, indent=2))
@@ -234,4 +248,5 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     write_reformatted(args.orca_url_matches, args.orca_data, args.stack_readme_affiliations, args.working_curated,
-                      args.czi_software_rors, args.joss_software_rors, args.openaire_czi_matches, args.output_csv, args.output_json)
+                      args.czi_software_rors, args.joss_software_rors, args.openaire_czi_matches, args.output_csv,
+                      args.output_json)
