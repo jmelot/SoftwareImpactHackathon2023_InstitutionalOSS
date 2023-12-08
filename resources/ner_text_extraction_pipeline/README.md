@@ -43,7 +43,7 @@ A sample of 5K READMEs is available [here](stack_readmes/sample.jsonl).
 
 ## Extracting and mapping organization names
 
-1. Download the NER model from [huggingface](https://huggingface.co/poodledude/ner-test-bert-base-uncased-finetuned-500K-AdamW-3-epoch-locations/tree/main).
+1. Download the NER model from [huggingface](https://huggingface.co/adambuttrick/ner-test-bert-base-uncased-finetuned-500K-AdamW-3-epoch-locations).
 
 2. Run [pipeline.py](pipeline.py) script to extract organisation names and map them to ROR IDs:
 
