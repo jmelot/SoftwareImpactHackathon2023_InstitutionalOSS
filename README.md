@@ -26,6 +26,7 @@ information, structured like this:
 | github_slug | Github owner and repo name, e.g. `apache/airflow` | text |
 | ror_id | ROR id, in url form, e.g. `https://ror.org/02qenvm24` | text |
 | extraction_methods | semicolon-separated list of methods used to extract the software-ror pair, from the set described below | text |
+| high_quality | If true, we believe this link is more likely to be accurate. | boolean |
 
 The extraction/matching methods we currently use - all of which are imperfect - are:
 
