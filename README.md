@@ -31,13 +31,13 @@ information, structured like this:
 
 The extraction/matching methods we currently use - all of which are imperfect - are:
 
-* `czi_affiliation_links` - links from software mentioned in a paper to the ROR ids of author affiliations of that paper, for the CZI software mentions dataset. Code available in [resources/czi_affiliation_links_pipeline](resources/czi_affiliation_links_pipeline).
+* `czi_affiliation_links` - links software to the ROR ids of author affiliations of the paper most likely describing that software, for the CZI software mentions dataset. Code available in [resources/czi_affiliation_links_pipeline](resources/czi_affiliation_links_pipeline).
 * `joss_affiliation_links` - links from software described in a JOSS paper to the ROR ids of the author affiliations of that paper. Code available in [resources/joss_affiliations](resources/joss_affiliations).
 * `ner_text_extraction` - links from github READMEs to ROR ids of affiliations extracted from those READMEs using NER. Code available in [resources/ner_text_extraction_pipeline](resources/ner_text_extraction_pipeline).
 * `url_matches` - links from github repo owner names, which may be individual user accounts or organization accounts, to ROR based on URL match. Code available in [resources/github_org_url_matching_pipeline](resources/github_org_url_matching_pipeline).
-* `by_name` - links from affiliation names, associated with software by a human (see `scicrunch_working_file_*.csv`) to ROR matched using the ROR API. Code available in [resources/scicrunch](resources/scicrunch).
-* `human_curated` - ROR ids that a human identified as being affiliated with a piece of software. Data available in [resources/scicrunch](resources/scicrunch).
-* `openaire_czi` - join doi-to-ROR-ids from OpenAIRE (based on string matching on the affiliation strings of the authors from Crossref) to CZI mentions dataset that provides doi-to-software relations (only Github repo URLs were used). Code available in [resources/openaire_x_czi_pipeline](resources/openaire_x_czi_pipeline).
+* `by_name` - links from affiliation names, associated with software by a human in the SciCrunch dataset (see `scicrunch_working_file_*.csv`) to ROR matched using the ROR API. Code available in [resources/scicrunch](resources/scicrunch).
+* `human_curated` - ROR ids that a human identified as being affiliated with a piece of software, from the SciCrunch dataset. Data available in [resources/scicrunch](resources/scicrunch).
+* `openaire_czi` - links between software and ROR ids of author affiliations of papers mentioning that software from the CZI software mentions dataset, joined using OpenAIRE. Code available in [resources/openaire_x_czi_pipeline](resources/openaire_x_czi_pipeline).
 
 ## About this project
 
