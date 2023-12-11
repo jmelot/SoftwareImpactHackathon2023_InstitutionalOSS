@@ -161,12 +161,13 @@ def merge_rows(datasets: list) -> list:
                 id_to_record[id] = row
     merged = []
     # Not casting aspersions, just noting that some methods return less ambiguous matches than others!
-    high_quality_methods = ["czi_affiliation_links", "joss_affiliation_links", "by_name", "human_curated",
-                            "ner_text_extraction"]
+    high_quality_methods = ["czi_affiliation_links", "joss_affiliation_links", "by_name", "human_curated"]
+    medium_quality_methods = ["ner_text_extraction", "url_matches"]
     for _, record in id_to_record.items():
         methods = record["extraction_methods"]
         is_high_quality = len(methods) > 1 or any([m in high_quality_methods for m in methods])
-        record["high_quality"] = is_high_quality
+        is_medium_quality = len(methods) == 1 and any([m in medium_quality_methods for m in methods])
+        record["quality"] = 1 if is_high_quality else (0.5 if is_medium_quality else 0)
         merged.append(record)
     merged.sort(key=lambda row: f"{row['software_name']}/{row['ror_id']}".lower())
     return merged
@@ -203,7 +204,7 @@ def write_reformatted(orca_url_matches: str, orca_data: str, stack_readme_matche
     software = set()
     with open(output_csv, mode="w") as f:
         writer = csv.DictWriter(f, fieldnames=["software_name", "github_slug", "ror_id", "extraction_methods",
-                                               "high_quality"])
+                                               "quality"])
         writer.writeheader()
         for row in merged_rows:
             rors.add(row["ror_id"])
@@ -222,7 +223,7 @@ def write_reformatted(orca_url_matches: str, orca_data: str, stack_readme_matche
         ror_to_software[ror][row["software_name"]] = {
             "github_slug": row["github_slug"],
             "extraction_methods": row["extraction_methods"],
-            "high_quality": row["high_quality"]
+            "quality": row["quality"]
         }
     with open(output_json, mode="w") as f:
         f.write(json.dumps(ror_to_software, indent=2))

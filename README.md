@@ -14,7 +14,8 @@ The criteria for linking software to a research organization are:
 
 Our software to ROR links are consolidated using `resources/consolidate_links.py` and available in `software_to_ror.csv` and `software_to_ror.json`. 
 There may be multiple entries per software-ror pair, if our linkage method returned multiple ROR ids for a given
-piece of software. We have currently found 13918 software-ROR links containing 3608 distinct ROR ids. Some of these are sure to be 
+piece of software. We have currently found 1,442,022 software to ROR links (96,430 of moderate quality and 9,235 of 
+highest quality) over 21,920 unique organizations and 176,619 unique GitHub repositories. Some of these are sure to be 
 spurious links, and we're working on methods to identify and remove these.
 
 The JSON output maps ROR ids to software to github slug (if available) and extraction method. The CSV contains the same
@@ -26,7 +27,7 @@ information, structured like this:
 | github_slug | Github owner and repo name, e.g. `apache/airflow` | text |
 | ror_id | ROR id, in url form, e.g. `https://ror.org/02qenvm24` | text |
 | extraction_methods | semicolon-separated list of methods used to extract the software-ror pair, from the set described below | text |
-| high_quality | If true, we believe this link is more likely to be accurate. | boolean |
+| quality | 1 if high-quality, 0.5 if medium-quality, 0 if low-quality | float |
 
 The extraction/matching methods we currently use - all of which are imperfect - are:
 

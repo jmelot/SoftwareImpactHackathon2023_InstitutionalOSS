@@ -17,7 +17,7 @@ def get_ror_from_url(owner_name: str, ror_domain_json: str = "ror_domain_to_ids.
     if not gh_url:
         print(f"No url found for {owner_name} on github")
         return
-    if "linkedin.com" in gh_url or "sites.google.com" in gh_url:
+    if "linkedin.com" in gh_url or ".google.com" in gh_url:
         print(f"Skipping {gh_url} for {owner_name}")
         return
     cleaned_gh_url = clean_url(gh_url)
@@ -31,7 +31,7 @@ def get_ror_from_url(owner_name: str, ror_domain_json: str = "ror_domain_to_ids.
     gh_url_domain = cleaned_gh_url.split("/")[0]
     if gh_url_domain in domain_json:
         return domain_json[gh_url_domain]["ror_ids"]
-    # handle cases like nlp.standford.edu
+    # strip subdomains to handle cases like nlp.stanford.edu
     stripped_domain = ".".join(gh_url_domain.split(".")[-2:])
     if stripped_domain in domain_json:
         return domain_json[stripped_domain]["ror_ids"]
