@@ -39,6 +39,10 @@ The extraction/matching methods we currently use - all of which are imperfect - 
 * `human_curated` - ROR ids that a human identified as being affiliated with a piece of software, from the SciCrunch dataset. Data available in [resources/scicrunch](resources/scicrunch).
 * `openaire_czi` - links between software and ROR ids of author affiliations of papers mentioning that software from the CZI software mentions dataset, joined using OpenAIRE. Code available in [resources/openaire_x_czi_pipeline](resources/openaire_x_czi_pipeline).
 
+## Contributing
+
+We are eager to work with new contributors! Please review our [contribution guidelines](https://github.com/jmelot/SoftwareImpactHackathon2023_InstitutionalOSS/blob/main/CONTRIBUTING.md) for more information.
+
 ## About this project
 
 This repository was developed as part of the [Mapping the Impact of Research Software in Science](https://github.com/chanzuckerberg/software-impact-hackathon-2023) hackathon hosted by the Chan Zuckerberg Initiative (CZI). By participating in this hackathon, owners of this repository acknowledge the following:
